@@ -69,6 +69,20 @@ Any inquiries can be addressed to:
 			<Description>After Startup</Description>
 			<Type>dummy</Type>
 		</Param>
+
+		<Param id="3">
+			<Name>Dummy param with value -</Name>
+			<Description>Dummy param with value -1</Description>
+			<Type>fixed</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>fixed</LengthType>
+				<Length>2</Length>
+				<Value>-1</Value>
+			</Interprete>
+		</Param>
+		
 	</Params>
 
 	<QActions>
