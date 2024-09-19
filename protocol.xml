@@ -889,7 +889,7 @@ Any inquiries can be addressed to:
 			</Content>
 		</Trigger>
 		<Trigger id="4">
-			<Name>Trigger for Auto Chroma Weight</Name>
+			<Name>Trigger after toggling Auto Chroma Weight</Name>
 			<On id="13">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
@@ -979,7 +979,7 @@ Any inquiries can be addressed to:
 			<Type id="3">copy</Type>
 		</Action>
 		
-		<!--Action executes group after enabling decoder-->
+		<!--Action that executes group after enabling decoder-->
 		<Action id="13">
 			<Name>After Enabling Decoder Action</Name>
 			<Condition><![CDATA[(id:51 == 1)]]></Condition>
@@ -1060,8 +1060,6 @@ Any inquiries can be addressed to:
 			<On id="14">parameter</On>
 			<Type id="3">copy</Type>
 		</Action>
-		
-		
 	</Actions>
 
 	<Timers>
