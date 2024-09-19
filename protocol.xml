@@ -60,7 +60,7 @@ Any inquiries can be addressed to:
 
 	<Compliancies>
 		<CassandraReady>true</CassandraReady>
-		<MinimumRequiredVersion>10.1.0.0 - 9966</MinimumRequiredVersion>
+		<MinimumRequiredVersion>10.2.0.0 - 12603</MinimumRequiredVersion>
 	</Compliancies>
 
 	<Params>
@@ -70,10 +70,9 @@ Any inquiries can be addressed to:
 			<Type>dummy</Type>
 		</Param>
 		
-		<!--Dummy params for internal logic-->
 		<Param id="3">
-			<Name>notAvaliableDummyParam</Name>
-			<Description>Dummy param with value -1</Description>
+			<Name>fixedParamMinusOne</Name>
+			<Description>Fixed param with value -1</Description>
 			<Type>fixed</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -84,7 +83,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 		</Param>
 		<Param id="4">
-			<Name>zeroDummyParam</Name>
+			<Name>fixedParamZero</Name>
 			<Description>Dummy param with value 0</Description>
 			<Type>fixed</Type>
 			<Interprete>
@@ -96,8 +95,8 @@ Any inquiries can be addressed to:
 			</Interprete>
 		</Param>
 		<Param id="5">
-			<Name>bitrateDummyParam</Name>
-			<Description>Dummy param for bitrate.</Description>
+			<Name>fixedParamDefaultBitrate</Name>
+			<Description>Fixed param for default bitrate value</Description>
 			<Type>fixed</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -108,8 +107,8 @@ Any inquiries can be addressed to:
 			</Interprete>
 		</Param>
 		<Param id="6">
-			<Name>codeBlockDummyParam</Name>
-			<Description>Dummy param for Code Block.</Description>
+			<Name>fixedParamDefaultCodeBlock</Name>
+			<Description>Fixed param for Default Code Block value</Description>
 			<Type>fixed</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -120,10 +119,8 @@ Any inquiries can be addressed to:
 			</Interprete>
 		</Param>
 		
-		
-		<!--Encoder params-->
 		<Param id="10">
-			<Name>Encoder</Name>
+			<Name>encoderTitle</Name>
 			<Description>Encoder</Description>
 			<Type>header</Type>
 			<Display>
@@ -210,15 +207,15 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="12" trending="false" save="true">
-			<Name>currentCompressedBitrateEncoder</Name>
+		<Param id="12" trending="false">
+			<Name>encoderCompressedBitrate</Name>
 			<Description>Compressed Bitrate (Encoder)</Description>
 			<Type>read</Type>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
 			<Information>
-				<Subtext>Shows Current Compressed Bitrate of the Encoder-</Subtext>
+				<Subtext>Shows Current Compressed Bitrate of the Encoder</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -233,9 +230,11 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
-			<!-- SuppressValidator 2.11.1 Range not needed, (ASK)-->
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -246,11 +245,10 @@ Any inquiries can be addressed to:
 				<Units>Mbps</Units>
 				<Decimals>3</Decimals>
 			</Display>
-			<!-- /SuppressValidator 2.11.1 -->
 		</Param>
 		<Param id="13" trending="false" save="true">
-			<Name>autoChromaWeight</Name>
-			<Description>Auto Chroma Weight</Description>
+			<Name>encoderAutoChromaWeightStatus</Name>
+			<Description>Auto Chroma Weight Status</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>Tells Encoder to manage Chroma Weight by itself.</Subtext>
@@ -267,8 +265,6 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
-			<!-- SuppressValidator 2.9.7 Units not needed.	(ASK MICHIEL) -->
-			<!-- SuppressValidator 2.11.1 Range not needed.			 -->
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -279,10 +275,8 @@ Any inquiries can be addressed to:
 					</Position>
 				</Positions>
 			</Display>
-			<!-- /SuppressValidator 2.11.1 -->
-			<!-- /SuppressValidator 2.9.7 -->
 			<Measurement>
-				<Type>number</Type>
+				<Type>discreet</Type>
 				<Discreets>
 					<Discreet>
 						<Value>0</Value>
@@ -296,15 +290,14 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="113" setter="true">
-			<Name>autoChromaWeight</Name>
-			<Description>Auto Chroma Weight</Description>
+			<Name>encoderAutoChromaWeightStatus</Name>
+			<Description>Auto Chroma Weight Status</Description>
 			<Type>write</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
-			<!-- SuppressValidator 2.9.7 Units not needed.	(ASK MICHIEL) -->
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -315,7 +308,6 @@ Any inquiries can be addressed to:
 					</Position>
 				</Positions>
 			</Display>
-			<!-- /SuppressValidator 2.9.7 -->
 			<Measurement>
 				<Type>togglebutton</Type>
 				<Discreets>
@@ -331,7 +323,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="14" trending="false" save="true">
-			<Name>chromaWeight</Name>
+			<Name>encoderChromaWeight</Name>
 			<Description>Chroma Weight</Description>
 			<Type>read</Type>
 			<Information>
@@ -369,7 +361,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="114" setter="true">
-			<Name>chromaWeight</Name>
+			<Name>encoderChromaWeight</Name>
 			<Description>Chroma Weight</Description>
 			<Type>write</Type>
 			<Interprete>
@@ -404,7 +396,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="15" trending="false" save="true">
-			<Name>losslessModeStatus</Name>
+			<Name>encoderLosslessModeStatus</Name>
 			<Description>Lossless Mode Status</Description>
 			<Type>read</Type>
 			<Information>
@@ -446,7 +438,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="115" setter="true">
-			<Name>losslessModeStatus</Name>
+			<Name>encoderLosslessModeStatus</Name>
 			<Description>Lossless Mode Status</Description>
 			<Type>write</Type>
 			<Interprete>
@@ -479,15 +471,10 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		
-		
-		<!--Decoder params-->
 		<Param id="50">
-			<Name>Decoder</Name>
+			<Name>decoderTitle</Name>
 			<Description>Decoder</Description>
 			<Type>header</Type>
-			<Information>
-				<Text>Tooltip text</Text>
-			</Information>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -572,8 +559,8 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="52" trending="false" save="true">
-			<Name>currentCompressedBitrateDecoder</Name>
+		<Param id="52" trending="false">
+			<Name>decoderCompressedBitrate</Name>
 			<Description>Compressed Bitrate (Decoder)</Description>
 			<Type>read</Type>
 			<Information>
@@ -592,9 +579,11 @@ Any inquiries can be addressed to:
 				</Exceptions>
 				<LengthType>next param</LengthType>
 			</Interprete>
-			<!-- SuppressValidator 2.11.1 Range not needed. ASK -->
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -605,13 +594,12 @@ Any inquiries can be addressed to:
 				<Units>Mbps</Units>
 				<Decimals>3</Decimals>
 			</Display>
-			<!-- /SuppressValidator 2.11.1 -->
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="53" trending="true" save="true">
-			<Name>progressionOrder</Name>
+			<Name>decoderProgressionOrder</Name>
 			<Description>Progression Order</Description>
 			<Type>read</Type>
 			<Information>
@@ -666,7 +654,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="153" setter="true" save="true">
-			<Name>progressionOrder</Name>
+			<Name>decoderProgressionOrder</Name>
 			<Description>Progression Order</Description>
 			<Type>write</Type>
 			<Interprete>
@@ -710,8 +698,8 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="54" trending="false" save="true">
-			<Name>codeBlockWidth</Name>
+		<Param id="54" trending="false">
+			<Name>decoderCodeBlockWidth</Name>
 			<Description>Code Block Width</Description>
 			<Type>read</Type>
 			<Information>
@@ -729,9 +717,11 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
-			<!-- SuppressValidator 2.11.1 Range not needed.-->
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Units>px</Units>
 				<Positions>
 					<Position>
@@ -741,13 +731,12 @@ Any inquiries can be addressed to:
 					</Position>
 				</Positions>
 			</Display>
-			<!-- /SuppressValidator 2.11.1 -->
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="55" trending="false" save="true">
-			<Name>codeBlockHeight</Name>
+		<Param id="55" trending="false">
+			<Name>decoderCodeBlockHeight</Name>
 			<Description>Code Block Height</Description>
 			<Type>read</Type>
 			<Information>
@@ -765,9 +754,11 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
-			<!-- SuppressValidator 2.11.1 Range not needed. -->
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Units>px</Units>
 				<Positions>
 					<Position>
@@ -777,23 +768,10 @@ Any inquiries can be addressed to:
 					</Position>
 				</Positions>
 			</Display>
-			<!-- /SuppressValidator 2.11.1 -->
 			<Measurement>
 				<Type>number</Type>
-				<Discreets>
-					<Discreet>
-						<Value>1</Value>
-						<Display>100</Display>
-					</Discreet>
-					<Discreet>
-						<Value>2</Value>
-						<Display>Not Available</Display>
-					</Discreet>
-				</Discreets>
 			</Measurement>
-		</Param>
-		
-		
+		</Param>	
 	</Params>
 
 	<QActions>
@@ -811,8 +789,8 @@ Any inquiries can be addressed to:
 			</Content>
 		</Group>
 		<Group id="3">
-			<Name>After Enabling Encoder</Name>
-			<Description>After Enabling Encoder</Description>
+			<Name>Disable Decoder/Set Encoder Default Values</Name>
+			<Description>Disables Decoder and sets Encoders params to default values</Description>
 			<Type>action</Type>
 			<Content>
 				<Action>4</Action>
@@ -823,37 +801,46 @@ Any inquiries can be addressed to:
 			</Content>
 		</Group>
 		<Group id="4">
-			<Name>After Disabling Encoder</Name>
-			<Description>After Disabling Encoder</Description>
+			<Name>Disable Encoder</Name>
+			<Description>Set Encoder params to Not Available</Description>
 			<Type>action</Type>
 			<Content>
 				<Action>10</Action>
-				<Action>11</Action>
-				<Action>12</Action>
-				<Action>113</Action>
 			</Content>
 		</Group>
 		<Group id="5">
-			<Name>After Enabling Decoder</Name>
-			<Description>After Enabling Decoder</Description>
+			<Name>Disable Encoder/Set Decoder Default Values</Name>
+			<Description>Disables Encoder and sets Decoders params to default values</Description>
 			<Type>action</Type>
 			<Content>
 				<Action>14</Action>
 				<Action>15</Action>
 				<Action>16</Action>
 				<Action>17</Action>
-				<Action>18</Action>
 			</Content>
 		</Group>
 		<Group id="6">
-			<Name>After Disabling Decoder</Name>
-			<Description>After Disabling Decoder</Description>
+			<Name>Disable Decoder</Name>
+			<Description>Set Decoder params to Not Available</Description>
 			<Type>action</Type>
 			<Content>
 				<Action>20</Action>
-				<Action>21</Action>
-				<Action>22</Action>
-				<Action>23</Action>
+			</Content>
+		</Group>
+		<Group id="7">
+			<Name>Enable Auto Chroma</Name>
+			<Description>Description</Description>
+			<Type>action</Type>
+			<Content>
+				<Action>26</Action>
+			</Content>
+		</Group>
+		<Group id="8">
+			<Name>Disable Auto Chroma</Name>
+			<Description>Description</Description>
+			<Type>action</Type>
+			<Content>
+				<Action>7</Action>
 			</Content>
 		</Group>
 	</Groups>
@@ -869,17 +856,18 @@ Any inquiries can be addressed to:
 			</Content>
 		</Trigger>
 		<Trigger id="2">
-			<Name>Trigger after toggling encoder</Name>
+			<Name>After toggling encoder</Name>
+			<Condition><![CDATA[(id:11 == 1)]]></Condition>
 			<On id="11">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
 			<Content>
 				<Id>3</Id>
-				<Id>9</Id>
+				<Id else="true">9</Id>
 			</Content>
 		</Trigger>
 		<Trigger id="3">
-			<Name>Trigger after toggling decoder</Name>
+			<Name>After toggling decoder</Name>
 			<On id="51">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
@@ -889,13 +877,14 @@ Any inquiries can be addressed to:
 			</Content>
 		</Trigger>
 		<Trigger id="4">
-			<Name>Trigger after toggling Auto Chroma Weight</Name>
+			<Name>After toggling Auto Chroma Weight</Name>
+			<Condition><![CDATA[(id:13 == 1)]]></Condition>
 			<On id="13">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
 			<Content>
 				<Id>24</Id>
-				<Id>25</Id>
+				<Id else="true">25</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -912,11 +901,9 @@ Any inquiries can be addressed to:
 			<Type>run actions</Type>
 		</Action>
 		
-		
 		<!--Action that executes group after enabling encoder-->
 		<Action id="3">
-			<Name>After Enabling Encoder Action</Name>
-			<Condition><![CDATA[(id:11 == 1)]]></Condition>
+			<Name>Execute Enable Encoder Group</Name>
 			<On id="3">group</On>
 			<Type id="3">execute next</Type>
 		</Action>
@@ -929,59 +916,43 @@ Any inquiries can be addressed to:
 			<Type id="4">copy</Type>
 		</Action>
 		<Action id="5">
-			<Name>Copy 5 To 12</Name>
+			<Name>Set Encoder Bitrate To Default</Name>
 			<On id="12">parameter</On>
 			<Type id="5">copy</Type>
 		</Action>
 		<Action id="6">
-			<Name>Copy 4 To 13</Name>
+			<Name>Set Auto Chroma Weight To Default</Name>
 			<On id="13">parameter</On>
 			<Type id="4">copy</Type>
 		</Action>
 		<Action id="7">
-			<Name>Copy 4 To 14</Name>
+			<Name>Set Chroma Weight To Default</Name>
 			<On id="14">parameter</On>
 			<Type id="4">copy</Type>
 		</Action>
 		<Action id="8">
-			<Name>Copy 4 To 15</Name>
+			<Name>Set Lossless Mode To Default</Name>
 			<On id="15">parameter</On>
 			<Type id="4">copy</Type>
 		</Action>
 
 		<!--Action that executes group after disabling encoder-->
 		<Action id="9">
-			<Name>After Disabling Encoder Action</Name>
-			<Condition><![CDATA[(id:11 == 0)]]></Condition>
+			<Name>Execute Disable Encoder Group</Name>
 			<On id="4">group</On>
 			<Type id="4">execute next</Type>
 		</Action>
 
 		<!--Actions after disabling encoder-->
 		<Action id="10">
-			<Name>Copy 3 To 12 </Name>
-			<On id="12">parameter</On>
-			<Type id="3">copy</Type>
-		</Action>
-		<Action id="11">
-			<Name>Copy 3 To 13 </Name>
-			<On id="13">parameter</On>
-			<Type id="3">copy</Type>
-		</Action>
-		<Action id="12">
-			<Name>Copy 3 To 14 </Name>
-			<On id="14">parameter</On>
-			<Type id="3">copy</Type>
-		</Action>
-		<Action id="113">
-			<Name>Copy 3 To 15 </Name>
-			<On id="15">parameter</On>
+			<Name>Set Encoder Values To Not Available</Name>
+			<On id="12;13;14;15">parameter</On>
 			<Type id="3">copy</Type>
 		</Action>
 		
 		<!--Action that executes group after enabling decoder-->
 		<Action id="13">
-			<Name>After Enabling Decoder Action</Name>
+			<Name>Execute Enable Decoder Group</Name>
 			<Condition><![CDATA[(id:51 == 1)]]></Condition>
 			<On id="5">group</On>
 			<Type id="5">execute next</Type>
@@ -995,29 +966,24 @@ Any inquiries can be addressed to:
 			<Type id="4">copy</Type>
 		</Action>
 		<Action id="15">
-			<Name>Copy 5 To 52</Name>
+			<Name>Set Decoder Values To Default</Name>
 			<On id="52">parameter</On>
 			<Type id="5">copy</Type>
 		</Action>
 		<Action id="16">
-			<Name>Copy 5 To 53</Name>
+			<Name>Set Progression Order To Default</Name>
 			<On id="53">parameter</On>
 			<Type id="4">copy</Type>
 		</Action>
 		<Action id="17">
-			<Name>Copy 6 To 54</Name>
-			<On id="54">parameter</On>
-			<Type id="6">copy</Type>
-		</Action>
-		<Action id="18">
-			<Name>Copy 6 To 55</Name>
-			<On id="55">parameter</On>
+			<Name>Set Code Block Width/Height To Default</Name>
+			<On id="54;55">parameter</On>
 			<Type id="6">copy</Type>
 		</Action>
 
 		<!--Action that executes group after disabling decoder-->
 		<Action id="19">
-			<Name>After Disabling Decoder Action</Name>
+			<Name>Execute Disable Decoder Group</Name>
 			<Condition><![CDATA[(id:51 == 0)]]></Condition>
 			<On id="6">group</On>
 			<Type id="6">execute next</Type>
@@ -1025,38 +991,24 @@ Any inquiries can be addressed to:
 
 		<!--Actions after disabling decoder-->
 		<Action id="20">
-			<Name>Copy 3 To 52 </Name>
-			<On id="52">parameter</On>
-			<Type id="3">copy</Type>
-		</Action>
-		<Action id="21">
-			<Name>Copy 3 To 53 </Name>
-			<On id="53">parameter</On>
-			<Type id="3">copy</Type>
-		</Action>
-		<Action id="22">
-			<Name>Copy 3 To 54 </Name>
-			<On id="54">parameter</On>
-			<Type id="3">copy</Type>
-		</Action>
-		<Action id="23">
-			<Name>Copy 3 To 55</Name>
-			<On id="55">parameter</On>
+			<Name>Set Decoder Values To Not Available</Name>
+			<On id="52;53;54;55">parameter</On>
 			<Type id="3">copy</Type>
 		</Action>
 
-		<!--Action after enabling Auto Chroma Weight-->
 		<Action id="24">
-			<Condition><![CDATA[(id:13 == 0)]]></Condition>
-			<Name>Copy 4 To 14 With Condition</Name>
-			<On id="14">parameter</On>
-			<Type id="4">copy</Type>
+			<Name>Execute Enable Auto Chroma Group</Name>
+			<On id="7">group</On>
+			<Type id="7">execute next</Type>
 		</Action>
-
-		<!--Action disabling Auto Chroma Weight-->
 		<Action id="25">
-			<Condition><![CDATA[(id:13 == 1)]]></Condition>
-			<Name>Copy 3 To 14 With Condition</Name>
+			<Name>Execute Disable Auto Chroma Group</Name>
+			<Condition><![CDATA[(id:11 == 1)]]></Condition>
+			<On id="8">group</On>
+			<Type id="8">execute next</Type>
+		</Action>
+		<Action id="26">
+			<Name>Set Chroma Weight To Not Available</Name>
 			<On id="14">parameter</On>
 			<Type id="3">copy</Type>
 		</Action>
@@ -1101,7 +1053,7 @@ Any inquiries can be addressed to:
 									<MinorVersion id="1">
 										<Date>2024-01-08</Date>
 										<Provider>
-											<Author>XXX</Author>
+											<Author>EAB</Author>
 											<Company>Skyline Communications</Company>
 										</Provider>
 										<Changes>
