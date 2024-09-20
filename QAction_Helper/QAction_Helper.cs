@@ -98,7 +98,7 @@ public class WriteParameters
 	public System.Object Encoderstatus {get { return Protocol.GetParameter(111); }set { Protocol.SetParameter(111, value); }}
 	/// <summary>PID: 113  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	public System.Object Encoderautochromaweightstatus {get { return Protocol.GetParameter(113); }set { Protocol.SetParameter(113, value); }}
-	/// <summary>PID: 114  | Type: write | DISCREETS: Not Available = -1</summary>
+	/// <summary>PID: 114  | Type: write</summary>
 	public System.Object Encoderchromaweight {get { return Protocol.GetParameter(114); }set { Protocol.SetParameter(114, value); }}
 	/// <summary>PID: 115  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	public System.Object Encoderlosslessmodestatus {get { return Protocol.GetParameter(115); }set { Protocol.SetParameter(115, value); }}
@@ -221,7 +221,7 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	/// <summary>PID: 113  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderautochromaweightstatus_113 {get { return GetParameter(113); }set { SetParameter(113, value); }}
-	/// <summary>PID: 114  | Type: write | DISCREETS: Not Available = -1</summary>
+	/// <summary>PID: 114  | Type: write</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderchromaweight_114 {get { return GetParameter(114); }set { SetParameter(114, value); }}
 	/// <summary>PID: 115  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>

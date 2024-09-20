@@ -102,8 +102,8 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>fixed</LengthType>
-				<Length>5</Length>
-				<Value>9.151</Value>
+				<Length>6</Length>
+				<Value>15.151</Value>
 			</Interprete>
 		</Param>
 		<Param id="6">
@@ -150,6 +150,9 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<DefaultValue>0</DefaultValue>
 			</Interprete>
+			<Alarm>
+				<Monitored>false</Monitored>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -207,10 +210,13 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="12" trending="false">
+		<Param id="12" trending="true">
 			<Name>encoderCompressedBitrate</Name>
 			<Description>Compressed Bitrate (Encoder)</Description>
 			<Type>read</Type>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
@@ -387,12 +393,6 @@ Any inquiries can be addressed to:
 			</Display>
 			<Measurement>
 				<Type>analog</Type>
-				<Discreets>
-					<Discreet>
-						<Display state="disabled">Not Available</Display>
-						<Value>-1</Value>
-					</Discreet>
-				</Discreets>
 			</Measurement>
 		</Param>
 		<Param id="15" trending="false" save="true">
@@ -494,7 +494,7 @@ Any inquiries can be addressed to:
 			<Description>Decoder Status</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>Shows current status of the Encoder.</Subtext>
+				<Subtext>Shows current status of the Decoder.</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -526,7 +526,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="151" setter="true" save="true">
+		<Param id="151" setter="true">
 			<Name>decoderStatus</Name>
 			<Description>Decoder Status</Description>
 			<Type>write</Type>
@@ -559,7 +559,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="52" trending="false">
+		<Param id="52" trending="true">
 			<Name>decoderCompressedBitrate</Name>
 			<Description>Compressed Bitrate (Decoder)</Description>
 			<Type>read</Type>
@@ -579,6 +579,9 @@ Any inquiries can be addressed to:
 				</Exceptions>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Range>
@@ -598,7 +601,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="53" trending="true" save="true">
+		<Param id="53" trending="false" save="true">
 			<Name>decoderProgressionOrder</Name>
 			<Description>Progression Order</Description>
 			<Type>read</Type>
@@ -653,7 +656,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="153" setter="true" save="true">
+		<Param id="153" setter="true">
 			<Name>decoderProgressionOrder</Name>
 			<Description>Progression Order</Description>
 			<Type>write</Type>
@@ -771,7 +774,7 @@ Any inquiries can be addressed to:
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
-		</Param>	
+		</Param>
 	</Params>
 
 	<QActions>
@@ -868,12 +871,13 @@ Any inquiries can be addressed to:
 		</Trigger>
 		<Trigger id="3">
 			<Name>After toggling decoder</Name>
+			<Condition><![CDATA[(id:51 == 1)]]></Condition>
 			<On id="51">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
 			<Content>
 				<Id>13</Id>
-				<Id>19</Id>
+				<Id else="true">19</Id>
 			</Content>
 		</Trigger>
 		<Trigger id="4">
@@ -953,7 +957,6 @@ Any inquiries can be addressed to:
 		<!--Action that executes group after enabling decoder-->
 		<Action id="13">
 			<Name>Execute Enable Decoder Group</Name>
-			<Condition><![CDATA[(id:51 == 1)]]></Condition>
 			<On id="5">group</On>
 			<Type id="5">execute next</Type>
 		</Action>
@@ -984,7 +987,6 @@ Any inquiries can be addressed to:
 		<!--Action that executes group after disabling decoder-->
 		<Action id="19">
 			<Name>Execute Disable Decoder Group</Name>
-			<Condition><![CDATA[(id:51 == 0)]]></Condition>
 			<On id="6">group</On>
 			<Type id="6">execute next</Type>
 		</Action>
