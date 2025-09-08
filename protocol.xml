@@ -948,6 +948,26 @@ Any inquiries can be addressed to:
 			<On id="14">parameter</On>
 			<Type id="6">copy</Type>
 		</Action>
+		<Action id="17">
+			<Name>Copy Value to Decoder Current Compressed Bitrate</Name>
+			<On id="16">parameter</On>
+			<Type id="7">copy</Type>
+		</Action>
+		<Action id="18">
+			<Name>Copy Value to Decoder Progression Order</Name>
+			<On id="17">parameter</On>
+			<Type id="8">copy</Type>
+		</Action>
+		<Action id="19">
+			<Name>Copy Value to Decoder Code Block Width</Name>
+			<On id="18">parameter</On>
+			<Type id="9">copy</Type>
+		</Action>
+		<Action id="20">
+			<Name>Copy Value to Decoder Code Block Height</Name>
+			<On id="19">parameter</On>
+			<Type id="20">copy</Type>
+		</Action>
 		
 	</Actions>
 
