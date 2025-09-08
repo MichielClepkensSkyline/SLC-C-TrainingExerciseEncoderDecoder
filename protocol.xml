@@ -84,7 +84,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="4">
 			<Name>valueEncoderCurrentCompressedBitrate</Name>
-			<Description>Encoder Current Compressed Bitrate</Description>
+			<Description>Value Encoder Current Compressed Bitrate</Description>
 			<Type>fixed</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -120,7 +120,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="7">
 			<Name>valueDecoderCurrentCompressedBitrate</Name>
-			<Description>Decoder Current Compressed Bitrate</Description>
+			<Description>Value Decoder Current Compressed Bitrate</Description>
 			<Type>fixed</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
