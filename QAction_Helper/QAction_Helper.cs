@@ -116,6 +116,9 @@ public interface SLProtocolExt : SLProtocol
 {
 	object Afterstartup_dummy { get; set; }
 	object Valuenotavailable__fixed { get; set; }
+	object Valuecurrentcompressedbitrate__fixed { get; set; }
+	object Valuechromaweight__fixed { get; set; }
+	object Valueenabled__fixed { get; set; }
 	object Encoderstatus_10 { get; set; }
 	object Encoderstatus { get; set; }
 	object Encodercurrentcompressedbitrate_11 { get; set; }
@@ -150,6 +153,12 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Afterstartup_dummy {get { return GetParameter(2); }set { SetParameter(2, value); }}
 	/// <summary>PID: 3  | Type: fixed</summary>
 	public System.Object Valuenotavailable__fixed {get { return GetParameter(3); }set { SetParameter(3, value); }}
+	/// <summary>PID: 4  | Type: fixed</summary>
+	public System.Object Valuecurrentcompressedbitrate__fixed {get { return GetParameter(4); }set { SetParameter(4, value); }}
+	/// <summary>PID: 5  | Type: fixed</summary>
+	public System.Object Valuechromaweight__fixed {get { return GetParameter(5); }set { SetParameter(5, value); }}
+	/// <summary>PID: 6  | Type: fixed</summary>
+	public System.Object Valueenabled__fixed {get { return GetParameter(6); }set { SetParameter(6, value); }}
 	/// <summary>PID: 10  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderstatus_10 {get { return GetParameter(10); }set { SetParameter(10, value); }}

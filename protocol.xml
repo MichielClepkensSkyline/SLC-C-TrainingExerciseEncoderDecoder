@@ -82,6 +82,42 @@ Any inquiries can be addressed to:
 				<Value>-1</Value>
 			</Interprete>
 		</Param>
+		<Param id="4">
+			<Name>valueCurrentCompressedBitrate</Name>
+			<Description>Current Compressed Bitrate</Description>
+			<Type>fixed</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>fixed</LengthType>
+				<Length>4</Length>
+				<Value>1201</Value>
+			</Interprete>
+		</Param>
+		<Param id="5">
+			<Name>valueChromaWeight</Name>
+			<Description>Chroma Weight</Description>
+			<Type>fixed</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>fixed</LengthType>
+				<Length>2</Length>
+				<Value>56</Value>
+			</Interprete>
+		</Param>
+		<Param id="6">
+			<Name>valueEnabled</Name>
+			<Description>Value Enabled</Description>
+			<Type>fixed</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>fixed</LengthType>
+				<Length>1</Length>
+				<Value>1</Value>
+			</Interprete>
+		</Param>
 		
 		
 		
@@ -884,7 +920,7 @@ Any inquiries can be addressed to:
 									<MinorVersion id="1">
 										<Date>2024-01-08</Date>
 										<Provider>
-											<Author>XXX</Author>
+											<Author>TSA</Author>
 											<Company>Skyline Communications</Company>
 										</Provider>
 										<Changes>
