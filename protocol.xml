@@ -53,14 +53,14 @@ Any inquiries can be addressed to:
 	<Vendor>Skyline</Vendor>
 	<VendorOID>1.3.6.1.4.1.8813.2.</VendorOID>
 	<DeviceOID>9999</DeviceOID>
-	<ElementType></ElementType>
+	<ElementType>Encoder/decoder</ElementType>
 	<Type relativeTimers="true">virtual</Type>
-	<Display defaultPage="General" pageOrder="General;----------;Set data" wideColumnPages="" />
+	<Display defaultPage="General" pageOrder="General;----------;Set Data" wideColumnPages="" />
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
 		<CassandraReady>true</CassandraReady>
-		<MinimumRequiredVersion>10.1.0.0 - 9966</MinimumRequiredVersion>
+		<MinimumRequiredVersion>10.3.0.0 - 99966</MinimumRequiredVersion>
 	</Compliancies>
 
 	<Params>
@@ -71,7 +71,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="3" trending="false">
 			<Name>statusEncoder</Name>
-			<Description>Status</Description>
+			<Description>Status Encoder</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>This gives the status of the encoder.</Subtext>
@@ -80,25 +80,25 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>Enabled</DefaultValue>
+				<DefaultValue>1</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>Set data</Page>
+						<Page>General</Page>
 						<Column>0</Column>
 						<Row>1</Row>
 					</Position>
 					<Position>
-						<Page>General</Page>
+						<Page>Set Data</Page>
 						<Column>0</Column>
 						<Row>1</Row>
 					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>togglebutton</Type>
+				<Type>discreet</Type>
 				<Discreets>
 					<Discreet>
 						<Display>Disabled</Display>
@@ -113,19 +113,18 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="103" setter="true">
 			<Name>statusEncoder</Name>
-			<Description>Status</Description>
+			<Description>Status Encoder</Description>
 			<Type>write</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>Enabled</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>Set data</Page>
+						<Page>Set Data</Page>
 						<Column>0</Column>
 						<Row>1</Row>
 					</Position>
@@ -147,7 +146,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="4" trending="false">
 			<Name>statusDecoder</Name>
-			<Description>Status</Description>
+			<Description>Status Decoder</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>This gives the status of the decoder.</Subtext>
@@ -156,25 +155,25 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>Disabled</DefaultValue>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>Set data</Page>
+						<Page>General</Page>
 						<Column>1</Column>
 						<Row>1</Row>
 					</Position>
 					<Position>
-						<Page>General</Page>
+						<Page>Set Data</Page>
 						<Column>1</Column>
 						<Row>1</Row>
 					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>togglebutton</Type>
+				<Type>discreet</Type>
 				<Discreets>
 					<Discreet>
 						<Display>Disabled</Display>
@@ -189,19 +188,18 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="104" setter="true">
 			<Name>statusDecoder</Name>
-			<Description>Status</Description>
+			<Description>Status Decoder</Description>
 			<Type>write</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>Disabled</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>Set data</Page>
+						<Page>Set Data</Page>
 						<Column>1</Column>
 						<Row>1</Row>
 					</Position>
@@ -223,7 +221,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="5" trending="false">
 			<Name>curComBitrateEncoder</Name>
-			<Description>Current Compressed Bitrate</Description>
+			<Description>Current Compressed Bitrate Encoder</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>Updates the current bitrate of the encoder.</Subtext>
@@ -238,6 +236,10 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Units>Mbps</Units>
 				<Decimals>3</Decimals>
+				<Range>
+					<Low>0</Low>
+					<High>1000</High>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -252,7 +254,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="6" trending="false">
 			<Name>curComBitrateDecoder</Name>
-			<Description>Current Compressed Bitrate</Description>
+			<Description>Current Compressed Bitrate Decoder</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>Updates the current bitrate of the decoder.</Subtext>
@@ -267,6 +269,10 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Units>Mbps</Units>
 				<Decimals>3</Decimals>
+				<Range>
+					<Low>0</Low>
+					<High>1000</High>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -290,7 +296,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>Disabled</DefaultValue>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -301,14 +307,14 @@ Any inquiries can be addressed to:
 						<Row>3</Row>
 					</Position>
 					<Position>
-						<Page>Set data</Page>
+						<Page>Set Data</Page>
 						<Column>0</Column>
 						<Row>2</Row>
 					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>togglebutton</Type>
+				<Type>discreet</Type>
 				<Discreets>
 					<Discreet>
 						<Display>Disabled</Display>
@@ -334,7 +340,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>Set data</Page>
+						<Page>Set Data</Page>
 						<Column>0</Column>
 						<Row>2</Row>
 					</Position>
@@ -381,7 +387,7 @@ Any inquiries can be addressed to:
 						<Row>4</Row>
 					</Position>
 					<Position>
-						<Page>Set data</Page>
+						<Page>Set Data</Page>
 						<Column>0</Column>
 						<Row>3</Row>
 					</Position>
@@ -409,7 +415,7 @@ Any inquiries can be addressed to:
 				</Range>
 				<Positions>
 					<Position>
-						<Page>Set data</Page>
+						<Page>Set Data</Page>
 						<Column>0</Column>
 						<Row>3</Row>
 					</Position>
@@ -430,7 +436,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>Disabled</DefaultValue>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -441,14 +447,14 @@ Any inquiries can be addressed to:
 						<Row>5</Row>
 					</Position>
 					<Position>
-						<Page>Set data</Page>
+						<Page>Set Data</Page>
 						<Column>0</Column>
 						<Row>4</Row>
 					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>togglebutton</Type>
+				<Type>discreet</Type>
 				<Discreets>
 					<Discreet>
 						<Display>Disabled</Display>
@@ -474,7 +480,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>Set data</Page>
+						<Page>Set Data</Page>
 						<Column>0</Column>
 						<Row>4</Row>
 					</Position>
@@ -505,7 +511,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>LCRP</DefaultValue>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -516,7 +522,7 @@ Any inquiries can be addressed to:
 						<Row>3</Row>
 					</Position>
 					<Position>
-						<Page>Set data</Page>
+						<Page>Set Data</Page>
 						<Column>1</Column>
 						<Row>2</Row>
 					</Position>
@@ -561,7 +567,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>Set data</Page>
+						<Page>Set Data</Page>
 						<Column>1</Column>
 						<Row>2</Row>
 					</Position>
@@ -609,6 +615,10 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>px</Units>
+				<Range>
+					<Low>0</Low>
+					<High>1000</High> <!--This can be set better, but I have no idea what is a good high-->
+				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -637,6 +647,11 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>px</Units>
+				<Range>
+					<Low>0</Low>
+					<High>1000</High>
+					<!--This can be set better, but I have no idea what is a good high-->
+				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -662,7 +677,7 @@ Any inquiries can be addressed to:
 						<Row>0</Row>
 					</Position>
 					<Position>
-						<Page>Set data</Page>
+						<Page>Set Data</Page>
 						<Column>0</Column>
 						<Row>0</Row>
 					</Position>
@@ -685,7 +700,7 @@ Any inquiries can be addressed to:
 						<Row>0</Row>
 					</Position>
 					<Position>
-						<Page>Set data</Page>
+						<Page>Set Data</Page>
 						<Column>1</Column>
 						<Row>0</Row>
 					</Position>
@@ -697,10 +712,10 @@ Any inquiries can be addressed to:
 		</Param>
 	</Params>
 	
-	<QActions>
+	<!--<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
 		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
-	</QActions>
+	</QActions>-->
 
 	<Groups>
 		<Group id="2">
