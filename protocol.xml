@@ -884,6 +884,7 @@ Any inquiries can be addressed to:
 				<Id>12</Id>
 			</Content>
 		</Trigger>
+
 	</Triggers>
 
 	<Actions>
@@ -989,6 +990,18 @@ Any inquiries can be addressed to:
 			<Name>Copy Value to Decoder Code Block Height</Name>
 			<On id="19">parameter</On>
 			<Type id="20">copy</Type>
+		</Action>
+
+		<Action id="21">
+			<Name>Enable Encoder</Name>
+			<On id="5">group</On>
+			<Type>execute next</Type>
+		</Action>
+
+		<Action id="22">
+			<Name>Enable Decoder</Name>
+			<On id="6">group</On>
+			<Type>execute next</Type>
 		</Action>
 
 		
