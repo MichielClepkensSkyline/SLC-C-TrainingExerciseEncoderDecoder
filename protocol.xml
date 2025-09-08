@@ -927,6 +927,27 @@ Any inquiries can be addressed to:
 			<On id="4">group</On>
 			<Type>execute next</Type>
 		</Action>
+
+		<Action id="13">
+			<Name>Copy Value to Encoder Current Compressed Bitrate</Name>
+			<On id="11">parameter</On>
+			<Type id="4">copy</Type>
+		</Action>
+		<Action id="14">
+			<Name>Copy Value to Encoder Auto Chroma Weight</Name>
+			<On id="12">parameter</On>
+			<Type id="6">copy</Type>
+		</Action>
+		<Action id="15">
+			<Name>Copy Value to Encoder Chroma Weight</Name>
+			<On id="13">parameter</On>
+			<Type id="5">copy</Type>
+		</Action>
+		<Action id="16">
+			<Name>Copy Value to Encoder Lossless Mode</Name>
+			<On id="14">parameter</On>
+			<Type id="6">copy</Type>
+		</Action>
 		
 	</Actions>
 
