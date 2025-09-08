@@ -66,7 +66,7 @@ Any inquiries can be addressed to:
 	<Params>
 		<Param id="2">
 			<Name>AfterStartup</Name>
-			<Description>After Startup</Description>
+			<Description>After</Description>
 			<Type>dummy</Type>
 		</Param>
 	</Params>
