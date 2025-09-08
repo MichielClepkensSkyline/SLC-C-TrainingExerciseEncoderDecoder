@@ -116,9 +116,12 @@ public interface SLProtocolExt : SLProtocol
 {
 	object Afterstartup_dummy { get; set; }
 	object Valuenotavailable__fixed { get; set; }
-	object Valuecurrentcompressedbitrate__fixed { get; set; }
+	object Valueencodercurrentcompressedbitrate__fixed { get; set; }
 	object Valuechromaweight__fixed { get; set; }
 	object Valueenabled__fixed { get; set; }
+	object Valuedecodercurrentcompressedbitrate__fixed { get; set; }
+	object Valueprogressionorder__fixed { get; set; }
+	object Valuecodeblockwidth__fixed { get; set; }
 	object Encoderstatus_10 { get; set; }
 	object Encoderstatus { get; set; }
 	object Encodercurrentcompressedbitrate_11 { get; set; }
@@ -139,6 +142,7 @@ public interface SLProtocolExt : SLProtocol
 	object Decodercodeblockwidth { get; set; }
 	object Decodercodeblockheight_19 { get; set; }
 	object Decodercodeblockheight { get; set; }
+	object Valuecodeblockheight__fixed { get; set; }
 	object Encoderstatus_110 { get; set; }
 	object Encoderautochromaweight_112 { get; set; }
 	object Encoderchromaweight_113 { get; set; }
@@ -154,11 +158,17 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	/// <summary>PID: 3  | Type: fixed</summary>
 	public System.Object Valuenotavailable__fixed {get { return GetParameter(3); }set { SetParameter(3, value); }}
 	/// <summary>PID: 4  | Type: fixed</summary>
-	public System.Object Valuecurrentcompressedbitrate__fixed {get { return GetParameter(4); }set { SetParameter(4, value); }}
+	public System.Object Valueencodercurrentcompressedbitrate__fixed {get { return GetParameter(4); }set { SetParameter(4, value); }}
 	/// <summary>PID: 5  | Type: fixed</summary>
 	public System.Object Valuechromaweight__fixed {get { return GetParameter(5); }set { SetParameter(5, value); }}
 	/// <summary>PID: 6  | Type: fixed</summary>
 	public System.Object Valueenabled__fixed {get { return GetParameter(6); }set { SetParameter(6, value); }}
+	/// <summary>PID: 7  | Type: fixed</summary>
+	public System.Object Valuedecodercurrentcompressedbitrate__fixed {get { return GetParameter(7); }set { SetParameter(7, value); }}
+	/// <summary>PID: 8  | Type: fixed</summary>
+	public System.Object Valueprogressionorder__fixed {get { return GetParameter(8); }set { SetParameter(8, value); }}
+	/// <summary>PID: 9  | Type: fixed</summary>
+	public System.Object Valuecodeblockwidth__fixed {get { return GetParameter(9); }set { SetParameter(9, value); }}
 	/// <summary>PID: 10  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderstatus_10 {get { return GetParameter(10); }set { SetParameter(10, value); }}
@@ -209,6 +219,8 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Decodercodeblockheight_19 {get { return GetParameter(19); }set { SetParameter(19, value); }}
 	/// <summary>PID: 19  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Decodercodeblockheight {get { return GetParameter(19); }set { SetParameter(19, value); }}
+	/// <summary>PID: 20  | Type: fixed</summary>
+	public System.Object Valuecodeblockheight__fixed {get { return GetParameter(20); }set { SetParameter(20, value); }}
 	/// <summary>PID: 110  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderstatus_110 {get { return GetParameter(110); }set { SetParameter(110, value); }}

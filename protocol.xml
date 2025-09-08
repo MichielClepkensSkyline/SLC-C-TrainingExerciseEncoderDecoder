@@ -83,8 +83,8 @@ Any inquiries can be addressed to:
 			</Interprete>
 		</Param>
 		<Param id="4">
-			<Name>valueCurrentCompressedBitrate</Name>
-			<Description>Current Compressed Bitrate</Description>
+			<Name>valueEncoderCurrentCompressedBitrate</Name>
+			<Description>Encoder Current Compressed Bitrate</Description>
 			<Type>fixed</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -116,6 +116,42 @@ Any inquiries can be addressed to:
 				<LengthType>fixed</LengthType>
 				<Length>1</Length>
 				<Value>1</Value>
+			</Interprete>
+		</Param>
+		<Param id="7">
+			<Name>valueDecoderCurrentCompressedBitrate</Name>
+			<Description>Decoder Current Compressed Bitrate</Description>
+			<Type>fixed</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>fixed</LengthType>
+				<Length>4</Length>
+				<Value>1105</Value>
+			</Interprete>
+		</Param>
+		<Param id="8">
+			<Name>valueProgressionOrder</Name>
+			<Description>Value Progression Order</Description>
+			<Type>fixed</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>fixed</LengthType>
+				<Length>1</Length>
+				<Value>0</Value>
+			</Interprete>
+		</Param>
+		<Param id="9">
+			<Name>valueCodeBlockWidth</Name>
+			<Description>Value Code Block Width</Description>
+			<Type>fixed</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>fixed</LengthType>
+				<Length>3</Length>
+				<Value>238</Value>
 			</Interprete>
 		</Param>
 		
@@ -738,6 +774,19 @@ Any inquiries can be addressed to:
 			<Measurement>
 				<Type>analog</Type>
 			</Measurement>
+		</Param>
+
+		<Param id="20">
+			<Name>valueCodeBlockHeight</Name>
+			<Description>Value Code Block Height</Description>
+			<Type>fixed</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>fixed</LengthType>
+				<Length>3</Length>
+				<Value>438</Value>
+			</Interprete>
 		</Param>
 		
 	</Params>
