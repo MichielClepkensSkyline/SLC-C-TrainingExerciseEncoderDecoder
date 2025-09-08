@@ -768,8 +768,8 @@ Any inquiries can be addressed to:
 			<Time>change</Time>
 			<Type>action</Type>
 			<Content>
-				<Id>30</Id>
-				<Id>31</Id>
+				<Id>40</Id>
+				<Id>41</Id>
 			</Content>
 		</Trigger>
 		<Trigger id="4">
@@ -778,8 +778,8 @@ Any inquiries can be addressed to:
 			<Time>change</Time>
 			<Type>action</Type>
 			<Content>
-				<Id>40</Id>
-				<Id>41</Id>
+				<Id>30</Id>
+				<Id>31</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -795,25 +795,25 @@ Any inquiries can be addressed to:
 			<On id="2">parameter</On>
 			<Type>run actions</Type>
 		</Action>
-		<Action id="31">
+		<Action id="40">
 			<Name>Copy zero to status decoder</Name>
 			<Condition><![CDATA[id:3 == 1]]></Condition>
 			<On id="4">parameter</On>
 			<Type id="1000">copy</Type>	
 		</Action>
-		<Action id="30">
+		<Action id="41">
 			<Name>Copy one to status decoder</Name>
 			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<On id="4">parameter</On>
 			<Type id="1001">copy</Type>
 		</Action>
-		<Action id="41">
+		<Action id="30">
 			<Name>Copy zero to status encoder</Name>
 			<Condition><![CDATA[id:4 == 1]]></Condition>
 			<On id="3">parameter</On>
 			<Type id="1000">copy</Type>	
 		</Action>
-		<Action id="40">
+		<Action id="31">
 			<Name>Copy one to status encoder</Name>
 			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<On id="3">parameter</On>
