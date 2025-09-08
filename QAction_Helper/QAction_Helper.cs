@@ -8,12 +8,104 @@ namespace Skyline.DataMiner.Scripting
 {
 public static class Parameter
 {
+	/// <summary>PID: 3 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int statusencoder_3 = 3;
+	/// <summary>PID: 3 | Type: read</summary>
+	public const int statusencoder = 3;
+	/// <summary>PID: 4 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int statusdecoder_4 = 4;
+	/// <summary>PID: 4 | Type: read</summary>
+	public const int statusdecoder = 4;
+	/// <summary>PID: 5 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int curcombitrateencoder_5 = 5;
+	/// <summary>PID: 5 | Type: read</summary>
+	public const int curcombitrateencoder = 5;
+	/// <summary>PID: 6 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int curcombitratedecoder_6 = 6;
+	/// <summary>PID: 6 | Type: read</summary>
+	public const int curcombitratedecoder = 6;
+	/// <summary>PID: 7 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int autochromaweight_7 = 7;
+	/// <summary>PID: 7 | Type: read</summary>
+	public const int autochromaweight = 7;
+	/// <summary>PID: 8 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int chromaweight_8 = 8;
+	/// <summary>PID: 8 | Type: read</summary>
+	public const int chromaweight = 8;
+	/// <summary>PID: 9 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int losslessmode_9 = 9;
+	/// <summary>PID: 9 | Type: read</summary>
+	public const int losslessmode = 9;
+	/// <summary>PID: 10 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int progressionorder_10 = 10;
+	/// <summary>PID: 10 | Type: read</summary>
+	public const int progressionorder = 10;
+	/// <summary>PID: 11 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int codeblockwidth_11 = 11;
+	/// <summary>PID: 11 | Type: read</summary>
+	public const int codeblockwidth = 11;
+	/// <summary>PID: 12 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int codeblockheight_12 = 12;
+	/// <summary>PID: 12 | Type: read</summary>
+	public const int codeblockheight = 12;
 	public class Write
 	{
+		/// <summary>PID: 103 | Type: write</summary>
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public const int statusencoder_103 = 103;
+		/// <summary>PID: 103 | Type: write</summary>
+		public const int statusencoder = 103;
+		/// <summary>PID: 104 | Type: write</summary>
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public const int statusdecoder_104 = 104;
+		/// <summary>PID: 104 | Type: write</summary>
+		public const int statusdecoder = 104;
+		/// <summary>PID: 107 | Type: write</summary>
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public const int autochromaweight_107 = 107;
+		/// <summary>PID: 107 | Type: write</summary>
+		public const int autochromaweight = 107;
+		/// <summary>PID: 108 | Type: write</summary>
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public const int chromaweight_108 = 108;
+		/// <summary>PID: 108 | Type: write</summary>
+		public const int chromaweight = 108;
+		/// <summary>PID: 109 | Type: write</summary>
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public const int losslessmode_109 = 109;
+		/// <summary>PID: 109 | Type: write</summary>
+		public const int losslessmode = 109;
+		/// <summary>PID: 110 | Type: write</summary>
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public const int progressionorder_110 = 110;
+		/// <summary>PID: 110 | Type: write</summary>
+		public const int progressionorder = 110;
 	}
 }
 public class WriteParameters
 {
+	/// <summary>PID: 103  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	public System.Object Statusencoder {get { return Protocol.GetParameter(103); }set { Protocol.SetParameter(103, value); }}
+	/// <summary>PID: 104  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	public System.Object Statusdecoder {get { return Protocol.GetParameter(104); }set { Protocol.SetParameter(104, value); }}
+	/// <summary>PID: 107  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	public System.Object Autochromaweight {get { return Protocol.GetParameter(107); }set { Protocol.SetParameter(107, value); }}
+	/// <summary>PID: 108  | Type: write</summary>
+	public System.Object Chromaweight {get { return Protocol.GetParameter(108); }set { Protocol.SetParameter(108, value); }}
+	/// <summary>PID: 109  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	public System.Object Losslessmode {get { return Protocol.GetParameter(109); }set { Protocol.SetParameter(109, value); }}
+	/// <summary>PID: 110  | Type: write | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4</summary>
+	public System.Object Progressionorder {get { return Protocol.GetParameter(110); }set { Protocol.SetParameter(110, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -23,12 +115,112 @@ public class WriteParameters
 public interface SLProtocolExt : SLProtocol
 {
 	object Afterstartup_dummy { get; set; }
+	object Statusencoder_3 { get; set; }
+	object Statusencoder { get; set; }
+	object Statusdecoder_4 { get; set; }
+	object Statusdecoder { get; set; }
+	object Curcombitrateencoder_5 { get; set; }
+	object Curcombitrateencoder { get; set; }
+	object Curcombitratedecoder_6 { get; set; }
+	object Curcombitratedecoder { get; set; }
+	object Autochromaweight_7 { get; set; }
+	object Autochromaweight { get; set; }
+	object Chromaweight_8 { get; set; }
+	object Chromaweight { get; set; }
+	object Losslessmode_9 { get; set; }
+	object Losslessmode { get; set; }
+	object Progressionorder_10 { get; set; }
+	object Progressionorder { get; set; }
+	object Codeblockwidth_11 { get; set; }
+	object Codeblockwidth { get; set; }
+	object Codeblockheight_12 { get; set; }
+	object Codeblockheight { get; set; }
+	object Encodertitle__fixed { get; set; }
+	object Decodertitle__fixed { get; set; }
+	object Statusencoder_103 { get; set; }
+	object Statusdecoder_104 { get; set; }
+	object Autochromaweight_107 { get; set; }
+	object Chromaweight_108 { get; set; }
+	object Losslessmode_109 { get; set; }
+	object Progressionorder_110 { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 {
 	/// <summary>PID: 2  | Type: dummy</summary>
 	public System.Object Afterstartup_dummy {get { return GetParameter(2); }set { SetParameter(2, value); }}
+	/// <summary>PID: 3  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Statusencoder_3 {get { return GetParameter(3); }set { SetParameter(3, value); }}
+	/// <summary>PID: 3  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	public System.Object Statusencoder {get { return GetParameter(3); }set { SetParameter(3, value); }}
+	/// <summary>PID: 4  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Statusdecoder_4 {get { return GetParameter(4); }set { SetParameter(4, value); }}
+	/// <summary>PID: 4  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	public System.Object Statusdecoder {get { return GetParameter(4); }set { SetParameter(4, value); }}
+	/// <summary>PID: 5  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Curcombitrateencoder_5 {get { return GetParameter(5); }set { SetParameter(5, value); }}
+	/// <summary>PID: 5  | Type: read</summary>
+	public System.Object Curcombitrateencoder {get { return GetParameter(5); }set { SetParameter(5, value); }}
+	/// <summary>PID: 6  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Curcombitratedecoder_6 {get { return GetParameter(6); }set { SetParameter(6, value); }}
+	/// <summary>PID: 6  | Type: read</summary>
+	public System.Object Curcombitratedecoder {get { return GetParameter(6); }set { SetParameter(6, value); }}
+	/// <summary>PID: 7  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Autochromaweight_7 {get { return GetParameter(7); }set { SetParameter(7, value); }}
+	/// <summary>PID: 7  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	public System.Object Autochromaweight {get { return GetParameter(7); }set { SetParameter(7, value); }}
+	/// <summary>PID: 8  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Chromaweight_8 {get { return GetParameter(8); }set { SetParameter(8, value); }}
+	/// <summary>PID: 8  | Type: read</summary>
+	public System.Object Chromaweight {get { return GetParameter(8); }set { SetParameter(8, value); }}
+	/// <summary>PID: 9  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Losslessmode_9 {get { return GetParameter(9); }set { SetParameter(9, value); }}
+	/// <summary>PID: 9  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	public System.Object Losslessmode {get { return GetParameter(9); }set { SetParameter(9, value); }}
+	/// <summary>PID: 10  | Type: read | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Progressionorder_10 {get { return GetParameter(10); }set { SetParameter(10, value); }}
+	/// <summary>PID: 10  | Type: read | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4</summary>
+	public System.Object Progressionorder {get { return GetParameter(10); }set { SetParameter(10, value); }}
+	/// <summary>PID: 11  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Codeblockwidth_11 {get { return GetParameter(11); }set { SetParameter(11, value); }}
+	/// <summary>PID: 11  | Type: read</summary>
+	public System.Object Codeblockwidth {get { return GetParameter(11); }set { SetParameter(11, value); }}
+	/// <summary>PID: 12  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Codeblockheight_12 {get { return GetParameter(12); }set { SetParameter(12, value); }}
+	/// <summary>PID: 12  | Type: read</summary>
+	public System.Object Codeblockheight {get { return GetParameter(12); }set { SetParameter(12, value); }}
+	/// <summary>PID: 13  | Type: fixed</summary>
+	public System.Object Encodertitle__fixed {get { return GetParameter(13); }set { SetParameter(13, value); }}
+	/// <summary>PID: 14  | Type: fixed</summary>
+	public System.Object Decodertitle__fixed {get { return GetParameter(14); }set { SetParameter(14, value); }}
+	/// <summary>PID: 103  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Statusencoder_103 {get { return GetParameter(103); }set { SetParameter(103, value); }}
+	/// <summary>PID: 104  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Statusdecoder_104 {get { return GetParameter(104); }set { SetParameter(104, value); }}
+	/// <summary>PID: 107  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Autochromaweight_107 {get { return GetParameter(107); }set { SetParameter(107, value); }}
+	/// <summary>PID: 108  | Type: write</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Chromaweight_108 {get { return GetParameter(108); }set { SetParameter(108, value); }}
+	/// <summary>PID: 109  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Losslessmode_109 {get { return GetParameter(109); }set { SetParameter(109, value); }}
+	/// <summary>PID: 110  | Type: write | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Progressionorder_110 {get { return GetParameter(110); }set { SetParameter(110, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
