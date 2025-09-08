@@ -828,6 +828,28 @@ Any inquiries can be addressed to:
 				<Action>10</Action>
 			</Content>
 		</Group>
+		<Group id="5">
+			<Name>Enable Encoder</Name>
+			<Description>Enable Encoder</Description>
+			<Type>poll action</Type>
+			<Content>
+				<Action>13</Action>
+				<Action>14</Action>
+				<Action>15</Action>
+				<Action>16</Action>
+			</Content>
+		</Group>
+		<Group id="6">
+			<Name>Enable Decoder</Name>
+			<Description>Enable Decoder</Description>
+			<Type>poll action</Type>
+			<Content>
+				<Action>17</Action>
+				<Action>18</Action>
+				<Action>19</Action>
+				<Action>20</Action>
+			</Content>
+		</Group>
 		
 		
 	</Groups>
@@ -968,6 +990,7 @@ Any inquiries can be addressed to:
 			<On id="19">parameter</On>
 			<Type id="20">copy</Type>
 		</Action>
+
 		
 	</Actions>
 
