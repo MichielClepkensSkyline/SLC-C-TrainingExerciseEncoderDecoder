@@ -243,7 +243,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="5" trending="false">
+		<Param id="5" trending="false" save="true">
 			<Name>curComBitrateEncoder</Name>
 			<Description>Current Compressed Bitrate Encoder</Description>
 			<Type>read</Type>
@@ -276,7 +276,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="6" trending="false">
+		<Param id="6" trending="false" save="true">
 			<Name>curComBitrateDecoder</Name>
 			<Description>Current Compressed Bitrate Decoder</Description>
 			<Type>read</Type>
@@ -309,7 +309,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="7" trending="false">
+		<Param id="7" trending="false" save="true">
 			<Name>autoChromaWeight</Name>
 			<Description>Auto Chroma Weight</Description>
 			<Type>read</Type>
@@ -770,6 +770,10 @@ Any inquiries can be addressed to:
 			<Content>
 				<Id>40</Id>
 				<Id>41</Id>
+				<Id>50</Id>
+				<Id>70</Id>
+				<Id>80</Id>
+				<Id>90</Id>
 			</Content>
 		</Trigger>
 		<Trigger id="4">
@@ -780,6 +784,10 @@ Any inquiries can be addressed to:
 			<Content>
 				<Id>30</Id>
 				<Id>31</Id>
+				<Id>60</Id>
+				<Id>100</Id>
+				<Id>110</Id>
+				<Id>120</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -818,6 +826,54 @@ Any inquiries can be addressed to:
 			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<On id="3">parameter</On>
 			<Type id="1001">copy</Type>
+		</Action>
+		<Action id="50">
+			<Name>Set current compressed bitrate encoder to "Not Available"</Name>
+			<Condition><![CDATA[id:3 == 0]]></Condition>
+			<On id="5">parameter</On>
+			<Type>clear on display</Type>
+		</Action>
+		<Action id="60">
+			<Name>Set current compressed bitrate decoder to "Not Available"</Name>
+			<Condition><![CDATA[id:4 == 0]]></Condition>
+			<On id="6">parameter</On>
+			<Type>clear on display</Type>
+		</Action>
+		<Action id="70">
+			<Name>Set auto chroma weight to "Not Available"</Name>
+			<Condition><![CDATA[id:3 == 0]]></Condition>
+			<On id="7">parameter</On>
+			<Type>clear on display</Type>
+		</Action>
+		<Action id="80">
+			<Name>Set chroma weight to "Not Available"</Name>
+			<Condition><![CDATA[id:3 == 0]]></Condition>
+			<On id="8">parameter</On>
+			<Type>clear on display</Type>
+		</Action>
+		<Action id="90">
+			<Name>Set lossless mode to "Not Available"</Name>
+			<Condition><![CDATA[id:3 == 0]]></Condition>
+			<On id="9">parameter</On>
+			<Type>clear on display</Type>
+		</Action>
+		<Action id="100">
+			<Name>Set progression order to "Not Available"</Name>
+			<Condition><![CDATA[id:4 == 0]]></Condition>
+			<On id="10">parameter</On>
+			<Type>clear on display</Type>
+		</Action>
+		<Action id="110">
+			<Name>Set code block width to "Not Available"</Name>
+			<Condition><![CDATA[id:4 == 0]]></Condition>
+			<On id="11">parameter</On>
+			<Type>clear on display</Type>
+		</Action>
+		<Action id="120">
+			<Name>Set code block height to "Not Available"</Name>
+			<Condition><![CDATA[id:4 == 0]]></Condition>
+			<On id="12">parameter</On>
+			<Type>clear on display</Type>
 		</Action>
 	</Actions>
 
