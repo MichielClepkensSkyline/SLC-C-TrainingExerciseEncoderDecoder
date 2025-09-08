@@ -53,7 +53,7 @@ Any inquiries can be addressed to:
 	<Vendor>Skyline</Vendor>
 	<VendorOID>1.3.6.1.4.1.8813.2.</VendorOID>
 	<DeviceOID>9999</DeviceOID>
-	<ElementType>Encoder/decoder</ElementType>
+	<ElementType>Encoder/Decoder</ElementType>
 	<Type relativeTimers="true">virtual</Type>
 	<Display defaultPage="General" pageOrder="General;----------;Set Data" wideColumnPages="" />
 	<SNMP includepages="true">auto</SNMP>
@@ -64,6 +64,30 @@ Any inquiries can be addressed to:
 	</Compliancies>
 
 	<Params>
+		<Param id="1000" trending="false">
+			<Name>zeroValue</Name>
+			<Description>Value Zero</Description>
+			<Type>fixed</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>fixed</LengthType>
+				<Length>1</Length>
+				<Value>0</Value>
+			</Interprete>
+		</Param>
+		<Param id="1001">
+			<Name>oneValue</Name>
+			<Description>Value One</Description>
+			<Type>fixed</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>fixed</LengthType>
+				<Length>1</Length>
+				<Value>1</Value>
+			</Interprete>
+		</Param>
 		<Param id="2">
 			<Name>AfterStartup</Name>
 			<Description>After Startup</Description>
@@ -738,6 +762,26 @@ Any inquiries can be addressed to:
 				<Id>1</Id>
 			</Content>
 		</Trigger>
+		<Trigger id="3">
+			<Name>Change Status Encoder</Name>
+			<On id="3">parameter</On>
+			<Time>change</Time>
+			<Type>action</Type>
+			<Content>
+				<Id>30</Id>
+				<Id>31</Id>
+			</Content>
+		</Trigger>
+		<Trigger id="4">
+			<Name>Change Status Decoder</Name>
+			<On id="4">parameter</On>
+			<Time>change</Time>
+			<Type>action</Type>
+			<Content>
+				<Id>40</Id>
+				<Id>41</Id>
+			</Content>
+		</Trigger>
 	</Triggers>
 
 	<Actions>
@@ -750,6 +794,30 @@ Any inquiries can be addressed to:
 			<Name>After Startup QAction</Name>
 			<On id="2">parameter</On>
 			<Type>run actions</Type>
+		</Action>
+		<Action id="31">
+			<Name>Copy zero to status decoder</Name>
+			<Condition><![CDATA[id:3 == 1]]></Condition>
+			<On id="4">parameter</On>
+			<Type id="1000">copy</Type>	
+		</Action>
+		<Action id="30">
+			<Name>Copy one to status decoder</Name>
+			<Condition><![CDATA[id:3 == 0]]></Condition>
+			<On id="4">parameter</On>
+			<Type id="1001">copy</Type>
+		</Action>
+		<Action id="41">
+			<Name>Copy zero to status encoder</Name>
+			<Condition><![CDATA[id:4 == 1]]></Condition>
+			<On id="3">parameter</On>
+			<Type id="1000">copy</Type>	
+		</Action>
+		<Action id="40">
+			<Name>Copy one to status encoder</Name>
+			<Condition><![CDATA[id:4 == 0]]></Condition>
+			<On id="3">parameter</On>
+			<Type id="1001">copy</Type>
 		</Action>
 	</Actions>
 
@@ -792,7 +860,7 @@ Any inquiries can be addressed to:
 									<MinorVersion id="1">
 										<Date>2024-01-08</Date>
 										<Provider>
-											<Author>XXX</Author>
+											<Author>SOK</Author>
 											<Company>Skyline Communications</Company>
 										</Provider>
 										<Changes>

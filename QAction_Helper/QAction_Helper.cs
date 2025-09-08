@@ -143,6 +143,8 @@ public interface SLProtocolExt : SLProtocol
 	object Chromaweight_108 { get; set; }
 	object Losslessmode_109 { get; set; }
 	object Progressionorder_110 { get; set; }
+	object Zerovalue__fixed { get; set; }
+	object Onevalue__fixed { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -221,6 +223,10 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	/// <summary>PID: 110  | Type: write | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Progressionorder_110 {get { return GetParameter(110); }set { SetParameter(110, value); }}
+	/// <summary>PID: 1000  | Type: fixed</summary>
+	public System.Object Zerovalue__fixed {get { return GetParameter(1000); }set { SetParameter(1000, value); }}
+	/// <summary>PID: 1001  | Type: fixed</summary>
+	public System.Object Onevalue__fixed {get { return GetParameter(1001); }set { SetParameter(1001, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
