@@ -143,6 +143,7 @@ public interface SLProtocolExt : SLProtocol
 	object Decodercodeblockheight_19 { get; set; }
 	object Decodercodeblockheight { get; set; }
 	object Valuecodeblockheight__fixed { get; set; }
+	object Valuedisabled__fixed { get; set; }
 	object Encoderstatus_110 { get; set; }
 	object Encoderautochromaweight_112 { get; set; }
 	object Encoderchromaweight_113 { get; set; }
@@ -221,6 +222,8 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Decodercodeblockheight {get { return GetParameter(19); }set { SetParameter(19, value); }}
 	/// <summary>PID: 20  | Type: fixed</summary>
 	public System.Object Valuecodeblockheight__fixed {get { return GetParameter(20); }set { SetParameter(20, value); }}
+	/// <summary>PID: 21  | Type: fixed</summary>
+	public System.Object Valuedisabled__fixed {get { return GetParameter(21); }set { SetParameter(21, value); }}
 	/// <summary>PID: 110  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderstatus_110 {get { return GetParameter(110); }set { SetParameter(110, value); }}

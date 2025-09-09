@@ -788,6 +788,18 @@ Any inquiries can be addressed to:
 				<Value>438</Value>
 			</Interprete>
 		</Param>
+		<Param id="21">
+			<Name>valueDisabled</Name>
+			<Description>Value Disabled</Description>
+			<Type>fixed</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>fixed</LengthType>
+				<Length>1</Length>
+				<Value>0</Value>
+			</Interprete>
+		</Param>
 		
 	</Params>
 
@@ -991,17 +1003,28 @@ Any inquiries can be addressed to:
 			<On id="19">parameter</On>
 			<Type id="20">copy</Type>
 		</Action>
-
+		
 		<Action id="21">
 			<Name>Enable Encoder</Name>
 			<On id="5">group</On>
 			<Type>execute next</Type>
 		</Action>
-
+		
 		<Action id="22">
 			<Name>Enable Decoder</Name>
 			<On id="6">group</On>
 			<Type>execute next</Type>
+		</Action>
+
+		<Action id="23">
+			<Name>Copy Value Enabled to Decoder Status</Name>
+			<On id="18">parameter</On>
+			<Type id="9">copy</Type>
+		</Action>
+		<Action id="20">
+			<Name>Copy Value Disabled to Decoder Status</Name>
+			<On id="19">parameter</On>
+			<Type id="20">copy</Type>
 		</Action>
 
 		
