@@ -890,6 +890,64 @@ Any inquiries can be addressed to:
 				<Action>2</Action>
 			</Content>
 		</Group>
+		<Group id="30">
+			<Name>Status Encoder Disabled</Name>
+			<Description>Actions to be taken when status of encoder is changed to disabled</Description>
+			<Condition><![CDATA[id:3 == 0]]></Condition>
+			<Type>poll action</Type>
+			<Content>
+				<Action>55</Action>
+				<Action>57</Action>
+				<Action>58</Action>
+				<Action>59</Action>
+				<Action>500</Action>
+				<Action>700</Action>
+				<Action>800</Action>
+				<Action>900</Action>
+			</Content>
+		</Group>
+		<Group id="31">
+				<Name>Status Encoder Enabled</Name>
+				<Description>Actions to be taken when status of encoder is changed to enabled</Description>
+				<Condition><![CDATA[id:3 == 1]]></Condition>
+				<Type>poll action</Type>
+				<Content>
+					<Action>555</Action>
+					<Action>757</Action>
+					<Action>858</Action>
+					<Action>959</Action>
+					<Action>40</Action>
+				</Content>
+		</Group>
+		<Group id="40">
+				<Name>Status Decoder Disabled</Name>
+				<Description>Actions to be taken when status of decoder is changed to disabled</Description>
+				<Condition><![CDATA[id:4 == 0]]></Condition>
+				<Type>poll action</Type>
+				<Content>
+					<Action>56</Action>
+					<Action>60</Action>
+					<Action>61</Action>
+					<Action>62</Action>
+					<Action>600</Action>
+					<Action>1000</Action>
+					<Action>1100</Action>
+					<Action>1200</Action>
+				</Content>
+		</Group>
+		<Group id="41">
+				<Name>Status Decoder Enabled</Name>
+				<Description>Actions to be taken when status of decoder is changed to enabled</Description>
+				<Condition><![CDATA[id:4 == 1]]></Condition>
+				<Type>poll action</Type>
+				<Content>
+					<Action>656</Action>
+					<Action>1060</Action>
+					<Action>1161</Action>
+					<Action>1262</Action>
+					<Action>30</Action>
+				</Content>
+		</Group>
 	</Groups>
 
 	<Triggers>
@@ -908,20 +966,8 @@ Any inquiries can be addressed to:
 			<Time>change</Time>
 			<Type>action</Type>
 			<Content>
-				<Id>40</Id>
-				<Id>41</Id>
-				<Id>55</Id>
-				<Id>555</Id>
-				<Id>500</Id>
-				<Id>57</Id>
-				<Id>757</Id>
-				<Id>700</Id>
-				<Id>58</Id>
-				<Id>858</Id>
-				<Id>800</Id>
-				<Id>59</Id>
-				<Id>959</Id>
-				<Id>900</Id>
+				<Id>3</Id>
+				<Id>4</Id>
 			</Content>
 		</Trigger>
 		<Trigger id="4">
@@ -930,20 +976,8 @@ Any inquiries can be addressed to:
 			<Time>change</Time>
 			<Type>action</Type>
 			<Content>
-				<Id>30</Id>
-				<Id>31</Id>
-				<Id>56</Id>
-				<Id>656</Id>
-				<Id>600</Id>
-				<Id>60</Id>
-				<Id>1060</Id>
-				<Id>1000</Id>
-				<Id>61</Id>
-				<Id>1161</Id>
-				<Id>1100</Id>
-				<Id>62</Id>
-				<Id>1262</Id>
-				<Id>1200</Id>
+				<Id>5</Id>
+				<Id>6</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -959,123 +993,113 @@ Any inquiries can be addressed to:
 			<On id="2">parameter</On>
 			<Type>run actions</Type>
 		</Action>
+		<Action id="3">
+			<Name>After Change Status Encoder Group</Name>
+			<On id="30">group</On>
+			<Type>execute next</Type>
+		</Action>
+		<Action id="4">
+			<Name>After Change Status Encoder Group</Name>
+			<On id="31">group</On>
+			<Type>execute next</Type>
+		</Action>
+		<Action id="5">
+			<Name>After Change Status Decoder Group</Name>
+			<On id="40">group</On>
+			<Type>execute next</Type>
+		</Action>
+		<Action id="6">
+			<Name>After Change Status Decoder Group</Name>
+			<On id="41">group</On>
+			<Type>execute next</Type>
+		</Action>
 		<Action id="40">
 			<Name>Copy zero to status decoder</Name>
-			<Condition><![CDATA[id:3 == 1]]></Condition>
 			<On id="4">parameter</On>
 			<Type id="1000">copy</Type>	
-		</Action>
-		<Action id="41">
-			<Name>Copy one to status decoder</Name>
-			<Condition><![CDATA[id:3 == 0]]></Condition>
-			<On id="4">parameter</On>
-			<Type id="1001">copy</Type>
 		</Action>
 		<Action id="30">
 			<Name>Copy zero to status encoder</Name>
-			<Condition><![CDATA[id:4 == 1]]></Condition>
 			<On id="3">parameter</On>
 			<Type id="1000">copy</Type>	
 		</Action>
-		<Action id="31">
-			<Name>Copy one to status encoder</Name>
-			<Condition><![CDATA[id:4 == 0]]></Condition>
-			<On id="3">parameter</On>
-			<Type id="1001">copy</Type>
-		</Action>
 		<Action id="500">
 			<Name>Set current compressed bitrate encoder to "Not Available"</Name>
-			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<On id="5">parameter</On>
 			<Type id="999">copy</Type>
 		</Action>
 		<Action id="600">
 			<Name>Set current compressed bitrate decoder to "Not Available"</Name>
-			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<On id="6">parameter</On>
 			<Type id="999">copy</Type>
 		</Action>
 		<Action id="700">
 			<Name>Set auto chroma weight to "Not Available"</Name>
-			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<On id="7">parameter</On>
 			<Type id="999">copy</Type>
 		</Action>
 		<Action id="800">
 			<Name>Set chroma weight to "Not Available"</Name>
-			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<On id="8">parameter</On>
 			<Type id="999">copy</Type>
 		</Action>
 		<Action id="900">
 			<Name>Set lossless mode to "Not Available"</Name>
-			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<On id="9">parameter</On>
 			<Type id="999">copy</Type>
 		</Action>
 		<Action id="1000">
 			<Name>Set progression order to "Not Available"</Name>
-			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<On id="10">parameter</On>
 			<Type id="999">copy</Type>
 		</Action>
 		<Action id="1100">
 			<Name>Set code block width to "Not Available"</Name>
-			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<On id="11">parameter</On>
 			<Type id="999">copy</Type>
 		</Action>
 		<Action id="1200">
 			<Name>Set code block height to "Not Available"</Name>
-			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<On id="12">parameter</On>
 			<Type id="999">copy</Type>
 		</Action>
 		<Action id="55">
 			<Name>Store value of current compressed bitrate encoder in saved parameter</Name>
-			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<On id="55">parameter</On>
 			<Type id="5">copy</Type>
 		</Action>
 		<Action id="56">
 			<Name>Store value of current compressed bitrate decoder in saved parameter</Name>
-			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<On id="56">parameter</On>
 			<Type id="6">copy</Type>
 		</Action>
 		<Action id="57">
 			<Name>Store value of auto chroma weight in saved parameter</Name>
-			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<On id="57">parameter</On>
 			<Type id="7">copy</Type>
 		</Action>
 		<Action id="58">
 			<Name>Store value of chroma weight in saved parameter</Name>
-			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<On id="58">parameter</On>
 			<Type id="8">copy</Type>
 		</Action>
 		<Action id="59">
 			<Name>Store value of lossless mode in saved parameter</Name>
-			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<On id="59">parameter</On>
 			<Type id="9">copy</Type>
 		</Action>
 		<Action id="60">
 			<Name>Store value of progression order in saved parameter</Name>
-			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<On id="60">parameter</On>
 			<Type id="10">copy</Type>
 		</Action>
 		<Action id="61">
 			<Name>Store value of code block width in saved parameter</Name>
-			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<On id="61">parameter</On>
 			<Type id="11">copy</Type>
 		</Action>
 		<Action id="62">
 			<Name>Store value of code block height in saved parameter</Name>
-			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<On id="62">parameter</On>
 			<Type id="12">copy</Type>
 		</Action>
