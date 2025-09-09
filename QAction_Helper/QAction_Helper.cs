@@ -38,6 +38,11 @@ public static class Parameter
 	public const int decodercurrentcompressedbitrateparameter_7 = 7;
 	/// <summary>PID: 7 | Type: read</summary>
 	public const int decodercurrentcompressedbitrateparameter = 7;
+	/// <summary>PID: 8 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int encoderautochromaweight_8 = 8;
+	/// <summary>PID: 8 | Type: read</summary>
+	public const int encoderautochromaweight = 8;
 	public class Write
 	{
 		/// <summary>PID: 54 | Type: write</summary>
@@ -50,6 +55,11 @@ public static class Parameter
 		public const int decoderstatusparam_55 = 55;
 		/// <summary>PID: 55 | Type: write</summary>
 		public const int decoderstatusparam = 55;
+		/// <summary>PID: 58 | Type: write</summary>
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public const int encoderautochromaweight_58 = 58;
+		/// <summary>PID: 58 | Type: write</summary>
+		public const int encoderautochromaweight = 58;
 	}
 }
 public class WriteParameters
@@ -58,6 +68,8 @@ public class WriteParameters
 	public System.Object Encoderstatusparam {get { return Protocol.GetParameter(54); }set { Protocol.SetParameter(54, value); }}
 	/// <summary>PID: 55  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	public System.Object Decoderstatusparam {get { return Protocol.GetParameter(55); }set { Protocol.SetParameter(55, value); }}
+	/// <summary>PID: 58  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	public System.Object Encoderautochromaweight {get { return Protocol.GetParameter(58); }set { Protocol.SetParameter(58, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -79,8 +91,11 @@ public interface SLProtocolExt : SLProtocol
 	object Encodercurrentcompressedbitrateparameter { get; set; }
 	object Decodercurrentcompressedbitrateparameter_7 { get; set; }
 	object Decodercurrentcompressedbitrateparameter { get; set; }
+	object Encoderautochromaweight_8 { get; set; }
+	object Encoderautochromaweight { get; set; }
 	object Encoderstatusparam_54 { get; set; }
 	object Decoderstatusparam_55 { get; set; }
+	object Encoderautochromaweight_58 { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -107,22 +122,30 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Decoderstatusparam_5 {get { return GetParameter(5); }set { SetParameter(5, value); }}
 	/// <summary>PID: 5  | Type: read | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	public System.Object Decoderstatusparam {get { return GetParameter(5); }set { SetParameter(5, value); }}
-	/// <summary>PID: 6  | Type: read</summary>
+	/// <summary>PID: 6  | Type: read | EXCEPTIONS: Not Avilable = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encodercurrentcompressedbitrateparameter_6 {get { return GetParameter(6); }set { SetParameter(6, value); }}
-	/// <summary>PID: 6  | Type: read</summary>
+	/// <summary>PID: 6  | Type: read | EXCEPTIONS: Not Avilable = -1</summary>
 	public System.Object Encodercurrentcompressedbitrateparameter {get { return GetParameter(6); }set { SetParameter(6, value); }}
 	/// <summary>PID: 7  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Decodercurrentcompressedbitrateparameter_7 {get { return GetParameter(7); }set { SetParameter(7, value); }}
 	/// <summary>PID: 7  | Type: read</summary>
 	public System.Object Decodercurrentcompressedbitrateparameter {get { return GetParameter(7); }set { SetParameter(7, value); }}
+	/// <summary>PID: 8  | Type: read | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Encoderautochromaweight_8 {get { return GetParameter(8); }set { SetParameter(8, value); }}
+	/// <summary>PID: 8  | Type: read | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	public System.Object Encoderautochromaweight {get { return GetParameter(8); }set { SetParameter(8, value); }}
 	/// <summary>PID: 54  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderstatusparam_54 {get { return GetParameter(54); }set { SetParameter(54, value); }}
 	/// <summary>PID: 55  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Decoderstatusparam_55 {get { return GetParameter(55); }set { SetParameter(55, value); }}
+	/// <summary>PID: 58  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Encoderautochromaweight_58 {get { return GetParameter(58); }set { SetParameter(58, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{

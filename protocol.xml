@@ -257,7 +257,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="6" trending="true">
 			<Name>EncoderCurrentCompressedBitrateParameter</Name>
-			<Description>Current Compressed Bitrate</Description>
+			<Description>Current Encoder Compressed Bitrate</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>Current Compressed Bitrate of the Encoder</Subtext>
@@ -267,6 +267,12 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>54</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Avilable</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -290,7 +296,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="7" trending="true">
 			<Name>DecoderCurrentCompressedBitrateParameter</Name>
-			<Description>Current Compressed Bitrate</Description>
+			<Description>Current Decoder Compressed Bitrate</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>Current Compressed Bitrate of the Decoder</Subtext>
@@ -321,6 +327,75 @@ Any inquiries can be addressed to:
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
+		<Param id="8" trending="true">
+			<Name>EncoderAutoChromaWeight</Name>
+			<Description>Encoder Auto Chroma Weight</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the Encoders Auto Chroma Weight Toggle</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>discreet</Type>
+				<Discreets>
+					<Discreet>
+						<Display>Enabled</Display>
+						<Value>1</Value>
+					</Discreet>
+					<Discreet>
+						<Display>Disabled</Display>
+						<Value>0</Value>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+		</Param>
+		<Param id="58" setter="true">
+			<Name>EncoderAutoChromaWeight</Name>
+			<Description>Encoder Auto Chroma Weight</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>togglebutton</Type>
+				<Discreets>
+					<Discreet>
+						<Display>Enabled</Display>
+						<Value>1</Value>
+					</Discreet>
+					<Discreet>
+						<Display>Disabled</Display>
+						<Value>0</Value>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+		</Param>
 	</Params>
 
 	<QActions>
@@ -335,6 +410,20 @@ Any inquiries can be addressed to:
 			<Type>poll action</Type>
 			<Content>
 				<Action>2</Action>
+			</Content>
+		</Group>
+		<Group id ="4">
+			<Name>Disable Encoder Parameters</Name>
+			<Description>Disable Encoder Parameters</Description>
+			<Type>poll action</Type>
+			<Content>
+			</Content>
+		</Group>
+		<Group id ="3">
+			<Name>Disable Decoder Parameters</Name>
+			<Description>Disable Decoder Parameters</Description>
+			<Type>poll action</Type>
+			<Content>
 			</Content>
 		</Group>
 	</Groups>
@@ -361,6 +450,16 @@ Any inquiries can be addressed to:
 			<Name>After Startup QAction</Name>
 			<On id="2">parameter</On>
 			<Type>run actions</Type>
+		</Action>
+		<Action id ="3">
+			<Name>Disable Encoder Compressed Bitrate</Name>
+			<On id="6">parameter</On>
+			<Type>execute</Type>
+		</Action>
+		<Action id ="4">
+			<Name>Disable Decoder Compressed Bitrate</Name>
+			<On id="7">parameter</On>
+			<Type>execute</Type>
 		</Action>
 	</Actions>
 
