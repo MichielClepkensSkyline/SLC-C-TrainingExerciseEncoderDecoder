@@ -58,6 +58,16 @@ public static class Parameter
 	public const int decoderprogressionorderparameter_11 = 11;
 	/// <summary>PID: 11 | Type: read</summary>
 	public const int decoderprogressionorderparameter = 11;
+	/// <summary>PID: 12 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int decodercodeblockwidthparameter_12 = 12;
+	/// <summary>PID: 12 | Type: read</summary>
+	public const int decodercodeblockwidthparameter = 12;
+	/// <summary>PID: 13 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int decodercodeblockheightparameter_13 = 13;
+	/// <summary>PID: 13 | Type: read</summary>
+	public const int decodercodeblockheightparameter = 13;
 	public class Write
 	{
 		/// <summary>PID: 54 | Type: write</summary>
@@ -135,6 +145,10 @@ public interface SLProtocolExt : SLProtocol
 	object Encoderlosslessmodeparameter { get; set; }
 	object Decoderprogressionorderparameter_11 { get; set; }
 	object Decoderprogressionorderparameter { get; set; }
+	object Decodercodeblockwidthparameter_12 { get; set; }
+	object Decodercodeblockwidthparameter { get; set; }
+	object Decodercodeblockheightparameter_13 { get; set; }
+	object Decodercodeblockheightparameter { get; set; }
 	object Encoderstatusparam_54 { get; set; }
 	object Decoderstatusparam_55 { get; set; }
 	object Encoderautochromaweightparameter_58 { get; set; }
@@ -197,6 +211,16 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Decoderprogressionorderparameter_11 {get { return GetParameter(11); }set { SetParameter(11, value); }}
 	/// <summary>PID: 11  | Type: read | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4</summary>
 	public System.Object Decoderprogressionorderparameter {get { return GetParameter(11); }set { SetParameter(11, value); }}
+	/// <summary>PID: 12  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Decodercodeblockwidthparameter_12 {get { return GetParameter(12); }set { SetParameter(12, value); }}
+	/// <summary>PID: 12  | Type: read</summary>
+	public System.Object Decodercodeblockwidthparameter {get { return GetParameter(12); }set { SetParameter(12, value); }}
+	/// <summary>PID: 13  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Decodercodeblockheightparameter_13 {get { return GetParameter(13); }set { SetParameter(13, value); }}
+	/// <summary>PID: 13  | Type: read</summary>
+	public System.Object Decodercodeblockheightparameter {get { return GetParameter(13); }set { SetParameter(13, value); }}
 	/// <summary>PID: 54  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderstatusparam_54 {get { return GetParameter(54); }set { SetParameter(54, value); }}
