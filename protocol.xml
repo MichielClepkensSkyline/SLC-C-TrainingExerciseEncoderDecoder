@@ -168,7 +168,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>1</DefaultValue>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -240,7 +240,7 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>3</Decimals>
-				<DefaultValue>1200.867</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="9999">
 						<Display state="disabled">Not Available</Display>
@@ -280,7 +280,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>1</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="9999">
 						<Display state="disabled">Not Available</Display>
@@ -357,7 +357,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>56</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="9999">
 						<Display state="disabled">Not Available</Display>
@@ -423,7 +423,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>1</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="9999">
 						<Display state="disabled">Not Available</Display>
@@ -499,6 +499,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -568,7 +569,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>1104.567</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Decimals>3</Decimals>
 				<Exceptions>
 					<Exception id="1" value="9999">
@@ -609,7 +610,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>0</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="9999">
 						<Display state="disabled">Not Available</Display>
@@ -710,7 +711,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>238</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="9999">
 						<Display state="disabled">Not Available</Display>
@@ -748,7 +749,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>438</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="9999">
 						<Display state="disabled">Not Available</Display>
@@ -801,6 +802,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 		</Param>
 		
+		
 	</Params>
 
 	<QActions>
@@ -822,6 +824,7 @@ Any inquiries can be addressed to:
 			<Name>Disable Encoder</Name>
 			<Description>Disable Encoder</Description>
 			<Type>poll action</Type>
+			<Condition><![CDATA[id:15 == 0 OR id:15 == 1]]></Condition>
 			<Content>
 				<Action>3</Action>
 				<Action>4</Action>
@@ -833,6 +836,7 @@ Any inquiries can be addressed to:
 			<Name>Disable Decoder</Name>
 			<Description>Disable Decoder</Description>
 			<Type>poll action</Type>
+			<Condition><![CDATA[id:10 == 1 OR id:15 == 0]]></Condition>
 			<Content>
 				<Action>7</Action>
 				<Action>8</Action>
@@ -844,17 +848,20 @@ Any inquiries can be addressed to:
 			<Name>Enable Encoder</Name>
 			<Description>Enable Encoder</Description>
 			<Type>poll action</Type>
+			<Condition><![CDATA[id:15 == 0 AND id:10 == 1]]></Condition>
 			<Content>
 				<Action>13</Action>
 				<Action>14</Action>
 				<Action>15</Action>
 				<Action>16</Action>
+				
 			</Content>
 		</Group>
 		<Group id="6">
 			<Name>Enable Decoder</Name>
 			<Description>Enable Decoder</Description>
 			<Type>poll action</Type>
+			<Condition><![CDATA[id:10 == 0 AND id:15 == 1]]></Condition>
 			<Content>
 				<Action>17</Action>
 				<Action>18</Action>
@@ -883,7 +890,11 @@ Any inquiries can be addressed to:
 			<Time>change</Time>
 			<Type>action</Type>
 			<Content>
+				<Id>21</Id>
 				<Id>11</Id>
+				<Id>12</Id>
+				<Id>24</Id>
+
 			</Content>
 		</Trigger>
 
@@ -894,6 +905,9 @@ Any inquiries can be addressed to:
 			<Type>action</Type>
 			<Content>
 				<Id>12</Id>
+				<Id>22</Id>
+				<Id>11</Id>
+				<Id>26</Id>
 			</Content>
 		</Trigger>
 
@@ -1017,14 +1031,35 @@ Any inquiries can be addressed to:
 		</Action>
 
 		<Action id="23">
+			<!-- if decoder is disabled and encoder is disabled-->
+			<Condition><![CDATA[id:15 == 0 AND id:10 == 0]]></Condition>
 			<Name>Copy Value Enabled to Decoder Status</Name>
-			<On id="18">parameter</On>
-			<Type id="9">copy</Type>
+			<On id="15">parameter</On>
+			<Type id="6">copy</Type>
 		</Action>
-		<Action id="20">
+		<!-- if decoder is enabled and encoder is enabled-->
+
+		<Action id="24">
+			<Condition><![CDATA[id:15 == 1 AND id:10 == 1]]></Condition>
 			<Name>Copy Value Disabled to Decoder Status</Name>
-			<On id="19">parameter</On>
-			<Type id="20">copy</Type>
+			<On id="15">parameter</On>
+			<Type id="21">copy</Type>
+		</Action>
+
+		<!-- if encoder is disabled and decoder is disabled-->
+		<Action id="25">
+			<Condition><![CDATA[id:15 == 0 AND id:10 == 0]]></Condition>
+			<Name>Copy Value Enabled to Encoder Status</Name>
+			<On id="10">parameter</On>
+			<Type id="6">copy</Type>
+		</Action>
+		
+		<!-- if encoder is enabled and decoder is enabled-->
+		<Action id="26">
+			<Condition><![CDATA[id:15 == 1 AND id:10 == 1]]></Condition>
+			<Name>Copy Value Disabled to Encoder Status</Name>
+			<On id="10">parameter</On>
+			<Type id="21">copy</Type>
 		</Action>
 
 		
