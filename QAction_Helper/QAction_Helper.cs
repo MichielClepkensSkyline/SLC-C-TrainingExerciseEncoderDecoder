@@ -28,6 +28,16 @@ public static class Parameter
 	public const int decoderstatusparam_5 = 5;
 	/// <summary>PID: 5 | Type: read</summary>
 	public const int decoderstatusparam = 5;
+	/// <summary>PID: 6 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int encodercurrentcompressedbitrateparameter_6 = 6;
+	/// <summary>PID: 6 | Type: read</summary>
+	public const int encodercurrentcompressedbitrateparameter = 6;
+	/// <summary>PID: 7 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int decodercurrentcompressedbitrateparameter_7 = 7;
+	/// <summary>PID: 7 | Type: read</summary>
+	public const int decodercurrentcompressedbitrateparameter = 7;
 	public class Write
 	{
 		/// <summary>PID: 54 | Type: write</summary>
@@ -65,6 +75,10 @@ public interface SLProtocolExt : SLProtocol
 	object Encoderstatusparam { get; set; }
 	object Decoderstatusparam_5 { get; set; }
 	object Decoderstatusparam { get; set; }
+	object Encodercurrentcompressedbitrateparameter_6 { get; set; }
+	object Encodercurrentcompressedbitrateparameter { get; set; }
+	object Decodercurrentcompressedbitrateparameter_7 { get; set; }
+	object Decodercurrentcompressedbitrateparameter { get; set; }
 	object Encoderstatusparam_54 { get; set; }
 	object Decoderstatusparam_55 { get; set; }
 	WriteParameters Write { get; set; }
@@ -93,6 +107,16 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Decoderstatusparam_5 {get { return GetParameter(5); }set { SetParameter(5, value); }}
 	/// <summary>PID: 5  | Type: read | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	public System.Object Decoderstatusparam {get { return GetParameter(5); }set { SetParameter(5, value); }}
+	/// <summary>PID: 6  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Encodercurrentcompressedbitrateparameter_6 {get { return GetParameter(6); }set { SetParameter(6, value); }}
+	/// <summary>PID: 6  | Type: read</summary>
+	public System.Object Encodercurrentcompressedbitrateparameter {get { return GetParameter(6); }set { SetParameter(6, value); }}
+	/// <summary>PID: 7  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Decodercurrentcompressedbitrateparameter_7 {get { return GetParameter(7); }set { SetParameter(7, value); }}
+	/// <summary>PID: 7  | Type: read</summary>
+	public System.Object Decodercurrentcompressedbitrateparameter {get { return GetParameter(7); }set { SetParameter(7, value); }}
 	/// <summary>PID: 54  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderstatusparam_54 {get { return GetParameter(54); }set { SetParameter(54, value); }}
