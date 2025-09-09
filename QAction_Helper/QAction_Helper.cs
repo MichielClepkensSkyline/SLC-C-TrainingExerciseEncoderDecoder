@@ -8,12 +8,46 @@ namespace Skyline.DataMiner.Scripting
 {
 public static class Parameter
 {
+	/// <summary>PID: 1 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int encodertitleparameter_1 = 1;
+	/// <summary>PID: 1 | Type: read</summary>
+	public const int encodertitleparameter = 1;
+	/// <summary>PID: 3 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int decodertitleparameter_3 = 3;
+	/// <summary>PID: 3 | Type: read</summary>
+	public const int decodertitleparameter = 3;
+	/// <summary>PID: 4 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int encoderstatusparam_4 = 4;
+	/// <summary>PID: 4 | Type: read</summary>
+	public const int encoderstatusparam = 4;
+	/// <summary>PID: 5 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int decoderstatusparam_5 = 5;
+	/// <summary>PID: 5 | Type: read</summary>
+	public const int decoderstatusparam = 5;
 	public class Write
 	{
+		/// <summary>PID: 54 | Type: write</summary>
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public const int encoderstatusparam_54 = 54;
+		/// <summary>PID: 54 | Type: write</summary>
+		public const int encoderstatusparam = 54;
+		/// <summary>PID: 55 | Type: write</summary>
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public const int decoderstatusparam_55 = 55;
+		/// <summary>PID: 55 | Type: write</summary>
+		public const int decoderstatusparam = 55;
 	}
 }
 public class WriteParameters
 {
+	/// <summary>PID: 54  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	public System.Object Encoderstatusparam {get { return Protocol.GetParameter(54); }set { Protocol.SetParameter(54, value); }}
+	/// <summary>PID: 55  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	public System.Object Decoderstatusparam {get { return Protocol.GetParameter(55); }set { Protocol.SetParameter(55, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -22,13 +56,49 @@ public class WriteParameters
 }
 public interface SLProtocolExt : SLProtocol
 {
+	object Encodertitleparameter_1 { get; set; }
+	object Encodertitleparameter { get; set; }
 	object Afterstartup_dummy { get; set; }
+	object Decodertitleparameter_3 { get; set; }
+	object Decodertitleparameter { get; set; }
+	object Encoderstatusparam_4 { get; set; }
+	object Encoderstatusparam { get; set; }
+	object Decoderstatusparam_5 { get; set; }
+	object Decoderstatusparam { get; set; }
+	object Encoderstatusparam_54 { get; set; }
+	object Decoderstatusparam_55 { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 {
+	/// <summary>PID: 1  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Encodertitleparameter_1 {get { return GetParameter(1); }set { SetParameter(1, value); }}
+	/// <summary>PID: 1  | Type: read</summary>
+	public System.Object Encodertitleparameter {get { return GetParameter(1); }set { SetParameter(1, value); }}
 	/// <summary>PID: 2  | Type: dummy</summary>
 	public System.Object Afterstartup_dummy {get { return GetParameter(2); }set { SetParameter(2, value); }}
+	/// <summary>PID: 3  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Decodertitleparameter_3 {get { return GetParameter(3); }set { SetParameter(3, value); }}
+	/// <summary>PID: 3  | Type: read</summary>
+	public System.Object Decodertitleparameter {get { return GetParameter(3); }set { SetParameter(3, value); }}
+	/// <summary>PID: 4  | Type: read | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Encoderstatusparam_4 {get { return GetParameter(4); }set { SetParameter(4, value); }}
+	/// <summary>PID: 4  | Type: read | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	public System.Object Encoderstatusparam {get { return GetParameter(4); }set { SetParameter(4, value); }}
+	/// <summary>PID: 5  | Type: read | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Decoderstatusparam_5 {get { return GetParameter(5); }set { SetParameter(5, value); }}
+	/// <summary>PID: 5  | Type: read | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	public System.Object Decoderstatusparam {get { return GetParameter(5); }set { SetParameter(5, value); }}
+	/// <summary>PID: 54  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Encoderstatusparam_54 {get { return GetParameter(54); }set { SetParameter(54, value); }}
+	/// <summary>PID: 55  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Decoderstatusparam_55 {get { return GetParameter(55); }set { SetParameter(55, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
