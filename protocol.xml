@@ -88,6 +88,18 @@ Any inquiries can be addressed to:
 				<Value>1</Value>
 			</Interprete>
 		</Param>
+		<Param id="999">
+			<Name>minusOneValue</Name>
+			<Description>Value Minus One</Description>
+			<Type>fixed</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>fixed</LengthType>
+				<Length>2</Length>
+				<Value>-1</Value>
+			</Interprete>
+		</Param>
 		<Param id="2">
 			<Name>AfterStartup</Name>
 			<Description>After Startup</Description>
@@ -255,6 +267,12 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>1.234</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -288,6 +306,12 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>1.234</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -321,6 +345,12 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>0</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -396,6 +426,12 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>0</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -461,6 +497,12 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>0</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -536,6 +578,12 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>0</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -635,6 +683,12 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>100</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -667,6 +721,12 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>100</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -831,49 +891,49 @@ Any inquiries can be addressed to:
 			<Name>Set current compressed bitrate encoder to "Not Available"</Name>
 			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<On id="5">parameter</On>
-			<Type>clear on display</Type>
+			<Type id="999">copy</Type>
 		</Action>
 		<Action id="60">
 			<Name>Set current compressed bitrate decoder to "Not Available"</Name>
 			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<On id="6">parameter</On>
-			<Type>clear on display</Type>
+			<Type id="999">copy</Type>
 		</Action>
 		<Action id="70">
 			<Name>Set auto chroma weight to "Not Available"</Name>
 			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<On id="7">parameter</On>
-			<Type>clear on display</Type>
+			<Type id="999">copy</Type>
 		</Action>
 		<Action id="80">
 			<Name>Set chroma weight to "Not Available"</Name>
 			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<On id="8">parameter</On>
-			<Type>clear on display</Type>
+			<Type id="999">copy</Type>
 		</Action>
 		<Action id="90">
 			<Name>Set lossless mode to "Not Available"</Name>
 			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<On id="9">parameter</On>
-			<Type>clear on display</Type>
+			<Type id="999">copy</Type>
 		</Action>
 		<Action id="100">
 			<Name>Set progression order to "Not Available"</Name>
 			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<On id="10">parameter</On>
-			<Type>clear on display</Type>
+			<Type id="999">copy</Type>
 		</Action>
 		<Action id="110">
 			<Name>Set code block width to "Not Available"</Name>
 			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<On id="11">parameter</On>
-			<Type>clear on display</Type>
+			<Type id="999">copy</Type>
 		</Action>
 		<Action id="120">
 			<Name>Set code block height to "Not Available"</Name>
 			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<On id="12">parameter</On>
-			<Type>clear on display</Type>
+			<Type id="999">copy</Type>
 		</Action>
 	</Actions>
 

@@ -143,6 +143,7 @@ public interface SLProtocolExt : SLProtocol
 	object Chromaweight_108 { get; set; }
 	object Losslessmode_109 { get; set; }
 	object Progressionorder_110 { get; set; }
+	object Minusonevalue__fixed { get; set; }
 	object Zerovalue__fixed { get; set; }
 	object Onevalue__fixed { get; set; }
 	WriteParameters Write { get; set; }
@@ -161,45 +162,45 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Statusdecoder_4 {get { return GetParameter(4); }set { SetParameter(4, value); }}
 	/// <summary>PID: 4  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	public System.Object Statusdecoder {get { return GetParameter(4); }set { SetParameter(4, value); }}
-	/// <summary>PID: 5  | Type: read</summary>
+	/// <summary>PID: 5  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Curcombitrateencoder_5 {get { return GetParameter(5); }set { SetParameter(5, value); }}
-	/// <summary>PID: 5  | Type: read</summary>
+	/// <summary>PID: 5  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Curcombitrateencoder {get { return GetParameter(5); }set { SetParameter(5, value); }}
-	/// <summary>PID: 6  | Type: read</summary>
+	/// <summary>PID: 6  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Curcombitratedecoder_6 {get { return GetParameter(6); }set { SetParameter(6, value); }}
-	/// <summary>PID: 6  | Type: read</summary>
+	/// <summary>PID: 6  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Curcombitratedecoder {get { return GetParameter(6); }set { SetParameter(6, value); }}
-	/// <summary>PID: 7  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	/// <summary>PID: 7  | Type: read | DISCREETS: Disabled = 0, Enabled = 1 | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Autochromaweight_7 {get { return GetParameter(7); }set { SetParameter(7, value); }}
-	/// <summary>PID: 7  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	/// <summary>PID: 7  | Type: read | DISCREETS: Disabled = 0, Enabled = 1 | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Autochromaweight {get { return GetParameter(7); }set { SetParameter(7, value); }}
-	/// <summary>PID: 8  | Type: read</summary>
+	/// <summary>PID: 8  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Chromaweight_8 {get { return GetParameter(8); }set { SetParameter(8, value); }}
-	/// <summary>PID: 8  | Type: read</summary>
+	/// <summary>PID: 8  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Chromaweight {get { return GetParameter(8); }set { SetParameter(8, value); }}
-	/// <summary>PID: 9  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	/// <summary>PID: 9  | Type: read | DISCREETS: Disabled = 0, Enabled = 1 | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Losslessmode_9 {get { return GetParameter(9); }set { SetParameter(9, value); }}
-	/// <summary>PID: 9  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
+	/// <summary>PID: 9  | Type: read | DISCREETS: Disabled = 0, Enabled = 1 | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Losslessmode {get { return GetParameter(9); }set { SetParameter(9, value); }}
-	/// <summary>PID: 10  | Type: read | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4</summary>
+	/// <summary>PID: 10  | Type: read | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4 | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Progressionorder_10 {get { return GetParameter(10); }set { SetParameter(10, value); }}
-	/// <summary>PID: 10  | Type: read | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4</summary>
+	/// <summary>PID: 10  | Type: read | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4 | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Progressionorder {get { return GetParameter(10); }set { SetParameter(10, value); }}
-	/// <summary>PID: 11  | Type: read</summary>
+	/// <summary>PID: 11  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Codeblockwidth_11 {get { return GetParameter(11); }set { SetParameter(11, value); }}
-	/// <summary>PID: 11  | Type: read</summary>
+	/// <summary>PID: 11  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Codeblockwidth {get { return GetParameter(11); }set { SetParameter(11, value); }}
-	/// <summary>PID: 12  | Type: read</summary>
+	/// <summary>PID: 12  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Codeblockheight_12 {get { return GetParameter(12); }set { SetParameter(12, value); }}
-	/// <summary>PID: 12  | Type: read</summary>
+	/// <summary>PID: 12  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Codeblockheight {get { return GetParameter(12); }set { SetParameter(12, value); }}
 	/// <summary>PID: 13  | Type: fixed</summary>
 	public System.Object Encodertitle__fixed {get { return GetParameter(13); }set { SetParameter(13, value); }}
@@ -223,6 +224,8 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	/// <summary>PID: 110  | Type: write | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Progressionorder_110 {get { return GetParameter(110); }set { SetParameter(110, value); }}
+	/// <summary>PID: 999  | Type: fixed</summary>
+	public System.Object Minusonevalue__fixed {get { return GetParameter(999); }set { SetParameter(999, value); }}
 	/// <summary>PID: 1000  | Type: fixed</summary>
 	public System.Object Zerovalue__fixed {get { return GetParameter(1000); }set { SetParameter(1000, value); }}
 	/// <summary>PID: 1001  | Type: fixed</summary>
