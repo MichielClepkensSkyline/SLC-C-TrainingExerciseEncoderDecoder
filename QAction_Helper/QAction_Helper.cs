@@ -58,6 +58,46 @@ public static class Parameter
 	public const int codeblockheight_12 = 12;
 	/// <summary>PID: 12 | Type: read</summary>
 	public const int codeblockheight = 12;
+	/// <summary>PID: 55 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int savedcurcombitrateencoder_55 = 55;
+	/// <summary>PID: 55 | Type: read</summary>
+	public const int savedcurcombitrateencoder = 55;
+	/// <summary>PID: 56 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int savedcurcombitratedecoder_56 = 56;
+	/// <summary>PID: 56 | Type: read</summary>
+	public const int savedcurcombitratedecoder = 56;
+	/// <summary>PID: 57 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int savedautochromaweight_57 = 57;
+	/// <summary>PID: 57 | Type: read</summary>
+	public const int savedautochromaweight = 57;
+	/// <summary>PID: 58 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int savedchromaweight_58 = 58;
+	/// <summary>PID: 58 | Type: read</summary>
+	public const int savedchromaweight = 58;
+	/// <summary>PID: 59 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int savedlosslessmode_59 = 59;
+	/// <summary>PID: 59 | Type: read</summary>
+	public const int savedlosslessmode = 59;
+	/// <summary>PID: 60 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int savedprogressionorder_60 = 60;
+	/// <summary>PID: 60 | Type: read</summary>
+	public const int savedprogressionorder = 60;
+	/// <summary>PID: 61 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int savedcodeblockwidth_61 = 61;
+	/// <summary>PID: 61 | Type: read</summary>
+	public const int savedcodeblockwidth = 61;
+	/// <summary>PID: 62 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int savedcodeblockheight_62 = 62;
+	/// <summary>PID: 62 | Type: read</summary>
+	public const int savedcodeblockheight = 62;
 	public class Write
 	{
 		/// <summary>PID: 103 | Type: write</summary>
@@ -137,6 +177,22 @@ public interface SLProtocolExt : SLProtocol
 	object Codeblockheight { get; set; }
 	object Encodertitle__fixed { get; set; }
 	object Decodertitle__fixed { get; set; }
+	object Savedcurcombitrateencoder_55 { get; set; }
+	object Savedcurcombitrateencoder { get; set; }
+	object Savedcurcombitratedecoder_56 { get; set; }
+	object Savedcurcombitratedecoder { get; set; }
+	object Savedautochromaweight_57 { get; set; }
+	object Savedautochromaweight { get; set; }
+	object Savedchromaweight_58 { get; set; }
+	object Savedchromaweight { get; set; }
+	object Savedlosslessmode_59 { get; set; }
+	object Savedlosslessmode { get; set; }
+	object Savedprogressionorder_60 { get; set; }
+	object Savedprogressionorder { get; set; }
+	object Savedcodeblockwidth_61 { get; set; }
+	object Savedcodeblockwidth { get; set; }
+	object Savedcodeblockheight_62 { get; set; }
+	object Savedcodeblockheight { get; set; }
 	object Statusencoder_103 { get; set; }
 	object Statusdecoder_104 { get; set; }
 	object Autochromaweight_107 { get; set; }
@@ -206,6 +262,46 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Encodertitle__fixed {get { return GetParameter(13); }set { SetParameter(13, value); }}
 	/// <summary>PID: 14  | Type: fixed</summary>
 	public System.Object Decodertitle__fixed {get { return GetParameter(14); }set { SetParameter(14, value); }}
+	/// <summary>PID: 55  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Savedcurcombitrateencoder_55 {get { return GetParameter(55); }set { SetParameter(55, value); }}
+	/// <summary>PID: 55  | Type: read</summary>
+	public System.Object Savedcurcombitrateencoder {get { return GetParameter(55); }set { SetParameter(55, value); }}
+	/// <summary>PID: 56  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Savedcurcombitratedecoder_56 {get { return GetParameter(56); }set { SetParameter(56, value); }}
+	/// <summary>PID: 56  | Type: read</summary>
+	public System.Object Savedcurcombitratedecoder {get { return GetParameter(56); }set { SetParameter(56, value); }}
+	/// <summary>PID: 57  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Savedautochromaweight_57 {get { return GetParameter(57); }set { SetParameter(57, value); }}
+	/// <summary>PID: 57  | Type: read</summary>
+	public System.Object Savedautochromaweight {get { return GetParameter(57); }set { SetParameter(57, value); }}
+	/// <summary>PID: 58  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Savedchromaweight_58 {get { return GetParameter(58); }set { SetParameter(58, value); }}
+	/// <summary>PID: 58  | Type: read</summary>
+	public System.Object Savedchromaweight {get { return GetParameter(58); }set { SetParameter(58, value); }}
+	/// <summary>PID: 59  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Savedlosslessmode_59 {get { return GetParameter(59); }set { SetParameter(59, value); }}
+	/// <summary>PID: 59  | Type: read</summary>
+	public System.Object Savedlosslessmode {get { return GetParameter(59); }set { SetParameter(59, value); }}
+	/// <summary>PID: 60  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Savedprogressionorder_60 {get { return GetParameter(60); }set { SetParameter(60, value); }}
+	/// <summary>PID: 60  | Type: read</summary>
+	public System.Object Savedprogressionorder {get { return GetParameter(60); }set { SetParameter(60, value); }}
+	/// <summary>PID: 61  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Savedcodeblockwidth_61 {get { return GetParameter(61); }set { SetParameter(61, value); }}
+	/// <summary>PID: 61  | Type: read</summary>
+	public System.Object Savedcodeblockwidth {get { return GetParameter(61); }set { SetParameter(61, value); }}
+	/// <summary>PID: 62  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Savedcodeblockheight_62 {get { return GetParameter(62); }set { SetParameter(62, value); }}
+	/// <summary>PID: 62  | Type: read</summary>
+	public System.Object Savedcodeblockheight {get { return GetParameter(62); }set { SetParameter(62, value); }}
 	/// <summary>PID: 103  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Statusencoder_103 {get { return GetParameter(103); }set { SetParameter(103, value); }}

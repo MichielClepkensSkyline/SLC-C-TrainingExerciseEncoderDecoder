@@ -294,6 +294,16 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
+		<Param id="55">
+			<Name>savedCurComBitrateEncoder</Name>
+			<Description>Saved Value of the Current Compressed Bitrate Encoder</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+		</Param>
 		<Param id="6" trending="false" save="true">
 			<Name>curComBitrateDecoder</Name>
 			<Description>Current Compressed Bitrate Decoder</Description>
@@ -333,7 +343,17 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="7" trending="false" save="true">
+		<Param id="56">
+			<Name>savedCurComBitrateDecoder</Name>
+			<Description>Saved Value of the Current Compressed Bitrate Decoder</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+		</Param>
+		<Param id="7" trending="false"  save="true">
 			<Name>autoChromaWeight</Name>
 			<Description>Auto Chroma Weight</Description>
 			<Type>read</Type>
@@ -380,6 +400,16 @@ Any inquiries can be addressed to:
 					</Discreet>
 				</Discreets>
 			</Measurement>
+		</Param>
+		<Param id="57">
+			<Name>savedAutoChromaWeight</Name>
+			<Description>Saved value of the Auto Chroma Weight</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
 		</Param>
 		<Param id="107" setter="true">
 			<Name>autoChromaWeight</Name>
@@ -457,6 +487,16 @@ Any inquiries can be addressed to:
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
+		<Param id="58">
+			<Name>savedChromaWeight</Name>
+			<Description>Saved Value of the Chroma Weight</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+		</Param>
 		<Param id="108" setter="true">
 			<Name>chromaWeight</Name>
 			<Description>Chroma Weight</Description>
@@ -532,6 +572,16 @@ Any inquiries can be addressed to:
 					</Discreet>
 				</Discreets>
 			</Measurement>
+		</Param>
+		<Param id="59">
+			<Name>savedLosslessMode</Name>
+			<Description>Saved value of the Lossless Mode</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
 		</Param>
 		<Param id="109" setter="true">
 			<Name>losslessMode</Name>
@@ -626,6 +676,16 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
+		<Param id="60">
+			<Name>savedProgressionOrder</Name>
+			<Description>Saved Value of the Progression Order</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+		</Param>
 		<Param id="110" setter="true">
 			<Name>progressionOrder</Name>
 			<Description>Progression Order</Description>
@@ -709,6 +769,16 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
+		<Param id="61">
+			<Name>savedCodeBlockWidth</Name>
+			<Description>Saved Value of the Code Block Width</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+		</Param>
 		<Param id="12" trending="false">
 			<Name>codeBlockHeight</Name>
 			<Description>Code Block Height</Description>
@@ -747,6 +817,16 @@ Any inquiries can be addressed to:
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
+		</Param>
+		<Param id="62">
+			<Name>savedCodeBlockHeight</Name>
+			<Description>Saved Value of the Code Block Height</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
 		</Param>
 		<Param id="13" trending="false">
 			<Name>encoderTitle</Name>
@@ -830,10 +910,18 @@ Any inquiries can be addressed to:
 			<Content>
 				<Id>40</Id>
 				<Id>41</Id>
-				<Id>50</Id>
-				<Id>70</Id>
-				<Id>80</Id>
-				<Id>90</Id>
+				<Id>55</Id>
+				<Id>555</Id>
+				<Id>500</Id>
+				<Id>57</Id>
+				<Id>757</Id>
+				<Id>700</Id>
+				<Id>58</Id>
+				<Id>858</Id>
+				<Id>800</Id>
+				<Id>59</Id>
+				<Id>959</Id>
+				<Id>900</Id>
 			</Content>
 		</Trigger>
 		<Trigger id="4">
@@ -844,10 +932,18 @@ Any inquiries can be addressed to:
 			<Content>
 				<Id>30</Id>
 				<Id>31</Id>
+				<Id>56</Id>
+				<Id>656</Id>
+				<Id>600</Id>
 				<Id>60</Id>
-				<Id>100</Id>
-				<Id>110</Id>
-				<Id>120</Id>
+				<Id>1060</Id>
+				<Id>1000</Id>
+				<Id>61</Id>
+				<Id>1161</Id>
+				<Id>1100</Id>
+				<Id>62</Id>
+				<Id>1262</Id>
+				<Id>1200</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -887,53 +983,141 @@ Any inquiries can be addressed to:
 			<On id="3">parameter</On>
 			<Type id="1001">copy</Type>
 		</Action>
-		<Action id="50">
+		<Action id="500">
 			<Name>Set current compressed bitrate encoder to "Not Available"</Name>
 			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<On id="5">parameter</On>
 			<Type id="999">copy</Type>
 		</Action>
-		<Action id="60">
+		<Action id="600">
 			<Name>Set current compressed bitrate decoder to "Not Available"</Name>
 			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<On id="6">parameter</On>
 			<Type id="999">copy</Type>
 		</Action>
-		<Action id="70">
+		<Action id="700">
 			<Name>Set auto chroma weight to "Not Available"</Name>
 			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<On id="7">parameter</On>
 			<Type id="999">copy</Type>
 		</Action>
-		<Action id="80">
+		<Action id="800">
 			<Name>Set chroma weight to "Not Available"</Name>
 			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<On id="8">parameter</On>
 			<Type id="999">copy</Type>
 		</Action>
-		<Action id="90">
+		<Action id="900">
 			<Name>Set lossless mode to "Not Available"</Name>
 			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<On id="9">parameter</On>
 			<Type id="999">copy</Type>
 		</Action>
-		<Action id="100">
+		<Action id="1000">
 			<Name>Set progression order to "Not Available"</Name>
 			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<On id="10">parameter</On>
 			<Type id="999">copy</Type>
 		</Action>
-		<Action id="110">
+		<Action id="1100">
 			<Name>Set code block width to "Not Available"</Name>
 			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<On id="11">parameter</On>
 			<Type id="999">copy</Type>
 		</Action>
-		<Action id="120">
+		<Action id="1200">
 			<Name>Set code block height to "Not Available"</Name>
 			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<On id="12">parameter</On>
 			<Type id="999">copy</Type>
+		</Action>
+		<Action id="55">
+			<Name>Store value of current compressed bitrate encoder in saved parameter</Name>
+			<Condition><![CDATA[id:3 == 0]]></Condition>
+			<On id="55">parameter</On>
+			<Type id="5">copy</Type>
+		</Action>
+		<Action id="56">
+			<Name>Store value of current compressed bitrate decoder in saved parameter</Name>
+			<Condition><![CDATA[id:4 == 0]]></Condition>
+			<On id="56">parameter</On>
+			<Type id="6">copy</Type>
+		</Action>
+		<Action id="57">
+			<Name>Store value of auto chroma weight in saved parameter</Name>
+			<Condition><![CDATA[id:3 == 0]]></Condition>
+			<On id="57">parameter</On>
+			<Type id="7">copy</Type>
+		</Action>
+		<Action id="58">
+			<Name>Store value of chroma weight in saved parameter</Name>
+			<Condition><![CDATA[id:3 == 0]]></Condition>
+			<On id="58">parameter</On>
+			<Type id="8">copy</Type>
+		</Action>
+		<Action id="59">
+			<Name>Store value of lossless mode in saved parameter</Name>
+			<Condition><![CDATA[id:3 == 0]]></Condition>
+			<On id="59">parameter</On>
+			<Type id="9">copy</Type>
+		</Action>
+		<Action id="60">
+			<Name>Store value of progression order in saved parameter</Name>
+			<Condition><![CDATA[id:4 == 0]]></Condition>
+			<On id="60">parameter</On>
+			<Type id="10">copy</Type>
+		</Action>
+		<Action id="61">
+			<Name>Store value of code block width in saved parameter</Name>
+			<Condition><![CDATA[id:4 == 0]]></Condition>
+			<On id="61">parameter</On>
+			<Type id="11">copy</Type>
+		</Action>
+		<Action id="62">
+			<Name>Store value of code block height in saved parameter</Name>
+			<Condition><![CDATA[id:4 == 0]]></Condition>
+			<On id="62">parameter</On>
+			<Type id="12">copy</Type>
+		</Action>
+		<Action id="555">
+			<Name>Reset saved parameter to current compressed bitrate encoder</Name>
+			<On id="5">parameter</On>
+			<Type id="55">copy</Type>
+		</Action>
+		<Action id="656">
+			<Name>Reset saved parameter to current compressed bitrate decoder</Name>
+			<On id="6">parameter</On>
+			<Type id="56">copy</Type>
+		</Action>
+		<Action id="757">
+			<Name>Reset saved parameter to auto chroma weight</Name>
+			<On id="7">parameter</On>
+			<Type id="57">copy</Type>
+		</Action>
+		<Action id="858">
+			<Name>Reset saved parameter to chroma weight</Name>
+			<On id="8">parameter</On>
+			<Type id="58">copy</Type>
+		</Action>
+		<Action id="959">
+			<Name>Reset saved parameter to lossless mode</Name>
+			<On id="9">parameter</On>
+			<Type id="59">copy</Type>
+		</Action>
+		<Action id="1060">
+			<Name>Reset saved parameter to progression order</Name>
+			<On id="10">parameter</On>
+			<Type id="60">copy</Type>
+		</Action>
+		<Action id="1161">
+			<Name>Reset saved parameter to code block width</Name>
+			<On id="11">parameter</On>
+			<Type id="61">copy</Type>
+		</Action>
+		<Action id="1262">
+			<Name>Reset saved parameter to code block height</Name>
+			<On id="12">parameter</On>
+			<Type id="62">copy</Type>
 		</Action>
 	</Actions>
 
