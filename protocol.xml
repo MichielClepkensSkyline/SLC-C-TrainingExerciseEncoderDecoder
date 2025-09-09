@@ -734,13 +734,43 @@ Any inquiries can be addressed to:
 			<Type>run actions</Type>
 		</Action>
 		<Action id ="3">
-			<Name>Disable Encoder Compressed Bitrate</Name>
+			<Name>Disable Encoder Compressed Bitrate Parameter</Name>
 			<On id="6">parameter</On>
 			<Type>execute</Type>
 		</Action>
 		<Action id ="4">
-			<Name>Disable Decoder Compressed Bitrate</Name>
+			<Name>Disable Decoder Compressed Bitrate Parameter</Name>
 			<On id="7">parameter</On>
+			<Type>execute</Type>
+		</Action>
+		<Action id="5">
+			<Name>Disable Encoder Auto Chroma Weight Parameter</Name>
+			<On id="8">parameter</On>
+			<Type>execute</Type>
+		</Action>
+		<Action id="6">
+			<Name>Disable Encoder Chroma Weight Parameter</Name>
+			<On id="9">parameter</On>
+			<Type>execute</Type>
+		</Action>
+		<Action id="7">
+			<Name>Disable Encoder Lossless Mode Parameter</Name>
+			<On id="10">parameter</On>
+			<Type>execute</Type>
+		</Action>
+		<Action id="8">
+			<Name>Disable Decoder Progression Order Parameter</Name>
+			<On id="11">parameter</On>
+			<Type>execute</Type>
+		</Action>
+		<Action id="9">
+			<Name>Disable Decoder Code Block Width Parameter</Name>
+			<On id="12">parameter</On>
+			<Type>execute</Type>
+		</Action>
+		<Action id="10">
+			<Name>Disable Decoder Code Block Height Parameter</Name>
+			<On id="13">parameter</On>
 			<Type>execute</Type>
 		</Action>
 	</Actions>
