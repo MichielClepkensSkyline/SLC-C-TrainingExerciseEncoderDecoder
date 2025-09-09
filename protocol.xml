@@ -266,7 +266,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>1.234</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
@@ -302,6 +302,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<DefaultValue>1.234</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="6" trending="false" save="true">
@@ -893,7 +894,6 @@ Any inquiries can be addressed to:
 		<Group id="30">
 			<Name>Status Encoder Disabled</Name>
 			<Description>Actions to be taken when status of encoder is changed to disabled</Description>
-			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<Type>poll action</Type>
 			<Content>
 				<Action>55</Action>
@@ -909,7 +909,6 @@ Any inquiries can be addressed to:
 		<Group id="31">
 				<Name>Status Encoder Enabled</Name>
 				<Description>Actions to be taken when status of encoder is changed to enabled</Description>
-				<Condition><![CDATA[id:3 == 1]]></Condition>
 				<Type>poll action</Type>
 				<Content>
 					<Action>555</Action>
@@ -922,7 +921,6 @@ Any inquiries can be addressed to:
 		<Group id="40">
 				<Name>Status Decoder Disabled</Name>
 				<Description>Actions to be taken when status of decoder is changed to disabled</Description>
-				<Condition><![CDATA[id:4 == 0]]></Condition>
 				<Type>poll action</Type>
 				<Content>
 					<Action>56</Action>
@@ -938,7 +936,6 @@ Any inquiries can be addressed to:
 		<Group id="41">
 				<Name>Status Decoder Enabled</Name>
 				<Description>Actions to be taken when status of decoder is changed to enabled</Description>
-				<Condition><![CDATA[id:4 == 1]]></Condition>
 				<Type>poll action</Type>
 				<Content>
 					<Action>656</Action>
@@ -965,9 +962,10 @@ Any inquiries can be addressed to:
 			<On id="3">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
+			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<Content>
 				<Id>3</Id>
-				<Id>4</Id>
+				<Id else="true">4</Id>
 			</Content>
 		</Trigger>
 		<Trigger id="4">
@@ -975,9 +973,10 @@ Any inquiries can be addressed to:
 			<On id="4">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
+			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<Content>
 				<Id>5</Id>
-				<Id>6</Id>
+				<Id else="true">6</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -994,22 +993,22 @@ Any inquiries can be addressed to:
 			<Type>run actions</Type>
 		</Action>
 		<Action id="3">
-			<Name>After Change Status Encoder Group</Name>
+			<Name>After Change Status Encoder to Disabled Group</Name>
 			<On id="30">group</On>
 			<Type>execute next</Type>
 		</Action>
 		<Action id="4">
-			<Name>After Change Status Encoder Group</Name>
+			<Name>After Change Status Encoder to Enabled Group</Name>
 			<On id="31">group</On>
 			<Type>execute next</Type>
 		</Action>
 		<Action id="5">
-			<Name>After Change Status Decoder Group</Name>
+			<Name>After Change Status Decoder to Disabled Group</Name>
 			<On id="40">group</On>
 			<Type>execute next</Type>
 		</Action>
 		<Action id="6">
-			<Name>After Change Status Decoder Group</Name>
+			<Name>After Change Status Decoder to Enabled Group</Name>
 			<On id="41">group</On>
 			<Type>execute next</Type>
 		</Action>
