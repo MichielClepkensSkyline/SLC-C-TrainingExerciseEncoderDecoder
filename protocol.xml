@@ -699,6 +699,10 @@ Any inquiries can be addressed to:
 			<Description>Disable Encoder Parameters</Description>
 			<Type>poll action</Type>
 			<Content>
+				<Action>3</Action>
+				<Action>5</Action>
+				<Action>6</Action>
+				<Action>7</Action>
 			</Content>
 		</Group>
 		<Group id ="3">
@@ -706,6 +710,10 @@ Any inquiries can be addressed to:
 			<Description>Disable Decoder Parameters</Description>
 			<Type>poll action</Type>
 			<Content>
+				<Action>4</Action>
+				<Action>8</Action>
+				<Action>9</Action>
+				<Action>10</Action>
 			</Content>
 		</Group>
 	</Groups>
@@ -721,7 +729,7 @@ Any inquiries can be addressed to:
 			</Content>
 		</Trigger>
 	</Triggers>
-
+	
 	<Actions>
 		<Action id="1">
 			<Name>After Startup Group</Name>
