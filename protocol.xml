@@ -222,9 +222,9 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="55">
+		<Param id="55" setter="true">
 			<Name>DecoderStatusParam</Name>
-			<Description>Decoder status</Description>
+			<Description>Decoder Status</Description>
 			<Type>write</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
