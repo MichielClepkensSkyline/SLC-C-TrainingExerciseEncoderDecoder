@@ -157,7 +157,7 @@ Any inquiries can be addressed to:
 		
 		
 		
-		<Param id="10" trending="false">
+		<Param id="10" trending="false" save="true">
 			<Name>encoderStatus</Name>
 			<Description>Encoder Status</Description>
 			<Type>read</Type>
@@ -194,7 +194,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="110" setter="true">
+		<Param id="110" setter="true" >
 			<Name>encoderStatus</Name>
 			<Description>Encoder Status</Description>
 			<Type>write</Type>
@@ -228,7 +228,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		
-		<Param id="11" trending="false">
+		<Param id="11" trending="false" save="true">
 			<Name>encoderCurrentCompressedBitrate</Name>
 			<Description>Encoder Current Compressed Bitrate</Description>
 			<Type>read</Type>
@@ -242,7 +242,7 @@ Any inquiries can be addressed to:
 				<Decimals>3</Decimals>
 				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
-					<Exception id="1" value="9999">
+					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
 						<Value>-1</Value>
 					</Exception>
@@ -269,7 +269,7 @@ Any inquiries can be addressed to:
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
-		<Param id="12" trending="false">
+		<Param id="12" trending="false" save="true">
 			<Name>encoderAutoChromaWeight</Name>
 			<Description>Encoder Auto Chroma Weight</Description>
 			<Type>read</Type>
@@ -282,7 +282,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
-					<Exception id="1" value="9999">
+					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
 						<Value>-1</Value>
 					</Exception>
@@ -346,7 +346,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		
-		<Param id="13" trending="false">
+		<Param id="13" trending="false" save="true">
 			<Name>encoderChromaWeight</Name>
 			<Description>Encoder Chroma Weight</Description>
 			<Type>read</Type>
@@ -359,7 +359,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
-					<Exception id="1" value="9999">
+					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
 						<Value>-1</Value>
 					</Exception>
@@ -412,7 +412,7 @@ Any inquiries can be addressed to:
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
-		<Param id="14" trending="false">
+		<Param id="14" trending="false" save="true">
 			<Name>encoderLosslessMode</Name>
 			<Description>Encoder Lossless Mode</Description>
 			<Type>read</Type>
@@ -425,7 +425,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
-					<Exception id="1" value="9999">
+					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
 						<Value>-1</Value>
 					</Exception>
@@ -488,7 +488,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="15" trending="false">
+		<Param id="15" trending="false" save="true">
 			<Name>decoderStatus</Name>
 			<Description>Decoder Status</Description>
 			<Type>read</Type>
@@ -558,7 +558,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="16" trending="false">
+		<Param id="16" trending="false" save="true">
 			<Name>decoderCurrentCompressedBitrate</Name>
 			<Description>Decoder Current Compressed Bitrate</Description>
 			<Type>read</Type>
@@ -572,7 +572,7 @@ Any inquiries can be addressed to:
 				<DefaultValue>-1</DefaultValue>
 				<Decimals>3</Decimals>
 				<Exceptions>
-					<Exception id="1" value="9999">
+					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
 						<Value>-1</Value>
 					</Exception>
@@ -599,7 +599,7 @@ Any inquiries can be addressed to:
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
-		<Param id="17" trending="false">
+		<Param id="17" trending="false" save="true">
 			<Name>decoderProgressionOrder</Name>
 			<Description>Decoder Progression Order</Description>
 			<Type>read</Type>
@@ -612,7 +612,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
-					<Exception id="1" value="9999">
+					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
 						<Value>-1</Value>
 					</Exception>
@@ -700,7 +700,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		
-		<Param id="18" trending="false">
+		<Param id="18" trending="false" save="true">
 			<Name>decoderCodeBlockWidth</Name>
 			<Description>Decoder Code Block Width</Description>
 			<Type>read</Type>
@@ -713,7 +713,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
-					<Exception id="1" value="9999">
+					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
 						<Value>-1</Value>
 					</Exception>
@@ -738,7 +738,7 @@ Any inquiries can be addressed to:
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
-		<Param id="19" trending="false">
+		<Param id="19" trending="false" save="true">
 			<Name>decoderCodeBlockHeight</Name>
 			<Description>Decoder Code Block Height</Description>
 			<Type>read</Type>
@@ -751,7 +751,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
-					<Exception id="1" value="9999">
+					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
 						<Value>-1</Value>
 					</Exception>
@@ -824,7 +824,7 @@ Any inquiries can be addressed to:
 			<Name>Disable Encoder</Name>
 			<Description>Disable Encoder</Description>
 			<Type>poll action</Type>
-			<Condition><![CDATA[id:15 == 0 OR id:15 == 1]]></Condition>
+			<Condition><![CDATA[id:15 == 1 OR id:10 == 0]]></Condition>
 			<Content>
 				<Action>3</Action>
 				<Action>4</Action>
@@ -1031,13 +1031,11 @@ Any inquiries can be addressed to:
 		</Action>
 
 		<Action id="23">
-			<!-- if decoder is disabled and encoder is disabled-->
 			<Condition><![CDATA[id:15 == 0 AND id:10 == 0]]></Condition>
 			<Name>Copy Value Enabled to Decoder Status</Name>
 			<On id="15">parameter</On>
 			<Type id="6">copy</Type>
 		</Action>
-		<!-- if decoder is enabled and encoder is enabled-->
 
 		<Action id="24">
 			<Condition><![CDATA[id:15 == 1 AND id:10 == 1]]></Condition>
@@ -1046,7 +1044,6 @@ Any inquiries can be addressed to:
 			<Type id="21">copy</Type>
 		</Action>
 
-		<!-- if encoder is disabled and decoder is disabled-->
 		<Action id="25">
 			<Condition><![CDATA[id:15 == 0 AND id:10 == 0]]></Condition>
 			<Name>Copy Value Enabled to Encoder Status</Name>
@@ -1054,7 +1051,6 @@ Any inquiries can be addressed to:
 			<Type id="6">copy</Type>
 		</Action>
 		
-		<!-- if encoder is enabled and decoder is enabled-->
 		<Action id="26">
 			<Condition><![CDATA[id:15 == 1 AND id:10 == 1]]></Condition>
 			<Name>Copy Value Disabled to Encoder Status</Name>
