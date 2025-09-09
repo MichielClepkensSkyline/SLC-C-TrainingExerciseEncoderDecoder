@@ -116,7 +116,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>1</DefaultValue>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -180,7 +180,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="4" trending="false">
+		<Param id="4" trending="false" save="true">
 			<Name>statusDecoder</Name>
 			<Description>Status Decoder</Description>
 			<Type>read</Type>
@@ -294,7 +294,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="55">
+		<Param id="55" save="true">
 			<Name>savedCurComBitrateEncoder</Name>
 			<Description>Saved Value of the Current Compressed Bitrate Encoder</Description>
 			<Type>read</Type>
@@ -316,7 +316,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>1.234</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
@@ -344,7 +344,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="56">
+		<Param id="56" save="true">
 			<Name>savedCurComBitrateDecoder</Name>
 			<Description>Saved Value of the Current Compressed Bitrate Decoder</Description>
 			<Type>read</Type>
@@ -352,6 +352,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<DefaultValue>1.234</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="7" trending="false"  save="true">
@@ -365,7 +366,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>0</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
@@ -402,7 +403,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="57">
+		<Param id="57" save="true">
 			<Name>savedAutoChromaWeight</Name>
 			<Description>Saved value of the Auto Chroma Weight</Description>
 			<Type>read</Type>
@@ -410,6 +411,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<DefaultValue>1</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="107" setter="true">
@@ -445,7 +447,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="8" trending="false">
+		<Param id="8" trending="false" save="true">
 			<Name>chromaWeight</Name>
 			<Description>Chroma Weight</Description>
 			<Type>read</Type>
@@ -456,7 +458,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>0</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
@@ -488,7 +490,7 @@ Any inquiries can be addressed to:
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
-		<Param id="58">
+		<Param id="58" save="true">
 			<Name>savedChromaWeight</Name>
 			<Description>Saved Value of the Chroma Weight</Description>
 			<Type>read</Type>
@@ -496,6 +498,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<DefaultValue>50</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="108" setter="true">
@@ -526,7 +529,7 @@ Any inquiries can be addressed to:
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
-		<Param id="9" trending="false">
+		<Param id="9" trending="false" save="true">
 			<Name>losslessMode</Name>
 			<Description>Lossless Mode</Description>
 			<Type>read</Type>
@@ -537,7 +540,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>0</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
@@ -574,7 +577,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="59">
+		<Param id="59" save="true">
 			<Name>savedLosslessMode</Name>
 			<Description>Saved value of the Lossless Mode</Description>
 			<Type>read</Type>
@@ -582,6 +585,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<DefaultValue>1</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="109" setter="true">
@@ -617,7 +621,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="10" trending="false">
+		<Param id="10" trending="false" save="true">
 			<Name>progressionOrder</Name>
 			<Description>Progression Order</Description>
 			<Type>read</Type>
@@ -628,7 +632,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>0</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
@@ -677,7 +681,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="60">
+		<Param id="60" save="true">
 			<Name>savedProgressionOrder</Name>
 			<Description>Saved Value of the Progression Order</Description>
 			<Type>read</Type>
@@ -685,6 +689,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<DefaultValue>2</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="110" setter="true">
@@ -732,7 +737,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="11" trending="false">
+		<Param id="11" trending="false" save="true">
 			<Name>codeBlockWidth</Name>
 			<Description>Code Block Width</Description>
 			<Type>read</Type>
@@ -743,7 +748,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>100</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
@@ -770,7 +775,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="61">
+		<Param id="61" save="true">
 			<Name>savedCodeBlockWidth</Name>
 			<Description>Saved Value of the Code Block Width</Description>
 			<Type>read</Type>
@@ -778,9 +783,10 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<DefaultValue>100</DefaultValue>
 			</Interprete>
 		</Param>
-		<Param id="12" trending="false">
+		<Param id="12" trending="false" save="true">
 			<Name>codeBlockHeight</Name>
 			<Description>Code Block Height</Description>
 			<Type>read</Type>
@@ -791,7 +797,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>100</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
@@ -819,7 +825,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="62">
+		<Param id="62" save="true">
 			<Name>savedCodeBlockHeight</Name>
 			<Description>Saved Value of the Code Block Height</Description>
 			<Type>read</Type>
@@ -827,6 +833,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<DefaultValue>100</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="13" trending="false">
