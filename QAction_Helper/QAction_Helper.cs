@@ -68,6 +68,11 @@ public static class Parameter
 	public const int decodercodeblockheightparameter_13 = 13;
 	/// <summary>PID: 13 | Type: read</summary>
 	public const int decodercodeblockheightparameter = 13;
+	/// <summary>PID: 15 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int notavilableparameter_15 = 15;
+	/// <summary>PID: 15 | Type: read</summary>
+	public const int notavilableparameter = 15;
 	/// <summary>PID: 106 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int copyofencodercurrentcompressedbitrateparameter_106 = 106;
@@ -148,7 +153,7 @@ public class WriteParameters
 	public System.Object Encoderstatusparam {get { return Protocol.GetParameter(54); }set { Protocol.SetParameter(54, value); }}
 	/// <summary>PID: 55  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	public System.Object Decoderstatusparam {get { return Protocol.GetParameter(55); }set { Protocol.SetParameter(55, value); }}
-	/// <summary>PID: 58  | Type: write | DISCREETS: Enabled = 1, Disabled = 0 | EXCEPTIONS:  = -1</summary>
+	/// <summary>PID: 58  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	public System.Object Encoderautochromaweightparameter {get { return Protocol.GetParameter(58); }set { Protocol.SetParameter(58, value); }}
 	/// <summary>PID: 59  | Type: write</summary>
 	public System.Object Encoderchromaweightparameter {get { return Protocol.GetParameter(59); }set { Protocol.SetParameter(59, value); }}
@@ -189,6 +194,8 @@ public interface SLProtocolExt : SLProtocol
 	object Decodercodeblockwidthparameter { get; set; }
 	object Decodercodeblockheightparameter_13 { get; set; }
 	object Decodercodeblockheightparameter { get; set; }
+	object Notavilableparameter_15 { get; set; }
+	object Notavilableparameter { get; set; }
 	object Encoderstatusparam_54 { get; set; }
 	object Decoderstatusparam_55 { get; set; }
 	object Encoderautochromaweightparameter_58 { get; set; }
@@ -237,20 +244,20 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Decoderstatusparam_5 {get { return GetParameter(5); }set { SetParameter(5, value); }}
 	/// <summary>PID: 5  | Type: read | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	public System.Object Decoderstatusparam {get { return GetParameter(5); }set { SetParameter(5, value); }}
-	/// <summary>PID: 6  | Type: read | EXCEPTIONS: Not Avilable = -1</summary>
+	/// <summary>PID: 6  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encodercurrentcompressedbitrateparameter_6 {get { return GetParameter(6); }set { SetParameter(6, value); }}
-	/// <summary>PID: 6  | Type: read | EXCEPTIONS: Not Avilable = -1</summary>
+	/// <summary>PID: 6  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Encodercurrentcompressedbitrateparameter {get { return GetParameter(6); }set { SetParameter(6, value); }}
-	/// <summary>PID: 7  | Type: read | EXCEPTIONS: Not Avilable = -1</summary>
+	/// <summary>PID: 7  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Decodercurrentcompressedbitrateparameter_7 {get { return GetParameter(7); }set { SetParameter(7, value); }}
-	/// <summary>PID: 7  | Type: read | EXCEPTIONS: Not Avilable = -1</summary>
+	/// <summary>PID: 7  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Decodercurrentcompressedbitrateparameter {get { return GetParameter(7); }set { SetParameter(7, value); }}
-	/// <summary>PID: 8  | Type: read | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	/// <summary>PID: 8  | Type: read | DISCREETS: Enabled = 1, Disabled = 0 | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderautochromaweightparameter_8 {get { return GetParameter(8); }set { SetParameter(8, value); }}
-	/// <summary>PID: 8  | Type: read | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	/// <summary>PID: 8  | Type: read | DISCREETS: Enabled = 1, Disabled = 0 | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Encoderautochromaweightparameter {get { return GetParameter(8); }set { SetParameter(8, value); }}
 	/// <summary>PID: 9  | Type: read | EXCEPTIONS: Not Avilable = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
@@ -277,13 +284,18 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Decodercodeblockheightparameter_13 {get { return GetParameter(13); }set { SetParameter(13, value); }}
 	/// <summary>PID: 13  | Type: read | EXCEPTIONS: Not Avilable = -1</summary>
 	public System.Object Decodercodeblockheightparameter {get { return GetParameter(13); }set { SetParameter(13, value); }}
+	/// <summary>PID: 15  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Notavilableparameter_15 {get { return GetParameter(15); }set { SetParameter(15, value); }}
+	/// <summary>PID: 15  | Type: read</summary>
+	public System.Object Notavilableparameter {get { return GetParameter(15); }set { SetParameter(15, value); }}
 	/// <summary>PID: 54  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderstatusparam_54 {get { return GetParameter(54); }set { SetParameter(54, value); }}
 	/// <summary>PID: 55  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Decoderstatusparam_55 {get { return GetParameter(55); }set { SetParameter(55, value); }}
-	/// <summary>PID: 58  | Type: write | DISCREETS: Enabled = 1, Disabled = 0 | EXCEPTIONS:  = -1</summary>
+	/// <summary>PID: 58  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderautochromaweightparameter_58 {get { return GetParameter(58); }set { SetParameter(58, value); }}
 	/// <summary>PID: 59  | Type: write</summary>

@@ -129,6 +129,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<DefaultValue>1</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -197,6 +198,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<DefaultValue>1</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -269,7 +271,7 @@ Any inquiries can be addressed to:
 				<DefaultValue>54</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="-1">
-						<Display state="disabled">Not Avilable</Display>
+						<Display state="disabled">Not Available</Display>
 						<Value>-1</Value>
 					</Exception>
 				</Exceptions>
@@ -302,7 +304,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>-1</DefaultValue>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="7" trending="true">
@@ -319,7 +321,7 @@ Any inquiries can be addressed to:
 				<DefaultValue>75</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="-1">
-						<Display state="disabled">Not Avilable</Display>
+						<Display state="disabled">Not Available</Display>
 						<Value>-1</Value>
 					</Exception>
 				</Exceptions>
@@ -352,7 +354,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>-1</DefaultValue>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="8" trending="true">
@@ -366,6 +368,13 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<DefaultValue>1</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -400,12 +409,6 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-1">
-						<Display state="disabled"></Display>
-						<Value>-1</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -439,7 +442,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>-1</DefaultValue>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="9" trending="true">
@@ -599,7 +602,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>-1</DefaultValue>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="11" trending="true">
@@ -709,7 +712,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>-1</DefaultValue>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="12" trending="true">
@@ -758,7 +761,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>-1</DefaultValue>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="13" trending="true">
@@ -806,6 +809,17 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<DefaultValue>0</DefaultValue>
+			</Interprete>
+		</Param>
+		<Param id="15">
+			<Name>NotAvilableParameter</Name>
+			<Description>This is the parameter used for setting the other parameters to Not Available</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
 				<DefaultValue>-1</DefaultValue>
 			</Interprete>
 		</Param>
@@ -830,11 +844,14 @@ Any inquiries can be addressed to:
 			<Description>Disable Encoder Parameters</Description>
 			<Type>poll action</Type>
 			<Content>
+				<Action>13</Action>
+				<Action>14</Action>
+				<Action>15</Action>
+				<Action>16</Action>
 				<Action>3</Action>
 				<Action>5</Action>
 				<Action>6</Action>
 				<Action>7</Action>
-				<Action>13</Action>
 			</Content>
 		</Group>
 		<Group id ="3">
@@ -842,10 +859,36 @@ Any inquiries can be addressed to:
 			<Description>Disable Decoder Parameters</Description>
 			<Type>poll action</Type>
 			<Content>
+				<Action>17</Action>
+				<Action>18</Action>
+				<Action>19</Action>
+				<Action>20</Action>
 				<Action>4</Action>
 				<Action>8</Action>
 				<Action>9</Action>
 				<Action>10</Action>
+			</Content>
+		</Group>
+		<Group id ="5">
+			<Name>Enable Decoder Parameters</Name>
+			<Description>Enable Decoder Parameters</Description>
+			<Type>poll action</Type>
+			<Content>
+				<Action>25</Action>
+				<Action>26</Action>
+				<Action>27</Action>
+				<Action>28</Action>
+			</Content>
+		</Group>
+		<Group id ="6">
+			<Name>Enable Encoder Parameters</Name>
+			<Description>Enable Encoder Parameters</Description>
+			<Type>poll action</Type>
+			<Content>
+				<Action>21</Action>
+				<Action>22</Action>
+				<Action>23</Action>
+				<Action>24</Action>
 			</Content>
 		</Group>
 	</Groups>
@@ -880,6 +923,26 @@ Any inquiries can be addressed to:
 				<Id>12</Id>
 			</Content>
 		</Trigger>
+		<Trigger id="4">
+			<Name>Activate Decoder Parameters</Name>
+			<On id="5">parameter</On>
+			<Time>change</Time>
+			<Type>action</Type>
+			<Condition><![CDATA[id:5 == 1]]></Condition>
+			<Content>
+				<Id>29</Id>
+			</Content>
+		</Trigger>
+		<Trigger id="5">
+			<Name>Activate Encoder Parameters</Name>
+			<On id="4">parameter</On>
+			<Time>change</Time>
+			<Type>action</Type>
+			<Condition><![CDATA[id:4 == 1]]></Condition>
+			<Content>
+				<Id>30</Id>
+			</Content>
+		</Trigger>
 	</Triggers>
 
 	<Actions>
@@ -896,42 +959,42 @@ Any inquiries can be addressed to:
 		<Action id ="3">
 			<Name>Disable Encoder Compressed Bitrate Parameter</Name>
 			<On id="6">parameter</On>
-			<Type id="106">copy</Type>
+			<Type id="15">copy</Type>
 		</Action>
 		<Action id ="4">
 			<Name>Disable Decoder Compressed Bitrate Parameter</Name>
 			<On id="7">parameter</On>
-			<Type id="107">copy</Type>
+			<Type id="15">copy</Type>
 		</Action>
 		<Action id="5">
 			<Name>Disable Encoder Auto Chroma Weight Parameter</Name>
 			<On id="8">parameter</On>
-			<Type id="108">copy</Type>
+			<Type id="15">copy</Type>
 		</Action>
 		<Action id="6">
 			<Name>Disable Encoder Chroma Weight Parameter</Name>
 			<On id="9">parameter</On>
-			<Type id="109">copy</Type>
+			<Type id="15">copy</Type>
 		</Action>
 		<Action id="7">
 			<Name>Disable Encoder Lossless Mode Parameter</Name>
 			<On id="10">parameter</On>
-			<Type id="110">copy</Type>
+			<Type id="15">copy</Type>
 		</Action>
 		<Action id="8">
 			<Name>Disable Decoder Progression Order Parameter</Name>
 			<On id="11">parameter</On>
-			<Type id="111">copy</Type>
+			<Type id="15">copy</Type>
 		</Action>
 		<Action id="9">
 			<Name>Disable Decoder Code Block Width Parameter</Name>
 			<On id="12">parameter</On>
-			<Type id="112">copy</Type>
+			<Type id="15">copy</Type>
 		</Action>
 		<Action id="10">
 			<Name>Disable Decoder Code Block Height Parameter</Name>
 			<On id="13">parameter</On>
-			<Type id="113">copy</Type>
+			<Type id="15">copy</Type>
 		</Action>
 		<Action id ="11">
 			<Name>Disable Encoder Parameters Action</Name>
@@ -941,6 +1004,96 @@ Any inquiries can be addressed to:
 		<Action id="12">
 			<Name>Disable Decoder Parameters Action</Name>
 			<On id="3">group</On>
+			<Type>execute next</Type>
+		</Action>
+		<Action id="13">
+			<Name>Copy Encoder Bitrate Data to it's copy</Name>
+			<On id="106">parameter</On>
+			<Type id="6">copy</Type>
+		</Action>
+		<Action id="14">
+			<Name>Copy Encoder Auto Chroma Weight to it's copy</Name>
+			<On id="108">parameter</On>
+			<Type id="8">copy</Type>
+		</Action>
+		<Action id="15">
+			<Name>Copy Encoder Chroma Weight to it's copy</Name>
+			<On id="109">parameter</On>
+			<Type id="9">copy</Type>
+		</Action>
+		<Action id="16">
+			<Name>Copy Encoder Lossles Mode to it's copy</Name>
+			<On id="110">parameter</On>
+			<Type id="10">copy</Type>
+		</Action>
+		<Action id="17">
+			<Name>Copy Decoder Bitrate to it's copy</Name>
+			<On id="107">parameter</On>
+			<Type id="7">copy</Type>
+		</Action>
+		<Action id="18">
+			<Name>Copy Decoder Progression Order to it's copy</Name>
+			<On id="111">parameter</On>
+			<Type id="11">copy</Type>
+		</Action>
+		<Action id="19">
+			<Name>Copy Decoder Block Width to it's copy</Name>
+			<On id="112">parameter</On>
+			<Type id="12">copy</Type>
+		</Action>
+		<Action id="20">
+			<Name>Copy Decoder Block Height to it's copy</Name>
+			<On id="113">parameter</On>
+			<Type id="13">copy</Type>
+		</Action>
+		<Action id="21">
+			<Name>Enable Encoder Bitrate </Name>
+			<On id="6">parameter</On>
+			<Type id="106">copy</Type>
+		</Action>
+		<Action id="22">
+			<Name>Enable Encoder Auto Chroma Weight </Name>
+			<On id="8">parameter</On>
+			<Type id="108">copy</Type>
+		</Action>
+		<Action id="23">
+			<Name>Enable Encoder Chroma Weight </Name>
+			<On id="9">parameter</On>
+			<Type id="109">copy</Type>
+		</Action>
+		<Action id="24">
+			<Name>Enable Encoder Lossless Mode </Name>
+			<On id="10">parameter</On>
+			<Type id="110">copy</Type>
+		</Action>
+		<Action id="25">
+			<Name>Enable Decoder Bitrate </Name>
+			<On id="7">parameter</On>
+			<Type id="107">copy</Type>
+		</Action>
+		<Action id="26">
+			<Name>Enable Decoder Progression Order </Name>
+			<On id="11">parameter</On>
+			<Type id="111">copy</Type>
+		</Action>
+		<Action id="27">
+			<Name>Enable Decoder Block Width </Name>
+			<On id="12">parameter</On>
+			<Type id="112">copy</Type>
+		</Action>
+		<Action id="28">
+			<Name>Enable Decoder Block Height </Name>
+			<On id="13">parameter</On>
+			<Type id="113">copy</Type>
+		</Action>
+		<Action id="29">
+			<Name>Enable Decoder Parameters Action</Name>
+			<On id="5">group</On>
+			<Type>execute next</Type>
+		</Action>
+		<Action id="30">
+			<Name>Enable Encoder Parameters Action</Name>
+			<On id="6">group</On>
 			<Type>execute next</Type>
 		</Action>
 
