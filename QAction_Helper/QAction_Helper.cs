@@ -73,6 +73,11 @@ public static class Parameter
 	public const int notavilableparameter_15 = 15;
 	/// <summary>PID: 15 | Type: read</summary>
 	public const int notavilableparameter = 15;
+	/// <summary>PID: 16 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int setstatustodisabled_16 = 16;
+	/// <summary>PID: 16 | Type: read</summary>
+	public const int setstatustodisabled = 16;
 	/// <summary>PID: 106 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int copyofencodercurrentcompressedbitrateparameter_106 = 106;
@@ -196,6 +201,8 @@ public interface SLProtocolExt : SLProtocol
 	object Decodercodeblockheightparameter { get; set; }
 	object Notavilableparameter_15 { get; set; }
 	object Notavilableparameter { get; set; }
+	object Setstatustodisabled_16 { get; set; }
+	object Setstatustodisabled { get; set; }
 	object Encoderstatusparam_54 { get; set; }
 	object Decoderstatusparam_55 { get; set; }
 	object Encoderautochromaweightparameter_58 { get; set; }
@@ -259,10 +266,10 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Encoderautochromaweightparameter_8 {get { return GetParameter(8); }set { SetParameter(8, value); }}
 	/// <summary>PID: 8  | Type: read | DISCREETS: Enabled = 1, Disabled = 0 | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Encoderautochromaweightparameter {get { return GetParameter(8); }set { SetParameter(8, value); }}
-	/// <summary>PID: 9  | Type: read | EXCEPTIONS: Not Avilable = -1</summary>
+	/// <summary>PID: 9  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderchromaweightparameter_9 {get { return GetParameter(9); }set { SetParameter(9, value); }}
-	/// <summary>PID: 9  | Type: read | EXCEPTIONS: Not Avilable = -1</summary>
+	/// <summary>PID: 9  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Encoderchromaweightparameter {get { return GetParameter(9); }set { SetParameter(9, value); }}
 	/// <summary>PID: 10  | Type: read | DISCREETS: Enabled = 1, Disabled = 0 | EXCEPTIONS: Not Avilable = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
@@ -279,16 +286,21 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Decodercodeblockwidthparameter_12 {get { return GetParameter(12); }set { SetParameter(12, value); }}
 	/// <summary>PID: 12  | Type: read | EXCEPTIONS: Not Avilable = -1</summary>
 	public System.Object Decodercodeblockwidthparameter {get { return GetParameter(12); }set { SetParameter(12, value); }}
-	/// <summary>PID: 13  | Type: read | EXCEPTIONS: Not Avilable = -1</summary>
+	/// <summary>PID: 13  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Decodercodeblockheightparameter_13 {get { return GetParameter(13); }set { SetParameter(13, value); }}
-	/// <summary>PID: 13  | Type: read | EXCEPTIONS: Not Avilable = -1</summary>
+	/// <summary>PID: 13  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Decodercodeblockheightparameter {get { return GetParameter(13); }set { SetParameter(13, value); }}
 	/// <summary>PID: 15  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Notavilableparameter_15 {get { return GetParameter(15); }set { SetParameter(15, value); }}
 	/// <summary>PID: 15  | Type: read</summary>
 	public System.Object Notavilableparameter {get { return GetParameter(15); }set { SetParameter(15, value); }}
+	/// <summary>PID: 16  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Setstatustodisabled_16 {get { return GetParameter(16); }set { SetParameter(16, value); }}
+	/// <summary>PID: 16  | Type: read</summary>
+	public System.Object Setstatustodisabled {get { return GetParameter(16); }set { SetParameter(16, value); }}
 	/// <summary>PID: 54  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderstatusparam_54 {get { return GetParameter(54); }set { SetParameter(54, value); }}

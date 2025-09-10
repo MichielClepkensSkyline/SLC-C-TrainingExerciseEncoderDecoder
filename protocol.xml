@@ -129,7 +129,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>1</DefaultValue>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -198,7 +198,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>1</DefaultValue>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -268,7 +268,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>54</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
@@ -304,7 +304,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>0</DefaultValue>
+				<DefaultValue>30</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="7" trending="true">
@@ -318,7 +318,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>75</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
@@ -354,7 +354,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>0</DefaultValue>
+				<DefaultValue>50</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="8" trending="true">
@@ -368,7 +368,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>1</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="-1">
 						<Display state="disabled">Not Available</Display>
@@ -445,7 +445,7 @@ Any inquiries can be addressed to:
 				<DefaultValue>0</DefaultValue>
 			</Interprete>
 		</Param>
-		<Param id="9" trending="true">
+		<Param id="9" trending="true" save="false">
 			<Name>EncoderChromaWeightParameter</Name>
 			<Description>Encoder Chroma Weight</Description>
 			<Type>read</Type>
@@ -457,10 +457,11 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<Exceptions>
 					<Exception id="1" value="-1">
-						<Display state="disabled">Not Avilable</Display>
+						<Display state="disabled">Not Available</Display>
 						<Value>-1</Value>
 					</Exception>
 				</Exceptions>
+				<DefaultValue>-1</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -517,7 +518,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>-1</DefaultValue>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="10" trending="true">
@@ -536,6 +537,7 @@ Any inquiries can be addressed to:
 						<Value>-1</Value>
 					</Exception>
 				</Exceptions>
+				<DefaultValue>-1</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -622,6 +624,7 @@ Any inquiries can be addressed to:
 						<Value>-1</Value>
 					</Exception>
 				</Exceptions>
+				<DefaultValue>-1</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -726,7 +729,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>50</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="-1">
 						<Display state="disabled">Not Avilable</Display>
@@ -761,7 +764,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>0</DefaultValue>
+				<DefaultValue>50</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="13" trending="true">
@@ -774,10 +777,10 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>70</DefaultValue>
+				<DefaultValue>-1</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="-1">
-						<Display state="disabled">Not Avilable</Display>
+						<Display state="disabled">Not Available</Display>
 						<Value>-1</Value>
 					</Exception>
 				</Exceptions>
@@ -809,7 +812,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>0</DefaultValue>
+				<DefaultValue>70</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="15">
@@ -821,6 +824,17 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>-1</DefaultValue>
+			</Interprete>
+		</Param>
+		<Param id="16">
+			<Name>SetStatusToDisabled</Name>
+			<Description>This is the parameter used for setting the encoder/decoder status parameters to disabled</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 		</Param>
 	</Params>
@@ -844,10 +858,6 @@ Any inquiries can be addressed to:
 			<Description>Disable Encoder Parameters</Description>
 			<Type>poll action</Type>
 			<Content>
-				<Action>13</Action>
-				<Action>14</Action>
-				<Action>15</Action>
-				<Action>16</Action>
 				<Action>3</Action>
 				<Action>5</Action>
 				<Action>6</Action>
@@ -859,10 +869,6 @@ Any inquiries can be addressed to:
 			<Description>Disable Decoder Parameters</Description>
 			<Type>poll action</Type>
 			<Content>
-				<Action>17</Action>
-				<Action>18</Action>
-				<Action>19</Action>
-				<Action>20</Action>
 				<Action>4</Action>
 				<Action>8</Action>
 				<Action>9</Action>
@@ -878,6 +884,8 @@ Any inquiries can be addressed to:
 				<Action>26</Action>
 				<Action>27</Action>
 				<Action>28</Action>
+				<Action>11</Action>
+				<Action>31</Action>
 			</Content>
 		</Group>
 		<Group id ="6">
@@ -889,6 +897,8 @@ Any inquiries can be addressed to:
 				<Action>22</Action>
 				<Action>23</Action>
 				<Action>24</Action>
+				<Action>12</Action>
+				<Action>32</Action>
 			</Content>
 		</Group>
 	</Groups>
@@ -904,43 +914,25 @@ Any inquiries can be addressed to:
 			</Content>
 		</Trigger>
 		<Trigger id="2">
-			<Name>Deactivate Encoder Parameters</Name>
+			<Name>Deactivate/Activate Encoder Parameters</Name>
 			<On id="4">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
 			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<Content>
 				<Id>11</Id>
+				<Id else="true">30</Id>
 			</Content>
 		</Trigger>
 		<Trigger id="3">
-			<Name>Deactivate Decoder Parameters</Name>
+			<Name>Deactivate/Activate Decoder Parameters</Name>
 			<On id="5">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
 			<Condition><![CDATA[id:5 == 0]]></Condition>
 			<Content>
 				<Id>12</Id>
-			</Content>
-		</Trigger>
-		<Trigger id="4">
-			<Name>Activate Decoder Parameters</Name>
-			<On id="5">parameter</On>
-			<Time>change</Time>
-			<Type>action</Type>
-			<Condition><![CDATA[id:5 == 1]]></Condition>
-			<Content>
-				<Id>29</Id>
-			</Content>
-		</Trigger>
-		<Trigger id="5">
-			<Name>Activate Encoder Parameters</Name>
-			<On id="4">parameter</On>
-			<Time>change</Time>
-			<Type>action</Type>
-			<Condition><![CDATA[id:4 == 1]]></Condition>
-			<Content>
-				<Id>30</Id>
+				<Id else="true">29</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -1095,6 +1087,16 @@ Any inquiries can be addressed to:
 			<Name>Enable Encoder Parameters Action</Name>
 			<On id="6">group</On>
 			<Type>execute next</Type>
+		</Action>
+		<Action id="31">
+			<Name>Switch Encoder Satus to Disabled</Name>
+			<On id="4">parameter</On>
+			<Type id="16">copy</Type>
+		</Action>
+		<Action id="32">
+			<Name>Switch Decoder Satus to Disabled</Name>
+			<On id="5">parameter</On>
+			<Type id="16">copy</Type>
 		</Action>
 
 	</Actions>
