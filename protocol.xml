@@ -126,8 +126,8 @@ Any inquiries can be addressed to:
 			<Information>
 			</Information>
 			<Interprete>
-				<RawType>text</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
@@ -159,8 +159,8 @@ Any inquiries can be addressed to:
 			<Description>Encoder Status</Description>
 			<Type>write</Type>
 			<Interprete>
-				<RawType>text</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
@@ -294,6 +294,17 @@ Any inquiries can be addressed to:
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
+		<Param id="106">
+			<Name>CopyOfEncoderCurrentCompressedBitrateParameter</Name>
+			<Description>Copy of the Encoder Current Compressed Bitrate Parameter</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>-1</DefaultValue>
+			</Interprete>
+		</Param>
 		<Param id="7" trending="true">
 			<Name>DecoderCurrentCompressedBitrateParameter</Name>
 			<Description>Current Decoder Compressed Bitrate</Description>
@@ -338,6 +349,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Avilable</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -363,6 +380,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
+		
 		<Param id="58" setter="true">
 			<Name>EncoderAutoChromaWeightParameter</Name>
 			<Description>Encoder Auto Chroma Weight</Description>
@@ -371,6 +389,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Avilable</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -396,6 +420,16 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
+		<Param id="108">
+			<Name>CopyOfEncoderAutoChromaWeightParameter</Name>
+			<Description>Description</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+		</Param>
 		<Param id="9" trending="true">
 			<Name>EncoderChromaWeightParameter</Name>
 			<Description>Encoder Chroma Weight</Description>
@@ -406,6 +440,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Avilable</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -454,9 +494,20 @@ Any inquiries can be addressed to:
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
+		<Param id="109">
+			<Name>CopyOfEncoderChromaWeightParameter</Name>
+			<Description>Copy Of Encoder Chroma Weight Parameter</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>-1</DefaultValue>
+			</Interprete>
+		</Param>
 		<Param id="10" trending="true">
 			<Name>EncoderLosslessModeParameter</Name>
-			<Description>Lossles Mode</Description>
+			<Description>Lossless Mode</Description>
 			<Type>read</Type>
 			<Information>
 			</Information>
@@ -521,6 +572,17 @@ Any inquiries can be addressed to:
 					</Discreet>
 				</Discreets>
 			</Measurement>
+		</Param>
+		<Param id="110">
+			<Name>CopyOfEncoderLosslessModeParameter</Name>
+			<Description>Copy Of Encoder Lossless Mode Parameter</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>-1</DefaultValue>
+			</Interprete>
 		</Param>
 		<Param id="11" trending="true">
 			<Name>DecoderProgressionOrderParameter</Name>
@@ -728,6 +790,16 @@ Any inquiries can be addressed to:
 				<Id>1</Id>
 			</Content>
 		</Trigger>
+		<Trigger id="2">
+			<Name>Deactivate Encoder Parameters</Name>
+			<On id="4">parameter</On>
+			<Time>change</Time>
+			<Type>action</Type>
+			<Condition><![CDATA[id:4 == 0]]></Condition>
+			<Content>
+				<Id>11</Id>
+			</Content>
+		</Trigger>
 	</Triggers>
 	
 	<Actions>
@@ -744,42 +816,47 @@ Any inquiries can be addressed to:
 		<Action id ="3">
 			<Name>Disable Encoder Compressed Bitrate Parameter</Name>
 			<On id="6">parameter</On>
-			<Type>execute</Type>
+			<Type id="106">copy</Type>
 		</Action>
 		<Action id ="4">
 			<Name>Disable Decoder Compressed Bitrate Parameter</Name>
 			<On id="7">parameter</On>
-			<Type>execute</Type>
+			<Type>execute next</Type>
 		</Action>
 		<Action id="5">
 			<Name>Disable Encoder Auto Chroma Weight Parameter</Name>
 			<On id="8">parameter</On>
-			<Type>execute</Type>
+			<Type id="108">copy</Type>
 		</Action>
 		<Action id="6">
 			<Name>Disable Encoder Chroma Weight Parameter</Name>
 			<On id="9">parameter</On>
-			<Type>execute</Type>
+			<Type id="109">copy</Type>
 		</Action>
 		<Action id="7">
 			<Name>Disable Encoder Lossless Mode Parameter</Name>
 			<On id="10">parameter</On>
-			<Type>execute</Type>
+			<Type id="110">copy</Type>
 		</Action>
 		<Action id="8">
 			<Name>Disable Decoder Progression Order Parameter</Name>
 			<On id="11">parameter</On>
-			<Type>execute</Type>
+			<Type>execute next</Type>
 		</Action>
 		<Action id="9">
 			<Name>Disable Decoder Code Block Width Parameter</Name>
 			<On id="12">parameter</On>
-			<Type>execute</Type>
+			<Type>execute next</Type>
 		</Action>
 		<Action id="10">
 			<Name>Disable Decoder Code Block Height Parameter</Name>
 			<On id="13">parameter</On>
-			<Type>execute</Type>
+			<Type>execute next</Type>
+		</Action>
+		<Action id ="11">
+			<Name>Disable Encoder Parameters Action</Name>
+			<On id="4">group</On>
+			<Type>execute next</Type>
 		</Action>
 	</Actions>
 
