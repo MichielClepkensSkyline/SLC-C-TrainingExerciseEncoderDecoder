@@ -317,6 +317,12 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>75</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Avilable</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -338,6 +344,17 @@ Any inquiries can be addressed to:
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
+		<Param id="107">
+			<Name>CopyOfDecoderCurrentCompressedBitrateParameter</Name>
+			<Description>Copy Of Decoder Current Compressed Bitrate Parameter</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>-1</DefaultValue>
+			</Interprete>
+		</Param>
 		<Param id="8" trending="true">
 			<Name>EncoderAutoChromaWeightParameter</Name>
 			<Description>Encoder Auto Chroma Weight</Description>
@@ -349,12 +366,6 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-1">
-						<Display state="disabled">Not Avilable</Display>
-						<Value>-1</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -380,7 +391,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		
+
 		<Param id="58" setter="true">
 			<Name>EncoderAutoChromaWeightParameter</Name>
 			<Description>Encoder Auto Chroma Weight</Description>
@@ -391,7 +402,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<Exceptions>
 					<Exception id="1" value="-1">
-						<Display state="disabled">Not Avilable</Display>
+						<Display state="disabled"></Display>
 						<Value>-1</Value>
 					</Exception>
 				</Exceptions>
@@ -428,6 +439,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<DefaultValue>-1</DefaultValue>
 			</Interprete>
 		</Param>
 		<Param id="9" trending="true">
@@ -515,6 +527,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Avilable</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -568,7 +586,7 @@ Any inquiries can be addressed to:
 					</Discreet>
 					<Discreet>
 						<Display>Disabled</Display>
-						<Value>2</Value>
+						<Value>0</Value>
 					</Discreet>
 				</Discreets>
 			</Measurement>
@@ -595,6 +613,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Avilable</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -677,6 +701,17 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
+		<Param id="111">
+			<Name>CopyOfDecoderProgressionOrderParameter</Name>
+			<Description>Copy Of Decoder Progression Order Parameter</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>-1</DefaultValue>
+			</Interprete>
+		</Param>
 		<Param id="12" trending="true">
 			<Name>DecoderCodeBlockWidthParameter</Name>
 			<Description>Code Block Width</Description>
@@ -689,6 +724,12 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>50</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Avilable</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -709,6 +750,17 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
+		<Param id="112">
+			<Name>CopyOfDecoderCodeBlockWidthParameter</Name>
+			<Description>Copy Of Decoder Code Block Width Parameter</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>-1</DefaultValue>
+			</Interprete>
+		</Param>
 		<Param id="13" trending="true">
 			<Name>DecoderCodeBlockHeightParameter</Name>
 			<Description>Code Block Height</Description>
@@ -720,6 +772,12 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>70</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Avilable</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -739,6 +797,17 @@ Any inquiries can be addressed to:
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
+		</Param>
+		<Param id="113">
+			<Name>CopyOfDecoderCodeBlockHeightParameter</Name>
+			<Description>Copy Of Decoder Code Block Height Parameter</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>-1</DefaultValue>
+			</Interprete>
 		</Param>
 	</Params>
 
@@ -765,6 +834,7 @@ Any inquiries can be addressed to:
 				<Action>5</Action>
 				<Action>6</Action>
 				<Action>7</Action>
+				<Action>13</Action>
 			</Content>
 		</Group>
 		<Group id ="3">
@@ -800,8 +870,18 @@ Any inquiries can be addressed to:
 				<Id>11</Id>
 			</Content>
 		</Trigger>
+		<Trigger id="3">
+			<Name>Deactivate Decoder Parameters</Name>
+			<On id="5">parameter</On>
+			<Time>change</Time>
+			<Type>action</Type>
+			<Condition><![CDATA[id:5 == 0]]></Condition>
+			<Content>
+				<Id>12</Id>
+			</Content>
+		</Trigger>
 	</Triggers>
-	
+
 	<Actions>
 		<Action id="1">
 			<Name>After Startup Group</Name>
@@ -821,7 +901,7 @@ Any inquiries can be addressed to:
 		<Action id ="4">
 			<Name>Disable Decoder Compressed Bitrate Parameter</Name>
 			<On id="7">parameter</On>
-			<Type>execute next</Type>
+			<Type id="107">copy</Type>
 		</Action>
 		<Action id="5">
 			<Name>Disable Encoder Auto Chroma Weight Parameter</Name>
@@ -841,23 +921,29 @@ Any inquiries can be addressed to:
 		<Action id="8">
 			<Name>Disable Decoder Progression Order Parameter</Name>
 			<On id="11">parameter</On>
-			<Type>execute next</Type>
+			<Type id="111">copy</Type>
 		</Action>
 		<Action id="9">
 			<Name>Disable Decoder Code Block Width Parameter</Name>
 			<On id="12">parameter</On>
-			<Type>execute next</Type>
+			<Type id="112">copy</Type>
 		</Action>
 		<Action id="10">
 			<Name>Disable Decoder Code Block Height Parameter</Name>
 			<On id="13">parameter</On>
-			<Type>execute next</Type>
+			<Type id="113">copy</Type>
 		</Action>
 		<Action id ="11">
 			<Name>Disable Encoder Parameters Action</Name>
 			<On id="4">group</On>
 			<Type>execute next</Type>
 		</Action>
+		<Action id="12">
+			<Name>Disable Decoder Parameters Action</Name>
+			<On id="3">group</On>
+			<Type>execute next</Type>
+		</Action>
+
 	</Actions>
 
 	<Timers>
