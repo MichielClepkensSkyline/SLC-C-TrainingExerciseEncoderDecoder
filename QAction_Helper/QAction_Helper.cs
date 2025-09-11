@@ -43,11 +43,6 @@ public static class Parameter
 	public const int encoderautochromaweightparameter_8 = 8;
 	/// <summary>PID: 8 | Type: read</summary>
 	public const int encoderautochromaweightparameter = 8;
-	/// <summary>PID: 9 | Type: read</summary>
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int encoderchromaweightparameter_9 = 9;
-	/// <summary>PID: 9 | Type: read</summary>
-	public const int encoderchromaweightparameter = 9;
 	/// <summary>PID: 10 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int encoderlosslessmodeparameter_10 = 10;
@@ -68,6 +63,11 @@ public static class Parameter
 	public const int decodercodeblockheightparameter_13 = 13;
 	/// <summary>PID: 13 | Type: read</summary>
 	public const int decodercodeblockheightparameter = 13;
+	/// <summary>PID: 17 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int encoderchromaweightparameters_17 = 17;
+	/// <summary>PID: 17 | Type: read</summary>
+	public const int encoderchromaweightparameters = 17;
 	/// <summary>PID: 106 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int copyofencodercurrentcompressedbitrateparameter_106 = 106;
@@ -83,11 +83,6 @@ public static class Parameter
 	public const int copyofencoderautochromaweightparameter_108 = 108;
 	/// <summary>PID: 108 | Type: read</summary>
 	public const int copyofencoderautochromaweightparameter = 108;
-	/// <summary>PID: 109 | Type: read</summary>
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int copyofencoderchromaweightparameter_109 = 109;
-	/// <summary>PID: 109 | Type: read</summary>
-	public const int copyofencoderchromaweightparameter = 109;
 	/// <summary>PID: 110 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int copyofencoderlosslessmodeparameter_110 = 110;
@@ -108,6 +103,11 @@ public static class Parameter
 	public const int copyofdecodercodeblockheightparameter_113 = 113;
 	/// <summary>PID: 113 | Type: read</summary>
 	public const int copyofdecodercodeblockheightparameter = 113;
+	/// <summary>PID: 117 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int copyofencoderchromaweightparameters_117 = 117;
+	/// <summary>PID: 117 | Type: read</summary>
+	public const int copyofencoderchromaweightparameters = 117;
 	public class Write
 	{
 		/// <summary>PID: 54 | Type: write</summary>
@@ -125,11 +125,6 @@ public static class Parameter
 		public const int encoderautochromaweightparameter_58 = 58;
 		/// <summary>PID: 58 | Type: write</summary>
 		public const int encoderautochromaweightparameter = 58;
-		/// <summary>PID: 59 | Type: write</summary>
-		[EditorBrowsable(EditorBrowsableState.Never)]
-		public const int encoderchromaweightparameter_59 = 59;
-		/// <summary>PID: 59 | Type: write</summary>
-		public const int encoderchromaweightparameter = 59;
 		/// <summary>PID: 60 | Type: write</summary>
 		[EditorBrowsable(EditorBrowsableState.Never)]
 		public const int encoderlosslessmodeparameter_60 = 60;
@@ -140,6 +135,11 @@ public static class Parameter
 		public const int decoderprogressionorderparameter_61 = 61;
 		/// <summary>PID: 61 | Type: write</summary>
 		public const int decoderprogressionorderparameter = 61;
+		/// <summary>PID: 67 | Type: write</summary>
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public const int encoderchromaweightparameters_67 = 67;
+		/// <summary>PID: 67 | Type: write</summary>
+		public const int encoderchromaweightparameters = 67;
 	}
 }
 public class WriteParameters
@@ -150,12 +150,12 @@ public class WriteParameters
 	public System.Object Decoderstatusparam {get { return Protocol.GetParameter(55); }set { Protocol.SetParameter(55, value); }}
 	/// <summary>PID: 58  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	public System.Object Encoderautochromaweightparameter {get { return Protocol.GetParameter(58); }set { Protocol.SetParameter(58, value); }}
-	/// <summary>PID: 59  | Type: write</summary>
-	public System.Object Encoderchromaweightparameter {get { return Protocol.GetParameter(59); }set { Protocol.SetParameter(59, value); }}
 	/// <summary>PID: 60  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	public System.Object Encoderlosslessmodeparameter {get { return Protocol.GetParameter(60); }set { Protocol.SetParameter(60, value); }}
 	/// <summary>PID: 61  | Type: write | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4</summary>
 	public System.Object Decoderprogressionorderparameter {get { return Protocol.GetParameter(61); }set { Protocol.SetParameter(61, value); }}
+	/// <summary>PID: 67  | Type: write</summary>
+	public System.Object Encoderchromaweightparameters {get { return Protocol.GetParameter(67); }set { Protocol.SetParameter(67, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -179,8 +179,6 @@ public interface SLProtocolExt : SLProtocol
 	object Decodercurrentcompressedbitrateparameter { get; set; }
 	object Encoderautochromaweightparameter_8 { get; set; }
 	object Encoderautochromaweightparameter { get; set; }
-	object Encoderchromaweightparameter_9 { get; set; }
-	object Encoderchromaweightparameter { get; set; }
 	object Encoderlosslessmodeparameter_10 { get; set; }
 	object Encoderlosslessmodeparameter { get; set; }
 	object Decoderprogressionorderparameter_11 { get; set; }
@@ -191,20 +189,20 @@ public interface SLProtocolExt : SLProtocol
 	object Decodercodeblockheightparameter { get; set; }
 	object Notavilableparameter__fixed { get; set; }
 	object Setstatustodisabled__fixed { get; set; }
+	object Encoderchromaweightparameters_17 { get; set; }
+	object Encoderchromaweightparameters { get; set; }
 	object Encoderstatusparam_54 { get; set; }
 	object Decoderstatusparam_55 { get; set; }
 	object Encoderautochromaweightparameter_58 { get; set; }
-	object Encoderchromaweightparameter_59 { get; set; }
 	object Encoderlosslessmodeparameter_60 { get; set; }
 	object Decoderprogressionorderparameter_61 { get; set; }
+	object Encoderchromaweightparameters_67 { get; set; }
 	object Copyofencodercurrentcompressedbitrateparameter_106 { get; set; }
 	object Copyofencodercurrentcompressedbitrateparameter { get; set; }
 	object Copyofdecodercurrentcompressedbitrateparameter_107 { get; set; }
 	object Copyofdecodercurrentcompressedbitrateparameter { get; set; }
 	object Copyofencoderautochromaweightparameter_108 { get; set; }
 	object Copyofencoderautochromaweightparameter { get; set; }
-	object Copyofencoderchromaweightparameter_109 { get; set; }
-	object Copyofencoderchromaweightparameter { get; set; }
 	object Copyofencoderlosslessmodeparameter_110 { get; set; }
 	object Copyofencoderlosslessmodeparameter { get; set; }
 	object Copyofdecoderprogressionorderparameter_111 { get; set; }
@@ -213,6 +211,8 @@ public interface SLProtocolExt : SLProtocol
 	object Copyofdecodercodeblockwidthparameter { get; set; }
 	object Copyofdecodercodeblockheightparameter_113 { get; set; }
 	object Copyofdecodercodeblockheightparameter { get; set; }
+	object Copyofencoderchromaweightparameters_117 { get; set; }
+	object Copyofencoderchromaweightparameters { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -254,11 +254,6 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Encoderautochromaweightparameter_8 {get { return GetParameter(8); }set { SetParameter(8, value); }}
 	/// <summary>PID: 8  | Type: read | DISCREETS: Enabled = 1, Disabled = 0 | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Encoderautochromaweightparameter {get { return GetParameter(8); }set { SetParameter(8, value); }}
-	/// <summary>PID: 9  | Type: read | EXCEPTIONS: Not Available = -1</summary>
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Encoderchromaweightparameter_9 {get { return GetParameter(9); }set { SetParameter(9, value); }}
-	/// <summary>PID: 9  | Type: read | EXCEPTIONS: Not Available = -1</summary>
-	public System.Object Encoderchromaweightparameter {get { return GetParameter(9); }set { SetParameter(9, value); }}
 	/// <summary>PID: 10  | Type: read | DISCREETS: Enabled = 1, Disabled = 0 | EXCEPTIONS: Not Avilable = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderlosslessmodeparameter_10 {get { return GetParameter(10); }set { SetParameter(10, value); }}
@@ -283,6 +278,11 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Notavilableparameter__fixed {get { return GetParameter(15); }set { SetParameter(15, value); }}
 	/// <summary>PID: 16  | Type: fixed</summary>
 	public System.Object Setstatustodisabled__fixed {get { return GetParameter(16); }set { SetParameter(16, value); }}
+	/// <summary>PID: 17  | Type: read | EXCEPTIONS: Not Available = -1</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Encoderchromaweightparameters_17 {get { return GetParameter(17); }set { SetParameter(17, value); }}
+	/// <summary>PID: 17  | Type: read | EXCEPTIONS: Not Available = -1</summary>
+	public System.Object Encoderchromaweightparameters {get { return GetParameter(17); }set { SetParameter(17, value); }}
 	/// <summary>PID: 54  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderstatusparam_54 {get { return GetParameter(54); }set { SetParameter(54, value); }}
@@ -292,15 +292,15 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	/// <summary>PID: 58  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderautochromaweightparameter_58 {get { return GetParameter(58); }set { SetParameter(58, value); }}
-	/// <summary>PID: 59  | Type: write</summary>
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Encoderchromaweightparameter_59 {get { return GetParameter(59); }set { SetParameter(59, value); }}
 	/// <summary>PID: 60  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderlosslessmodeparameter_60 {get { return GetParameter(60); }set { SetParameter(60, value); }}
 	/// <summary>PID: 61  | Type: write | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Decoderprogressionorderparameter_61 {get { return GetParameter(61); }set { SetParameter(61, value); }}
+	/// <summary>PID: 67  | Type: write</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Encoderchromaweightparameters_67 {get { return GetParameter(67); }set { SetParameter(67, value); }}
 	/// <summary>PID: 106  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Copyofencodercurrentcompressedbitrateparameter_106 {get { return GetParameter(106); }set { SetParameter(106, value); }}
@@ -316,11 +316,6 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Copyofencoderautochromaweightparameter_108 {get { return GetParameter(108); }set { SetParameter(108, value); }}
 	/// <summary>PID: 108  | Type: read</summary>
 	public System.Object Copyofencoderautochromaweightparameter {get { return GetParameter(108); }set { SetParameter(108, value); }}
-	/// <summary>PID: 109  | Type: read</summary>
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Copyofencoderchromaweightparameter_109 {get { return GetParameter(109); }set { SetParameter(109, value); }}
-	/// <summary>PID: 109  | Type: read</summary>
-	public System.Object Copyofencoderchromaweightparameter {get { return GetParameter(109); }set { SetParameter(109, value); }}
 	/// <summary>PID: 110  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Copyofencoderlosslessmodeparameter_110 {get { return GetParameter(110); }set { SetParameter(110, value); }}
@@ -341,6 +336,11 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Copyofdecodercodeblockheightparameter_113 {get { return GetParameter(113); }set { SetParameter(113, value); }}
 	/// <summary>PID: 113  | Type: read</summary>
 	public System.Object Copyofdecodercodeblockheightparameter {get { return GetParameter(113); }set { SetParameter(113, value); }}
+	/// <summary>PID: 117  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Copyofencoderchromaweightparameters_117 {get { return GetParameter(117); }set { SetParameter(117, value); }}
+	/// <summary>PID: 117  | Type: read</summary>
+	public System.Object Copyofencoderchromaweightparameters {get { return GetParameter(117); }set { SetParameter(117, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{

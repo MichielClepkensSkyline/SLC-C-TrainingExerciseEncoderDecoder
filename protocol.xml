@@ -400,7 +400,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-
+		
 		<Param id="58" setter="true">
 			<Name>EncoderAutoChromaWeightParameter</Name>
 			<Description>Encoder Auto Chroma Weight</Description>
@@ -445,7 +445,75 @@ Any inquiries can be addressed to:
 				<DefaultValue>0</DefaultValue>
 			</Interprete>
 		</Param>
-		<Param id="9" trending="true">
+		<Param id="17" trending="true">
+			<Name>EncoderChromaWeightParameters</Name>
+			<Description>Encoder Chroma Weight Value</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>4</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>analog</Type>
+			</Measurement>
+		</Param>
+		<Param id="67" setter="true">
+			<Name>EncoderChromaWeightParameters</Name>
+			<Description>Encoder Chroma Weight Value</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+			</Display>
+			<Measurement>
+				<Type>analog</Type>
+			</Measurement>
+		</Param>
+		<Param id="117">
+			<Name>CopyOfEncoderChromaWeightParameters</Name>
+			<Description>Copy Of Encoder Chroma Weight Parameters</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>0</DefaultValue>
+			</Interprete>
+		</Param>
+		<!--<Param id="9" trending="true">
 			<Name>EncoderChromaWeightParameter</Name>
 			<Description>Encoder Chroma Weight</Description>
 			<Type>read</Type>
@@ -470,13 +538,6 @@ Any inquiries can be addressed to:
 					<Low>0</Low>
 					<High>100</High>
 				</Range>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>4</Row>
-					</Position>
-				</Positions>
 			</Display>
 			<Measurement>
 				<Type>analog</Type>
@@ -498,13 +559,6 @@ Any inquiries can be addressed to:
 					<Low>0</Low>
 					<High>100</High>
 				</Range>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>4</Row>
-					</Position>
-				</Positions>
 			</Display>
 			<Measurement>
 				<Type>analog</Type>
@@ -520,7 +574,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<DefaultValue>0</DefaultValue>
 			</Interprete>
-		</Param>
+		</Param>-->
 		<Param id="10" trending="true">
 			<Name>EncoderLosslessModeParameter</Name>
 			<Description>Lossless Mode</Description>
@@ -967,7 +1021,7 @@ Any inquiries can be addressed to:
 		</Action>
 		<Action id="6">
 			<Name>Disable Encoder Chroma Weight Parameter</Name>
-			<On id="9">parameter</On>
+			<On id="17">parameter</On>
 			<Type id="15">copy</Type>
 		</Action>
 		<Action id="7">
@@ -1012,8 +1066,8 @@ Any inquiries can be addressed to:
 		</Action>
 		<Action id="15">
 			<Name>Copy Encoder Chroma Weight to it's copy</Name>
-			<On id="109">parameter</On>
-			<Type id="9">copy</Type>
+			<On id="117">parameter</On>
+			<Type id="17">copy</Type>
 		</Action>
 		<Action id="16">
 			<Name>Copy Encoder Lossles Mode to it's copy</Name>
@@ -1052,8 +1106,8 @@ Any inquiries can be addressed to:
 		</Action>
 		<Action id="23">
 			<Name>Enable Encoder Chroma Weight </Name>
-			<On id="9">parameter</On>
-			<Type id="109">copy</Type>
+			<On id="17">parameter</On>
+			<Type id="117">copy</Type>
 		</Action>
 		<Action id="24">
 			<Name>Enable Encoder Lossless Mode </Name>
