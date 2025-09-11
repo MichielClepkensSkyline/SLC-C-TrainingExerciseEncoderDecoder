@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>9999</DeviceOID>
 	<ElementType>Encoder/Decoder</ElementType>
 	<Type relativeTimers="true">virtual</Type>
-	<Display defaultPage="General" pageOrder="General;----------;Set Data" wideColumnPages="" />
+	<Display defaultPage="General" pageOrder="General;----------;Config" wideColumnPages="" />
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -105,7 +105,7 @@ Any inquiries can be addressed to:
 			<Description>After Startup</Description>
 			<Type>dummy</Type>
 		</Param>
-		<Param id="3" trending="false">
+		<Param id="3" trending="false" save="true">
 			<Name>statusEncoder</Name>
 			<Description>Status Encoder</Description>
 			<Type>read</Type>
@@ -127,7 +127,7 @@ Any inquiries can be addressed to:
 						<Row>1</Row>
 					</Position>
 					<Position>
-						<Page>Set Data</Page>
+						<Page>Config</Page>
 						<Column>0</Column>
 						<Row>1</Row>
 					</Position>
@@ -160,7 +160,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>Set Data</Page>
+						<Page>Config</Page>
 						<Column>0</Column>
 						<Row>1</Row>
 					</Position>
@@ -202,7 +202,7 @@ Any inquiries can be addressed to:
 						<Row>1</Row>
 					</Position>
 					<Position>
-						<Page>Set Data</Page>
+						<Page>Config</Page>
 						<Column>1</Column>
 						<Row>1</Row>
 					</Position>
@@ -235,7 +235,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>Set Data</Page>
+						<Page>Config</Page>
 						<Column>1</Column>
 						<Row>1</Row>
 					</Position>
@@ -285,6 +285,11 @@ Any inquiries can be addressed to:
 				<Positions>
 					<Position>
 						<Page>General</Page>
+						<Column>0</Column>
+						<Row>2</Row>
+					</Position>
+					<Position>
+						<Page>Config</Page>
 						<Column>0</Column>
 						<Row>2</Row>
 					</Position>
@@ -338,6 +343,11 @@ Any inquiries can be addressed to:
 						<Column>1</Column>
 						<Row>2</Row>
 					</Position>
+					<Position>
+						<Page>Config</Page>
+						<Column>1</Column>
+						<Row>2</Row>
+					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
@@ -383,9 +393,9 @@ Any inquiries can be addressed to:
 						<Row>3</Row>
 					</Position>
 					<Position>
-						<Page>Set Data</Page>
+						<Page>Config</Page>
 						<Column>0</Column>
-						<Row>2</Row>
+						<Row>3</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -427,9 +437,9 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>Set Data</Page>
+						<Page>Config</Page>
 						<Column>0</Column>
-						<Row>2</Row>
+						<Row>3</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -480,9 +490,9 @@ Any inquiries can be addressed to:
 						<Row>4</Row>
 					</Position>
 					<Position>
-						<Page>Set Data</Page>
+						<Page>Config</Page>
 						<Column>0</Column>
-						<Row>3</Row>
+						<Row>4</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -519,9 +529,9 @@ Any inquiries can be addressed to:
 				</Range>
 				<Positions>
 					<Position>
-						<Page>Set Data</Page>
+						<Page>Config</Page>
 						<Column>0</Column>
-						<Row>3</Row>
+						<Row>4</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -557,9 +567,9 @@ Any inquiries can be addressed to:
 						<Row>5</Row>
 					</Position>
 					<Position>
-						<Page>Set Data</Page>
+						<Page>Config</Page>
 						<Column>0</Column>
-						<Row>4</Row>
+						<Row>5</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -601,9 +611,9 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>Set Data</Page>
+						<Page>Config</Page>
 						<Column>0</Column>
-						<Row>4</Row>
+						<Row>5</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -649,9 +659,9 @@ Any inquiries can be addressed to:
 						<Row>3</Row>
 					</Position>
 					<Position>
-						<Page>Set Data</Page>
+						<Page>Config</Page>
 						<Column>1</Column>
-						<Row>2</Row>
+						<Row>3</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -705,9 +715,9 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>Set Data</Page>
+						<Page>Config</Page>
 						<Column>1</Column>
-						<Row>2</Row>
+						<Row>3</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -761,11 +771,17 @@ Any inquiries can be addressed to:
 				<Units>px</Units>
 				<Range>
 					<Low>0</Low>
-					<High>1000</High> <!--This can be set better, but I have no idea what is a good high-->
+					<High>1000</High>
+					<!--This can be set better, but I have no idea what is a good high-->
 				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
+						<Column>1</Column>
+						<Row>4</Row>
+					</Position>
+					<Position>
+						<Page>Config</Page>
 						<Column>1</Column>
 						<Row>4</Row>
 					</Position>
@@ -819,6 +835,11 @@ Any inquiries can be addressed to:
 						<Column>1</Column>
 						<Row>5</Row>
 					</Position>
+					<Position>
+						<Page>Config</Page>
+						<Column>1</Column>
+						<Row>5</Row>
+					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
@@ -849,7 +870,7 @@ Any inquiries can be addressed to:
 						<Row>0</Row>
 					</Position>
 					<Position>
-						<Page>Set Data</Page>
+						<Page>Config</Page>
 						<Column>0</Column>
 						<Row>0</Row>
 					</Position>
@@ -872,7 +893,7 @@ Any inquiries can be addressed to:
 						<Row>0</Row>
 					</Position>
 					<Position>
-						<Page>Set Data</Page>
+						<Page>Config</Page>
 						<Column>1</Column>
 						<Row>0</Row>
 					</Position>
