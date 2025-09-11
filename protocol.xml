@@ -818,23 +818,25 @@ Any inquiries can be addressed to:
 		<Param id="15">
 			<Name>NotAvilableParameter</Name>
 			<Description>This is the parameter used for setting the other parameters to Not Available</Description>
-			<Type>read</Type>
+			<Type>fixed</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>-1</DefaultValue>
+				<LengthType>fixed</LengthType>
+				<Length>0</Length>
+				<Value>-1</Value>
 			</Interprete>
 		</Param>
 		<Param id="16">
 			<Name>SetStatusToDisabled</Name>
 			<Description>This is the parameter used for setting the encoder/decoder status parameters to disabled</Description>
-			<Type>read</Type>
+			<Type>fixed</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>0</DefaultValue>
+				<LengthType>fixed</LengthType>
+				<Length>0</Length>
+				<Value>0</Value>
 			</Interprete>
 		</Param>
 	</Params>

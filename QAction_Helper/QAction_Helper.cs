@@ -68,16 +68,6 @@ public static class Parameter
 	public const int decodercodeblockheightparameter_13 = 13;
 	/// <summary>PID: 13 | Type: read</summary>
 	public const int decodercodeblockheightparameter = 13;
-	/// <summary>PID: 15 | Type: read</summary>
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int notavilableparameter_15 = 15;
-	/// <summary>PID: 15 | Type: read</summary>
-	public const int notavilableparameter = 15;
-	/// <summary>PID: 16 | Type: read</summary>
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int setstatustodisabled_16 = 16;
-	/// <summary>PID: 16 | Type: read</summary>
-	public const int setstatustodisabled = 16;
 	/// <summary>PID: 106 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int copyofencodercurrentcompressedbitrateparameter_106 = 106;
@@ -199,10 +189,8 @@ public interface SLProtocolExt : SLProtocol
 	object Decodercodeblockwidthparameter { get; set; }
 	object Decodercodeblockheightparameter_13 { get; set; }
 	object Decodercodeblockheightparameter { get; set; }
-	object Notavilableparameter_15 { get; set; }
-	object Notavilableparameter { get; set; }
-	object Setstatustodisabled_16 { get; set; }
-	object Setstatustodisabled { get; set; }
+	object Notavilableparameter__fixed { get; set; }
+	object Setstatustodisabled__fixed { get; set; }
 	object Encoderstatusparam_54 { get; set; }
 	object Decoderstatusparam_55 { get; set; }
 	object Encoderautochromaweightparameter_58 { get; set; }
@@ -291,16 +279,10 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Decodercodeblockheightparameter_13 {get { return GetParameter(13); }set { SetParameter(13, value); }}
 	/// <summary>PID: 13  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Decodercodeblockheightparameter {get { return GetParameter(13); }set { SetParameter(13, value); }}
-	/// <summary>PID: 15  | Type: read</summary>
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Notavilableparameter_15 {get { return GetParameter(15); }set { SetParameter(15, value); }}
-	/// <summary>PID: 15  | Type: read</summary>
-	public System.Object Notavilableparameter {get { return GetParameter(15); }set { SetParameter(15, value); }}
-	/// <summary>PID: 16  | Type: read</summary>
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Setstatustodisabled_16 {get { return GetParameter(16); }set { SetParameter(16, value); }}
-	/// <summary>PID: 16  | Type: read</summary>
-	public System.Object Setstatustodisabled {get { return GetParameter(16); }set { SetParameter(16, value); }}
+	/// <summary>PID: 15  | Type: fixed</summary>
+	public System.Object Notavilableparameter__fixed {get { return GetParameter(15); }set { SetParameter(15, value); }}
+	/// <summary>PID: 16  | Type: fixed</summary>
+	public System.Object Setstatustodisabled__fixed {get { return GetParameter(16); }set { SetParameter(16, value); }}
 	/// <summary>PID: 54  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderstatusparam_54 {get { return GetParameter(54); }set { SetParameter(54, value); }}
