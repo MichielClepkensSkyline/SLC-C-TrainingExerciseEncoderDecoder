@@ -2,7 +2,7 @@
 <!--
 
 ****************************************************************************
-*  Copyright (c) 2024,  Skyline Communications NV  All Rights Reserved.    *
+*  Copyright (c) 2025,  Skyline Communications NV  All Rights Reserved.    *
 ****************************************************************************
 
 By using this driver, you expressly agree with the usage terms and
@@ -69,7 +69,7 @@ Any inquiries can be addressed to:
 			<Description>After Startup</Description>
 			<Type>dummy</Type>
 		</Param>
-	
+		
 		<Param id="3">
 			<Name>valueNotAvailable</Name>
 			<Description>Value Not Available</Description>
@@ -170,6 +170,9 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<DefaultValue>0</DefaultValue>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -228,7 +231,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		
-		<Param id="11" trending="false" save="true">
+		<Param id="11" trending="true" save="true">
 			<Name>encoderCurrentCompressedBitrate</Name>
 			<Description>Encoder Current Compressed Bitrate</Description>
 			<Type>read</Type>
@@ -248,6 +251,12 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>100</CL>
+				<Normal>800</Normal>
+				<CH>1400</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>Mbps</Units>
@@ -263,7 +272,6 @@ Any inquiries can be addressed to:
 					<Low>0</Low>
 					<High>1500</High>
 				</Range>
-				
 			</Display>
 			<Measurement>
 				<Type>analog</Type>
@@ -288,6 +296,9 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -346,7 +357,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		
-		<Param id="13" trending="false" save="true">
+		<Param id="13" trending="true" save="true">
 			<Name>encoderChromaWeight</Name>
 			<Description>Encoder Chroma Weight</Description>
 			<Type>read</Type>
@@ -365,6 +376,13 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>5</CL>
+				<Normal>50</Normal>
+				<MaH>85</MaH>
+				<CH>95</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
@@ -431,6 +449,9 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -501,6 +522,9 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<DefaultValue>0</DefaultValue>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -558,7 +582,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="16" trending="false" save="true">
+		<Param id="16" trending="true" save="true">
 			<Name>decoderCurrentCompressedBitrate</Name>
 			<Description>Decoder Current Compressed Bitrate</Description>
 			<Type>read</Type>
@@ -578,6 +602,12 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>100</CL>
+				<Normal>800</Normal>
+				<CH>1400</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
@@ -700,7 +730,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		
-		<Param id="18" trending="false" save="true">
+		<Param id="18" trending="true" save="true">
 			<Name>decoderCodeBlockWidth</Name>
 			<Description>Decoder Code Block Width</Description>
 			<Type>read</Type>
@@ -719,6 +749,12 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>10</CL>
+				<Normal>250</Normal>
+				<CH>450</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>px</Units>
@@ -738,7 +774,7 @@ Any inquiries can be addressed to:
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
-		<Param id="19" trending="false" save="true">
+		<Param id="19" trending="true" save="true">
 			<Name>decoderCodeBlockHeight</Name>
 			<Description>Decoder Code Block Height</Description>
 			<Type>read</Type>
@@ -757,6 +793,12 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>10</CL>
+				<Normal>250</Normal>
+				<CH>450</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>px</Units>
@@ -776,7 +818,7 @@ Any inquiries can be addressed to:
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
-
+		
 		<Param id="20">
 			<Name>valueCodeBlockHeight</Name>
 			<Description>Value Code Block Height</Description>
@@ -801,7 +843,6 @@ Any inquiries can be addressed to:
 				<Value>0</Value>
 			</Interprete>
 		</Param>
-		
 		
 	</Params>
 
@@ -854,7 +895,6 @@ Any inquiries can be addressed to:
 				<Action>14</Action>
 				<Action>15</Action>
 				<Action>16</Action>
-				
 			</Content>
 		</Group>
 		<Group id="6">
@@ -869,8 +909,6 @@ Any inquiries can be addressed to:
 				<Action>20</Action>
 			</Content>
 		</Group>
-		
-		
 	</Groups>
 
 	<Triggers>
@@ -883,7 +921,6 @@ Any inquiries can be addressed to:
 				<Id>1</Id>
 			</Content>
 		</Trigger>
-		
 		<Trigger id="2">
 			<Name>Encoder Status Change</Name>
 			<On id="10">parameter</On>
@@ -897,7 +934,6 @@ Any inquiries can be addressed to:
 
 			</Content>
 		</Trigger>
-
 		<Trigger id="3">
 			<Name>Decoder Status Change</Name>
 			<On id="15">parameter</On>
@@ -910,7 +946,6 @@ Any inquiries can be addressed to:
 				<Id>26</Id>
 			</Content>
 		</Trigger>
-
 	</Triggers>
 
 	<Actions>
@@ -1017,48 +1052,40 @@ Any inquiries can be addressed to:
 			<On id="19">parameter</On>
 			<Type id="20">copy</Type>
 		</Action>
-		
 		<Action id="21">
 			<Name>Enable Encoder</Name>
 			<On id="5">group</On>
 			<Type>execute next</Type>
 		</Action>
-		
 		<Action id="22">
 			<Name>Enable Decoder</Name>
 			<On id="6">group</On>
 			<Type>execute next</Type>
 		</Action>
-
 		<Action id="23">
 			<Condition><![CDATA[id:15 == 0 AND id:10 == 0]]></Condition>
 			<Name>Copy Value Enabled to Decoder Status</Name>
 			<On id="15">parameter</On>
 			<Type id="6">copy</Type>
 		</Action>
-
 		<Action id="24">
 			<Condition><![CDATA[id:15 == 1 AND id:10 == 1]]></Condition>
 			<Name>Copy Value Disabled to Decoder Status</Name>
 			<On id="15">parameter</On>
 			<Type id="21">copy</Type>
 		</Action>
-
 		<Action id="25">
 			<Condition><![CDATA[id:15 == 0 AND id:10 == 0]]></Condition>
 			<Name>Copy Value Enabled to Encoder Status</Name>
 			<On id="10">parameter</On>
 			<Type id="6">copy</Type>
 		</Action>
-		
 		<Action id="26">
 			<Condition><![CDATA[id:15 == 1 AND id:10 == 1]]></Condition>
 			<Name>Copy Value Disabled to Encoder Status</Name>
 			<On id="10">parameter</On>
 			<Type id="21">copy</Type>
 		</Action>
-
-		
 	</Actions>
 
 	<Timers>
