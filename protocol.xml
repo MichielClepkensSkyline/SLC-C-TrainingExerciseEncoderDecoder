@@ -741,6 +741,13 @@ Any inquiries can be addressed to:
 					<Low>0</Low>
 					<High>100</High>
 				</Range>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>4</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>analog</Type>
