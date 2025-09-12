@@ -170,6 +170,10 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<DefaultValue>0</DefaultValue>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<Normal>0;1</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -293,6 +297,10 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<Normal>0;1</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -443,6 +451,10 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<Normal>0;1</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -513,6 +525,10 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<DefaultValue>0</DefaultValue>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<Normal>0;1</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
