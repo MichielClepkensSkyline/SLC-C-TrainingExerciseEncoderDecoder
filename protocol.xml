@@ -65,7 +65,7 @@ Any inquiries can be addressed to:
 
 	<Params>
 		<Param id="1" trending="false">
-			<Name>EncoderTitleParameter</Name>
+			<Name>EncoderTitle</Name>
 			<Description>Encoder</Description>
 			<Type>read</Type>
 			<Information>
@@ -95,7 +95,7 @@ Any inquiries can be addressed to:
 			<Type>dummy</Type>
 		</Param>
 		<Param id="3" trending="false">
-			<Name>DecoderTitleParameter</Name>
+			<Name>DecoderTitle</Name>
 			<Description>Decoder</Description>
 			<Type>read</Type>
 			<Information>
@@ -120,7 +120,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="4" trending="true">
-			<Name>EncoderStatusParam</Name>
+			<Name>EncoderStatus</Name>
 			<Description>Encoder Status</Description>
 			<Type>read</Type>
 			<Information>
@@ -161,7 +161,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="54" setter="true">
-			<Name>EncoderStatusParam</Name>
+			<Name>EncoderStatus</Name>
 			<Description>Encoder Status</Description>
 			<Type>write</Type>
 			<Interprete>
@@ -194,7 +194,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="5" trending="true">
-			<Name>DecoderStatusParam</Name>
+			<Name>DecoderStatus</Name>
 			<Description>Decoder Status</Description>
 			<Type>read</Type>
 			<Information>
@@ -235,7 +235,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="55" setter="true">
-			<Name>DecoderStatusParam</Name>
+			<Name>DecoderStatus</Name>
 			<Description>Decoder Status</Description>
 			<Type>write</Type>
 			<Interprete>
@@ -268,7 +268,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="6" trending="true">
-			<Name>EncoderCurrentCompressedBitrateParameter</Name>
+			<Name>EncoderCurrentCompressedBitrate</Name>
 			<Description>Current Encoder Compressed Bitrate</Description>
 			<Type>read</Type>
 			<Information>
@@ -313,7 +313,7 @@ Any inquiries can be addressed to:
 		</Param>
 		
 		<Param id="7" trending="true">
-			<Name>DecoderCurrentCompressedBitrateParameter</Name>
+			<Name>DecoderCurrentCompressedBitrate</Name>
 			<Description>Current Decoder Compressed Bitrate</Description>
 			<Type>read</Type>
 			<Information>
@@ -357,7 +357,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="8" trending="true">
-			<Name>EncoderAutoChromaWeightParameter</Name>
+			<Name>EncoderAutoChromaWeight</Name>
 			<Description>Encoder Auto Chroma Weight</Description>
 			<Type>read</Type>
 			<Information>
@@ -406,7 +406,7 @@ Any inquiries can be addressed to:
 		</Param>
 		
 		<Param id="58" setter="true">
-			<Name>EncoderAutoChromaWeightParameter</Name>
+			<Name>EncoderAutoChromaWeight</Name>
 			<Description>Encoder Auto Chroma Weight</Description>
 			<Type>write</Type>
 			<Interprete>
@@ -439,7 +439,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="10" trending="true">
-			<Name>EncoderLosslessModeParameter</Name>
+			<Name>EncoderLosslessMode</Name>
 			<Description>Lossless Mode</Description>
 			<Type>read</Type>
 			<Information>
@@ -486,7 +486,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="60" setter="true">
-			<Name>EncoderLosslessModeParameter</Name>
+			<Name>EncoderLosslessMode</Name>
 			<Description>Lossless Mode</Description>
 			<Type>write</Type>
 			<Interprete>
@@ -519,7 +519,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="11" trending="true">
-			<Name>DecoderProgressionOrderParameter</Name>
+			<Name>DecoderProgressionOrder</Name>
 			<Description>Progression Order</Description>
 			<Type>read</Type>
 			<Information>
@@ -579,7 +579,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="61" setter="true">
-			<Name>DecoderProgressionOrderParameter</Name>
+			<Name>DecoderProgressionOrder</Name>
 			<Description>Progression Order</Description>
 			<Type>write</Type>
 			<Interprete>
@@ -624,7 +624,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="12" trending="false">
-			<Name>DecoderCodeBlockWidthParameter</Name>
+			<Name>DecoderCodeBlockWidth</Name>
 			<Description>Code Block Width</Description>
 			<Type>read</Type>
 			<Information>
@@ -663,7 +663,7 @@ Any inquiries can be addressed to:
 		</Param>
 		
 		<Param id="13" trending="false">
-			<Name>DecoderCodeBlockHeightParameter</Name>
+			<Name>DecoderCodeBlockHeight</Name>
 			<Description>Code Block Height</Description>
 			<Type>read</Type>
 			<Information>
@@ -701,7 +701,7 @@ Any inquiries can be addressed to:
 		</Param>
 		
 		<Param id="15">
-			<Name>NotAvilableParameter</Name>
+			<Name>NotAvailable</Name>
 			<Description>This is the parameter used for setting the other parameters to Not Available</Description>
 			<Type>fixed</Type>
 			<Interprete>
@@ -725,7 +725,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 		</Param>
 		<Param id="17" trending="true">
-			<Name>EncoderChromaWeightParameters</Name>
+			<Name>EncoderChromaWeight</Name>
 			<Description>Encoder Chroma Weight Value</Description>
 			<Type>read</Type>
 			<Information>
@@ -766,7 +766,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="67" setter="true">
-			<Name>EncoderChromaWeightParameters</Name>
+			<Name>EncoderChromaWeight</Name>
 			<Description>Encoder Chroma Weight Value</Description>
 			<Type>write</Type>
 			<Interprete>
@@ -794,8 +794,8 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="106">
-			<Name>CopyOfEncoderCurrentCompressedBitrateParameter</Name>
-			<Description>Copy of the Encoder Current Compressed Bitrate Parameter</Description>
+			<Name>CopyOfEncoderCurrentCompressedBitrate</Name>
+			<Description>Copy of the Encoder Current Compressed Bitrate</Description>
 			<Type>read</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -805,8 +805,8 @@ Any inquiries can be addressed to:
 			</Interprete>
 		</Param>
 		<Param id="107">
-			<Name>CopyOfDecoderCurrentCompressedBitrateParameter</Name>
-			<Description>Copy Of Decoder Current Compressed Bitrate Parameter</Description>
+			<Name>CopyOfDecoderCurrentCompressedBitrate</Name>
+			<Description>Copy Of Decoder Current Compressed Bitrate </Description>
 			<Type>read</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -816,8 +816,8 @@ Any inquiries can be addressed to:
 			</Interprete>
 		</Param>
 		<Param id="108">
-			<Name>CopyOfEncoderAutoChromaWeightParameter</Name>
-			<Description>Copy Of Encoder Auto Chroma Weight Parameter</Description>
+			<Name>CopyOfEncoderAutoChromaWeight</Name>
+			<Description>Copy Of Encoder Auto Chroma Weight </Description>
 			<Type>read</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -827,8 +827,8 @@ Any inquiries can be addressed to:
 			</Interprete>
 		</Param>
 		<Param id="110">
-			<Name>CopyOfEncoderLosslessModeParameter</Name>
-			<Description>Copy Of Encoder Lossless Mode Parameter</Description>
+			<Name>CopyOfEncoderLosslessMode</Name>
+			<Description>Copy Of Encoder Lossless Mode</Description>
 			<Type>read</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -838,8 +838,8 @@ Any inquiries can be addressed to:
 			</Interprete>
 		</Param>
 		<Param id="111">
-			<Name>CopyOfDecoderProgressionOrderParameter</Name>
-			<Description>Copy Of Decoder Progression Order Parameter</Description>
+			<Name>CopyOfDecoderProgressionOrder</Name>
+			<Description>Copy Of Decoder Progression Order</Description>
 			<Type>read</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -849,8 +849,8 @@ Any inquiries can be addressed to:
 			</Interprete>
 		</Param>
 		<Param id="112">
-			<Name>CopyOfDecoderCodeBlockWidthParameter</Name>
-			<Description>Copy Of Decoder Code Block Width Parameter</Description>
+			<Name>CopyOfDecoderCodeBlockWidth</Name>
+			<Description>Copy Of Decoder Code Block Width</Description>
 			<Type>read</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -860,8 +860,8 @@ Any inquiries can be addressed to:
 			</Interprete>
 		</Param>
 		<Param id="113">
-			<Name>CopyOfDecoderCodeBlockHeightParameter</Name>
-			<Description>Copy Of Decoder Code Block Height Parameter</Description>
+			<Name>CopyOfDecoderCodeBlockHeight</Name>
+			<Description>Copy Of Decoder Code Block Height</Description>
 			<Type>read</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -871,8 +871,8 @@ Any inquiries can be addressed to:
 			</Interprete>
 		</Param>
 		<Param id="117">
-			<Name>CopyOfEncoderChromaWeightParameters</Name>
-			<Description>Copy Of Encoder Chroma Weight Parameters</Description>
+			<Name>CopyOfEncoderChromaWeight</Name>
+			<Description>Copy Of Encoder Chroma Weight</Description>
 			<Type>read</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
