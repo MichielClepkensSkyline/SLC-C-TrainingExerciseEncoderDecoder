@@ -296,17 +296,7 @@ Any inquiries can be addressed to:
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
-		<Param id="106">
-			<Name>CopyOfEncoderCurrentCompressedBitrateParameter</Name>
-			<Description>Copy of the Encoder Current Compressed Bitrate Parameter</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>30</DefaultValue>
-			</Interprete>
-		</Param>
+		
 		<Param id="7" trending="true">
 			<Name>DecoderCurrentCompressedBitrateParameter</Name>
 			<Description>Current Decoder Compressed Bitrate</Description>
@@ -345,17 +335,6 @@ Any inquiries can be addressed to:
 			<Measurement>
 				<Type>analog</Type>
 			</Measurement>
-		</Param>
-		<Param id="107">
-			<Name>CopyOfDecoderCurrentCompressedBitrateParameter</Name>
-			<Description>Copy Of Decoder Current Compressed Bitrate Parameter</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>50</DefaultValue>
-			</Interprete>
 		</Param>
 		<Param id="8" trending="true">
 			<Name>EncoderAutoChromaWeightParameter</Name>
@@ -433,85 +412,6 @@ Any inquiries can be addressed to:
 					</Discreet>
 				</Discreets>
 			</Measurement>
-		</Param>
-		<Param id="108">
-			<Name>CopyOfEncoderAutoChromaWeightParameter</Name>
-			<Description>Copy Of Encoder Auto Chroma Weight Parameter</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>0</DefaultValue>
-			</Interprete>
-		</Param>
-		<Param id="17" trending="true">
-			<Name>EncoderChromaWeightParameters</Name>
-			<Description>Encoder Chroma Weight Value</Description>
-			<Type>read</Type>
-			<Information>
-			</Information>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-1">
-						<Display state="disabled">Not Available</Display>
-						<Value>-1</Value>
-					</Exception>
-				</Exceptions>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Units>%</Units>
-				<Range>
-					<Low>0</Low>
-					<High>100</High>
-				</Range>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>4</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type>analog</Type>
-			</Measurement>
-		</Param>
-		<Param id="67" setter="true">
-			<Name>EncoderChromaWeightParameters</Name>
-			<Description>Encoder Chroma Weight Value</Description>
-			<Type>write</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Units>%</Units>
-				<Range>
-					<Low>0</Low>
-					<High>100</High>
-				</Range>
-			</Display>
-			<Measurement>
-				<Type>analog</Type>
-			</Measurement>
-		</Param>
-		<Param id="117">
-			<Name>CopyOfEncoderChromaWeightParameters</Name>
-			<Description>Copy Of Encoder Chroma Weight Parameters</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>0</DefaultValue>
-			</Interprete>
 		</Param>
 		<!--<Param id="9" trending="true">
 			<Name>EncoderChromaWeightParameter</Name>
@@ -650,17 +550,6 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="110">
-			<Name>CopyOfEncoderLosslessModeParameter</Name>
-			<Description>Copy Of Encoder Lossless Mode Parameter</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>0</DefaultValue>
-			</Interprete>
-		</Param>
 		<Param id="11" trending="true">
 			<Name>DecoderProgressionOrderParameter</Name>
 			<Description>Progression Order</Description>
@@ -761,17 +650,6 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="111">
-			<Name>CopyOfDecoderProgressionOrderParameter</Name>
-			<Description>Copy Of Decoder Progression Order Parameter</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>0</DefaultValue>
-			</Interprete>
-		</Param>
 		<Param id="12" trending="true">
 			<Name>DecoderCodeBlockWidthParameter</Name>
 			<Description>Code Block Width</Description>
@@ -810,17 +688,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="112">
-			<Name>CopyOfDecoderCodeBlockWidthParameter</Name>
-			<Description>Copy Of Decoder Code Block Width Parameter</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>50</DefaultValue>
-			</Interprete>
-		</Param>
+		
 		<Param id="13" trending="true">
 			<Name>DecoderCodeBlockHeightParameter</Name>
 			<Description>Code Block Height</Description>
@@ -858,17 +726,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="113">
-			<Name>CopyOfDecoderCodeBlockHeightParameter</Name>
-			<Description>Copy Of Decoder Code Block Height Parameter</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>70</DefaultValue>
-			</Interprete>
-		</Param>
+		
 		<Param id="15">
 			<Name>NotAvilableParameter</Name>
 			<Description>This is the parameter used for setting the other parameters to Not Available</Description>
@@ -891,6 +749,151 @@ Any inquiries can be addressed to:
 				<LengthType>fixed</LengthType>
 				<Length>1</Length>
 				<Value>0</Value>
+			</Interprete>
+		</Param>
+		<Param id="17" trending="true">
+			<Name>EncoderChromaWeightParameters</Name>
+			<Description>Encoder Chroma Weight Value</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>4</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>analog</Type>
+			</Measurement>
+		</Param>
+		<Param id="67" setter="true">
+			<Name>EncoderChromaWeightParameters</Name>
+			<Description>Encoder Chroma Weight Value</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+			</Display>
+			<Measurement>
+				<Type>analog</Type>
+			</Measurement>
+		</Param>
+		<Param id="106">
+			<Name>CopyOfEncoderCurrentCompressedBitrateParameter</Name>
+			<Description>Copy of the Encoder Current Compressed Bitrate Parameter</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>30</DefaultValue>
+			</Interprete>
+		</Param>
+		<Param id="107">
+			<Name>CopyOfDecoderCurrentCompressedBitrateParameter</Name>
+			<Description>Copy Of Decoder Current Compressed Bitrate Parameter</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>50</DefaultValue>
+			</Interprete>
+		</Param>
+		<Param id="108">
+			<Name>CopyOfEncoderAutoChromaWeightParameter</Name>
+			<Description>Copy Of Encoder Auto Chroma Weight Parameter</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>0</DefaultValue>
+			</Interprete>
+		</Param>
+		<Param id="110">
+			<Name>CopyOfEncoderLosslessModeParameter</Name>
+			<Description>Copy Of Encoder Lossless Mode Parameter</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>0</DefaultValue>
+			</Interprete>
+		</Param>
+		<Param id="111">
+			<Name>CopyOfDecoderProgressionOrderParameter</Name>
+			<Description>Copy Of Decoder Progression Order Parameter</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>0</DefaultValue>
+			</Interprete>
+		</Param>
+		<Param id="112">
+			<Name>CopyOfDecoderCodeBlockWidthParameter</Name>
+			<Description>Copy Of Decoder Code Block Width Parameter</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>50</DefaultValue>
+			</Interprete>
+		</Param>
+		<Param id="113">
+			<Name>CopyOfDecoderCodeBlockHeightParameter</Name>
+			<Description>Copy Of Decoder Code Block Height Parameter</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>70</DefaultValue>
+			</Interprete>
+		</Param>
+		<Param id="117">
+			<Name>CopyOfEncoderChromaWeightParameters</Name>
+			<Description>Copy Of Encoder Chroma Weight Parameters</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 		</Param>
 	</Params>
