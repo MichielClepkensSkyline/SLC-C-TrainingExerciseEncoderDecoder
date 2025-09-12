@@ -119,7 +119,7 @@ Any inquiries can be addressed to:
 				<Type>title</Type>
 			</Measurement>
 		</Param>
-		<Param id="4" trending="false">
+		<Param id="4" trending="true">
 			<Name>EncoderStatusParam</Name>
 			<Description>Encoder Status</Description>
 			<Type>read</Type>
@@ -131,6 +131,11 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<DefaultValue>0</DefaultValue>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>0</CL>
+				<Normal>1</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -200,6 +205,11 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<DefaultValue>0</DefaultValue>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>0</CL>
+				<Normal>1</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -276,6 +286,11 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>20</CL>
+				<Normal>50</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>Mbps</Units>
@@ -316,6 +331,11 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>20</CL>
+				<Normal>50</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>Mbps</Units>
@@ -355,6 +375,11 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>0</CL>
+				<Normal>1</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -431,6 +456,11 @@ Any inquiries can be addressed to:
 				</Exceptions>
 				<DefaultValue>-1</DefaultValue>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>0</CL>
+				<Normal>1</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -507,6 +537,11 @@ Any inquiries can be addressed to:
 				</Exceptions>
 				<DefaultValue>-1</DefaultValue>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<Normal>0</Normal>
+				<CH>3</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -588,7 +623,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="12" trending="true">
+		<Param id="12" trending="false">
 			<Name>DecoderCodeBlockWidthParameter</Name>
 			<Description>Code Block Width</Description>
 			<Type>read</Type>
@@ -627,7 +662,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		
-		<Param id="13" trending="true">
+		<Param id="13" trending="false">
 			<Name>DecoderCodeBlockHeightParameter</Name>
 			<Description>Code Block Height</Description>
 			<Type>read</Type>
@@ -706,6 +741,11 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>15</CL>
+				<Normal>30</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
