@@ -124,6 +124,7 @@ Any inquiries can be addressed to:
 			<Description>Encoder Status</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>This is the button for toggling the Encoder status</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -198,6 +199,7 @@ Any inquiries can be addressed to:
 			<Description>Decoder Status</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>This is the button for toggling the decoder status</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -443,6 +445,7 @@ Any inquiries can be addressed to:
 			<Description>Lossless Mode</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>This is the button for toggling the lossles mode on the encoder</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -667,6 +670,7 @@ Any inquiries can be addressed to:
 			<Description>Code Block Height</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>This is the Code block height of the decoder</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -729,6 +733,7 @@ Any inquiries can be addressed to:
 			<Description>Encoder Chroma Weight Value</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>Here you can see and manipulate the chorma weight value for the encoder</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
