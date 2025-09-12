@@ -64,11 +64,6 @@ Any inquiries can be addressed to:
 	</Compliancies>
 
 	<Params>
-		<Param id="2">
-			<Name>AfterStartup</Name>
-			<Description>After Startup</Description>
-			<Type>dummy</Type>
-		</Param>
 		<Param id="1" trending="false">
 			<Name>EncoderTitleParameter</Name>
 			<Description>Encoder</Description>
@@ -93,6 +88,11 @@ Any inquiries can be addressed to:
 			<Measurement>
 				<Type>title</Type>
 			</Measurement>
+		</Param>
+		<Param id="2">
+			<Name>AfterStartup</Name>
+			<Description>After Startup</Description>
+			<Type>dummy</Type>
 		</Param>
 		<Param id="3" trending="false">
 			<Name>DecoderTitleParameter</Name>
@@ -413,68 +413,6 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<!--<Param id="9" trending="true">
-			<Name>EncoderChromaWeightParameter</Name>
-			<Description>Encoder Chroma Weight</Description>
-			<Type>read</Type>
-			<Information>
-			</Information>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-1">
-						<Display state="disabled">Not Available</Display>
-						<Value>-1</Value>
-					</Exception>
-				</Exceptions>
-				<DefaultValue>-1</DefaultValue>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Units>%</Units>
-				<Range>
-					<Low>0</Low>
-					<High>100</High>
-				</Range>
-			</Display>
-			<Measurement>
-				<Type>analog</Type>
-			</Measurement>
-		</Param>
-		<Param id="59" setter="true">
-			<Name>EncoderChromaWeightParameter</Name>
-			<Description>Encoder Chroma Weight</Description>
-			<Type>write</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Units>%</Units>
-				<Range>
-					<Low>0</Low>
-					<High>100</High>
-				</Range>
-			</Display>
-			<Measurement>
-				<Type>analog</Type>
-			</Measurement>
-		</Param>
-		<Param id="109">
-			<Name>CopyOfEncoderChromaWeightParameter</Name>
-			<Description>Copy Of Encoder Chroma Weight Parameter</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>0</DefaultValue>
-			</Interprete>
-		</Param>-->
 		<Param id="10" trending="true">
 			<Name>EncoderLosslessModeParameter</Name>
 			<Description>Lossless Mode</Description>
