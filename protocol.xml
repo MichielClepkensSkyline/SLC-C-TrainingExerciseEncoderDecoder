@@ -436,7 +436,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="108">
 			<Name>CopyOfEncoderAutoChromaWeightParameter</Name>
-			<Description>Description</Description>
+			<Description>Copy Of Encoder Auto Chroma Weight Parameter</Description>
 			<Type>read</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -877,7 +877,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>fixed</LengthType>
-				<Length>0</Length>
+				<Length>2</Length>
 				<Value>-1</Value>
 			</Interprete>
 		</Param>
@@ -889,7 +889,7 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>fixed</LengthType>
-				<Length>0</Length>
+				<Length>1</Length>
 				<Value>0</Value>
 			</Interprete>
 		</Param>
