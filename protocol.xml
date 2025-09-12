@@ -1042,46 +1042,6 @@ Any inquiries can be addressed to:
 			<On id="3">group</On>
 			<Type>execute next</Type>
 		</Action>
-		<Action id="13">
-			<Name>Copy Encoder Bitrate Data to it's copy</Name>
-			<On id="106">parameter</On>
-			<Type id="6">copy</Type>
-		</Action>
-		<Action id="14">
-			<Name>Copy Encoder Auto Chroma Weight to it's copy</Name>
-			<On id="108">parameter</On>
-			<Type id="8">copy</Type>
-		</Action>
-		<Action id="15">
-			<Name>Copy Encoder Chroma Weight to it's copy</Name>
-			<On id="117">parameter</On>
-			<Type id="17">copy</Type>
-		</Action>
-		<Action id="16">
-			<Name>Copy Encoder Lossles Mode to it's copy</Name>
-			<On id="110">parameter</On>
-			<Type id="10">copy</Type>
-		</Action>
-		<Action id="17">
-			<Name>Copy Decoder Bitrate to it's copy</Name>
-			<On id="107">parameter</On>
-			<Type id="7">copy</Type>
-		</Action>
-		<Action id="18">
-			<Name>Copy Decoder Progression Order to it's copy</Name>
-			<On id="111">parameter</On>
-			<Type id="11">copy</Type>
-		</Action>
-		<Action id="19">
-			<Name>Copy Decoder Block Width to it's copy</Name>
-			<On id="112">parameter</On>
-			<Type id="12">copy</Type>
-		</Action>
-		<Action id="20">
-			<Name>Copy Decoder Block Height to it's copy</Name>
-			<On id="113">parameter</On>
-			<Type id="13">copy</Type>
-		</Action>
 		<Action id="21">
 			<Name>Enable Encoder Bitrate </Name>
 			<On id="6">parameter</On>
