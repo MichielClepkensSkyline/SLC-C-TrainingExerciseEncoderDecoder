@@ -1021,55 +1021,15 @@ Any inquiries can be addressed to:
 			<On id="41">group</On>
 			<Type>execute next</Type>
 		</Action>
-		<Action id="40">
-			<Name>Copy zero to status decoder</Name>
-			<On id="4">parameter</On>
-			<Type id="1000">copy</Type>	
-		</Action>
 		<Action id="30">
 			<Name>Copy zero to status encoder</Name>
 			<On id="3">parameter</On>
 			<Type id="1000">copy</Type>	
 		</Action>
-		<Action id="500">
-			<Name>Set current compressed bitrate encoder to "Not Available"</Name>
-			<On id="5">parameter</On>
-			<Type id="999">copy</Type>
-		</Action>
-		<Action id="600">
-			<Name>Set current compressed bitrate decoder to "Not Available"</Name>
-			<On id="6">parameter</On>
-			<Type id="999">copy</Type>
-		</Action>
-		<Action id="700">
-			<Name>Set auto chroma weight to "Not Available"</Name>
-			<On id="7">parameter</On>
-			<Type id="999">copy</Type>
-		</Action>
-		<Action id="800">
-			<Name>Set chroma weight to "Not Available"</Name>
-			<On id="8">parameter</On>
-			<Type id="999">copy</Type>
-		</Action>
-		<Action id="900">
-			<Name>Set lossless mode to "Not Available"</Name>
-			<On id="9">parameter</On>
-			<Type id="999">copy</Type>
-		</Action>
-		<Action id="1000">
-			<Name>Set progression order to "Not Available"</Name>
-			<On id="10">parameter</On>
-			<Type id="999">copy</Type>
-		</Action>
-		<Action id="1100">
-			<Name>Set code block width to "Not Available"</Name>
-			<On id="11">parameter</On>
-			<Type id="999">copy</Type>
-		</Action>
-		<Action id="1200">
-			<Name>Set code block height to "Not Available"</Name>
-			<On id="12">parameter</On>
-			<Type id="999">copy</Type>
+		<Action id="40">
+			<Name>Copy zero to status decoder</Name>
+			<On id="4">parameter</On>
+			<Type id="1000">copy</Type>	
 		</Action>
 		<Action id="55">
 			<Name>Store value of current compressed bitrate encoder in saved parameter</Name>
@@ -1111,40 +1071,80 @@ Any inquiries can be addressed to:
 			<On id="62">parameter</On>
 			<Type id="12">copy</Type>
 		</Action>
+		<Action id="500">
+			<Name>Set current compressed bitrate encoder to "Not Available"</Name>
+			<On id="5">parameter</On>
+			<Type id="999">copy</Type>
+		</Action>
 		<Action id="555">
 			<Name>Reset saved parameter to current compressed bitrate encoder</Name>
 			<On id="5">parameter</On>
 			<Type id="55">copy</Type>
+		</Action>
+		<Action id="600">
+			<Name>Set current compressed bitrate decoder to "Not Available"</Name>
+			<On id="6">parameter</On>
+			<Type id="999">copy</Type>
 		</Action>
 		<Action id="656">
 			<Name>Reset saved parameter to current compressed bitrate decoder</Name>
 			<On id="6">parameter</On>
 			<Type id="56">copy</Type>
 		</Action>
+		<Action id="700">
+			<Name>Set auto chroma weight to "Not Available"</Name>
+			<On id="7">parameter</On>
+			<Type id="999">copy</Type>
+		</Action>
 		<Action id="757">
 			<Name>Reset saved parameter to auto chroma weight</Name>
 			<On id="7">parameter</On>
 			<Type id="57">copy</Type>
+		</Action>
+		<Action id="800">
+			<Name>Set chroma weight to "Not Available"</Name>
+			<On id="8">parameter</On>
+			<Type id="999">copy</Type>
 		</Action>
 		<Action id="858">
 			<Name>Reset saved parameter to chroma weight</Name>
 			<On id="8">parameter</On>
 			<Type id="58">copy</Type>
 		</Action>
+		<Action id="900">
+			<Name>Set lossless mode to "Not Available"</Name>
+			<On id="9">parameter</On>
+			<Type id="999">copy</Type>
+		</Action>
 		<Action id="959">
 			<Name>Reset saved parameter to lossless mode</Name>
 			<On id="9">parameter</On>
 			<Type id="59">copy</Type>
+		</Action>
+		<Action id="1000">
+			<Name>Set progression order to "Not Available"</Name>
+			<On id="10">parameter</On>
+			<Type id="999">copy</Type>
 		</Action>
 		<Action id="1060">
 			<Name>Reset saved parameter to progression order</Name>
 			<On id="10">parameter</On>
 			<Type id="60">copy</Type>
 		</Action>
+		<Action id="1100">
+			<Name>Set code block width to "Not Available"</Name>
+			<On id="11">parameter</On>
+			<Type id="999">copy</Type>
+		</Action>
 		<Action id="1161">
 			<Name>Reset saved parameter to code block width</Name>
 			<On id="11">parameter</On>
 			<Type id="61">copy</Type>
+		</Action>
+		<Action id="1200">
+			<Name>Set code block height to "Not Available"</Name>
+			<On id="12">parameter</On>
+			<Type id="999">copy</Type>
 		</Action>
 		<Action id="1262">
 			<Name>Reset saved parameter to code block height</Name>
