@@ -82,6 +82,10 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<DefaultValue>0</DefaultValue>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<Normal>0;1</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -157,6 +161,10 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<DefaultValue>0</DefaultValue>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<Normal>0;1</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -219,7 +227,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="5" trending="false" save="true">
+		<Param id="5" trending="true" save="true">
 			<Name>currentCompressedBitrateEncoder</Name>
 			<Description>Current Compressed Bitrate Encoder</Description>
 			<Type>read</Type>
@@ -238,6 +246,16 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>0</CL>
+				<MaL>0.05</MaL>
+				<MiL>0.5</MiL>
+				<Normal>1</Normal>
+				<MiH>100</MiH>
+				<MaH>500</MaH>
+				<CH>750</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>Mbps</Units>
@@ -263,7 +281,7 @@ Any inquiries can be addressed to:
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
-		<Param id="6" trending="false" save="true">
+		<Param id="6" trending="true" save="true">
 			<Name>currentCompressedBitrateDecoder</Name>
 			<Description>Current Compressed Bitrate Decoder</Description>
 			<Type>read</Type>
@@ -282,6 +300,16 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>0</CL>
+				<MaL>0.05</MaL>
+				<MiL>0.5</MiL>
+				<Normal>1</Normal>
+				<MiH>100</MiH>
+				<MaH>500</MaH>
+				<CH>750</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>Mbps</Units>
@@ -326,6 +354,10 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<Normal>0;1</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -407,6 +439,16 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>0</CL>
+				<MaL>1</MaL>
+				<MiL>5</MiL>
+				<Normal>10</Normal>
+				<MiH>90</MiH>
+				<MaH>95</MaH>
+				<CH>99</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
@@ -478,6 +520,10 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<Normal>0;1</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -559,6 +605,10 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<Normal>0;1;2;3;4</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -664,6 +714,16 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>0</CL>
+				<MaL>5</MaL>
+				<MiL>10</MiL>
+				<Normal>50</Normal>
+				<MiH>950</MiH>
+				<MaH>990</MaH>
+				<CH>995</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>px</Units>
@@ -707,6 +767,16 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>0</CL>
+				<MaL>5</MaL>
+				<MiL>10</MiL>
+				<Normal>50</Normal>
+				<MiH>950</MiH>
+				<MaH>990</MaH>
+				<CH>995</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>px</Units>
@@ -971,10 +1041,9 @@ Any inquiries can be addressed to:
 			<On id="3">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
-			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<Content>
 				<Id>3</Id>
-				<Id else="true">4</Id>
+				<Id>4</Id>
 			</Content>
 		</Trigger>
 		<Trigger id="4">
@@ -982,10 +1051,9 @@ Any inquiries can be addressed to:
 			<On id="4">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
-			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<Content>
 				<Id>5</Id>
-				<Id else="true">6</Id>
+				<Id>6</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -1004,21 +1072,25 @@ Any inquiries can be addressed to:
 		<Action id="3">
 			<Name>Disable Encoder Parameters</Name>
 			<On id="30">group</On>
+			<Condition><![CDATA[id:3 == 0]]></Condition>
 			<Type>execute next</Type>
 		</Action>
 		<Action id="4">
 			<Name>Enable Encoder Parameters</Name>
 			<On id="31">group</On>
+			<Condition><![CDATA[id:3 == 1]]></Condition>
 			<Type>execute next</Type>
 		</Action>
 		<Action id="5">
 			<Name>Disable Decoder Parameters</Name>
 			<On id="40">group</On>
+			<Condition><![CDATA[id:4 == 0]]></Condition>
 			<Type>execute next</Type>
 		</Action>
 		<Action id="6">
 			<Name>Enable Decoder Parameters</Name>
 			<On id="41">group</On>
+			<Condition><![CDATA[id:4 == 1]]></Condition>
 			<Type>execute next</Type>
 		</Action>
 		<Action id="30">
