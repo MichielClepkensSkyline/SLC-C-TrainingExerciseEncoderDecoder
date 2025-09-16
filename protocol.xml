@@ -2,7 +2,7 @@
 <!--
 
 ****************************************************************************
-*  Copyright (c) 2024,  Skyline Communications NV  All Rights Reserved.    *
+*  Copyright (c) 2025,  Skyline Communications NV  All Rights Reserved.    *
 ****************************************************************************
 
 By using this driver, you expressly agree with the usage terms and
@@ -64,42 +64,6 @@ Any inquiries can be addressed to:
 	</Compliancies>
 
 	<Params>
-		<Param id="1000" trending="false">
-			<Name>zeroValue</Name>
-			<Description>Value Zero</Description>
-			<Type>fixed</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>fixed</LengthType>
-				<Length>1</Length>
-				<Value>0</Value>
-			</Interprete>
-		</Param>
-		<Param id="1001">
-			<Name>oneValue</Name>
-			<Description>Value One</Description>
-			<Type>fixed</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>fixed</LengthType>
-				<Length>1</Length>
-				<Value>1</Value>
-			</Interprete>
-		</Param>
-		<Param id="999">
-			<Name>minusOneValue</Name>
-			<Description>Value Minus One</Description>
-			<Type>fixed</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>fixed</LengthType>
-				<Length>2</Length>
-				<Value>-1</Value>
-			</Interprete>
-		</Param>
 		<Param id="2">
 			<Name>AfterStartup</Name>
 			<Description>After Startup</Description>
@@ -256,7 +220,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="5" trending="false" save="true">
-			<Name>curComBitrateEncoder</Name>
+			<Name>currentCompressedBitrateEncoder</Name>
 			<Description>Current Compressed Bitrate Encoder</Description>
 			<Type>read</Type>
 			<Information>
@@ -296,22 +260,11 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>analog</Type>
 			</Measurement>
 		</Param>
-		<Param id="55" save="true">
-			<Name>savedCurComBitrateEncoder</Name>
-			<Description>Saved Value of the Current Compressed Bitrate Encoder</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>1.234</DefaultValue>
-			</Interprete>
-		</Param>
 		<Param id="6" trending="false" save="true">
-			<Name>curComBitrateDecoder</Name>
+			<Name>currentCompressedBitrateDecoder</Name>
 			<Description>Current Compressed Bitrate Decoder</Description>
 			<Type>read</Type>
 			<Information>
@@ -351,19 +304,8 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>analog</Type>
 			</Measurement>
-		</Param>
-		<Param id="56" save="true">
-			<Name>savedCurComBitrateDecoder</Name>
-			<Description>Saved Value of the Current Compressed Bitrate Decoder</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>1.234</DefaultValue>
-			</Interprete>
 		</Param>
 		<Param id="7" trending="false"  save="true">
 			<Name>autoChromaWeight</Name>
@@ -412,17 +354,6 @@ Any inquiries can be addressed to:
 					</Discreet>
 				</Discreets>
 			</Measurement>
-		</Param>
-		<Param id="57" save="true">
-			<Name>savedAutoChromaWeight</Name>
-			<Description>Saved value of the Auto Chroma Weight</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>1</DefaultValue>
-			</Interprete>
 		</Param>
 		<Param id="107" setter="true">
 			<Name>autoChromaWeight</Name>
@@ -500,17 +431,6 @@ Any inquiries can be addressed to:
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
-		<Param id="58" save="true">
-			<Name>savedChromaWeight</Name>
-			<Description>Saved Value of the Chroma Weight</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>50</DefaultValue>
-			</Interprete>
-		</Param>
 		<Param id="108" setter="true">
 			<Name>chromaWeight</Name>
 			<Description>Chroma Weight</Description>
@@ -586,17 +506,6 @@ Any inquiries can be addressed to:
 					</Discreet>
 				</Discreets>
 			</Measurement>
-		</Param>
-		<Param id="59" save="true">
-			<Name>savedLosslessMode</Name>
-			<Description>Saved value of the Lossless Mode</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>1</DefaultValue>
-			</Interprete>
 		</Param>
 		<Param id="109" setter="true">
 			<Name>losslessMode</Name>
@@ -691,17 +600,6 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="60" save="true">
-			<Name>savedProgressionOrder</Name>
-			<Description>Saved Value of the Progression Order</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>2</DefaultValue>
-			</Interprete>
-		</Param>
 		<Param id="110" setter="true">
 			<Name>progressionOrder</Name>
 			<Description>Progression Order</Description>
@@ -772,7 +670,6 @@ Any inquiries can be addressed to:
 				<Range>
 					<Low>0</Low>
 					<High>1000</High>
-					<!--This can be set better, but I have no idea what is a good high-->
 				</Range>
 				<Positions>
 					<Position>
@@ -788,19 +685,8 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>analog</Type>
 			</Measurement>
-		</Param>
-		<Param id="61" save="true">
-			<Name>savedCodeBlockWidth</Name>
-			<Description>Saved Value of the Code Block Width</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>100</DefaultValue>
-			</Interprete>
 		</Param>
 		<Param id="12" trending="false" save="true">
 			<Name>codeBlockHeight</Name>
@@ -827,7 +713,6 @@ Any inquiries can be addressed to:
 				<Range>
 					<Low>0</Low>
 					<High>1000</High>
-					<!--This can be set better, but I have no idea what is a good high-->
 				</Range>
 				<Positions>
 					<Position>
@@ -843,19 +728,8 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>analog</Type>
 			</Measurement>
-		</Param>
-		<Param id="62" save="true">
-			<Name>savedCodeBlockHeight</Name>
-			<Description>Saved Value of the Code Block Height</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>100</DefaultValue>
-			</Interprete>
 		</Param>
 		<Param id="13" trending="false">
 			<Name>encoderTitle</Name>
@@ -903,12 +777,119 @@ Any inquiries can be addressed to:
 				<Type>title</Type>
 			</Measurement>
 		</Param>
+		<Param id="55" save="true">
+			<Name>savedCurrentCompressedBitrateEncoder</Name>
+			<Description>Saved Value of the Current Compressed Bitrate Encoder</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>1.234</DefaultValue>
+			</Interprete>
+		</Param>
+		<Param id="56" save="true">
+			<Name>savedCurrentCompressedBitrateDecoder</Name>
+			<Description>Saved Value of the Current Compressed Bitrate Decoder</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>1.234</DefaultValue>
+			</Interprete>
+		</Param>
+		<Param id="57" save="true">
+			<Name>savedAutoChromaWeight</Name>
+			<Description>Saved value of the Auto Chroma Weight</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>1</DefaultValue>
+			</Interprete>
+		</Param>
+		<Param id="58" save="true">
+			<Name>savedChromaWeight</Name>
+			<Description>Saved Value of the Chroma Weight</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>50</DefaultValue>
+			</Interprete>
+		</Param>
+		<Param id="59" save="true">
+			<Name>savedLosslessMode</Name>
+			<Description>Saved value of the Lossless Mode</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>1</DefaultValue>
+			</Interprete>
+		</Param>
+		<Param id="60" save="true">
+			<Name>savedProgressionOrder</Name>
+			<Description>Saved Value of the Progression Order</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>2</DefaultValue>
+			</Interprete>
+		</Param>
+		<Param id="61" save="true">
+			<Name>savedCodeBlockWidth</Name>
+			<Description>Saved Value of the Code Block Width</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>100</DefaultValue>
+			</Interprete>
+		</Param>
+		<Param id="62" save="true">
+			<Name>savedCodeBlockHeight</Name>
+			<Description>Saved Value of the Code Block Height</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>100</DefaultValue>
+			</Interprete>
+		</Param>
+		<Param id="999">
+			<Name>minusOneValue</Name>
+			<Description>Value Minus One</Description>
+			<Type>fixed</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>fixed</LengthType>
+				<Length>2</Length>
+				<Value>-1</Value>
+			</Interprete>
+		</Param>
+		<Param id="1000" trending="false">
+			<Name>zeroValue</Name>
+			<Description>Value Zero</Description>
+			<Type>fixed</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>fixed</LengthType>
+				<Length>1</Length>
+				<Value>0</Value>
+			</Interprete>
+		</Param>
 	</Params>
-	
-	<!--<QActions>
-		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
-		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
-	</QActions>-->
 
 	<Groups>
 		<Group id="2">
@@ -1021,22 +1002,22 @@ Any inquiries can be addressed to:
 			<Type>run actions</Type>
 		</Action>
 		<Action id="3">
-			<Name>After Change Status Encoder to Disabled Group</Name>
+			<Name>Disable Encoder Parameters</Name>
 			<On id="30">group</On>
 			<Type>execute next</Type>
 		</Action>
 		<Action id="4">
-			<Name>After Change Status Encoder to Enabled Group</Name>
+			<Name>Enable Encoder Parameters</Name>
 			<On id="31">group</On>
 			<Type>execute next</Type>
 		</Action>
 		<Action id="5">
-			<Name>After Change Status Decoder to Disabled Group</Name>
+			<Name>Disable Decoder Parameters</Name>
 			<On id="40">group</On>
 			<Type>execute next</Type>
 		</Action>
 		<Action id="6">
-			<Name>After Change Status Decoder to Enabled Group</Name>
+			<Name>Enable Decoder Parameters</Name>
 			<On id="41">group</On>
 			<Type>execute next</Type>
 		</Action>
@@ -1195,10 +1176,7 @@ Any inquiries can be addressed to:
 			</Content>
 		</Timer>
 	</Timers>
-
-	<PortSettings>
-	</PortSettings>
-
+	
 	<VersionHistory>
 		<Branches>
 			<Branch id="1">
@@ -1211,7 +1189,7 @@ Any inquiries can be addressed to:
 									<MinorVersion id="1">
 										<Date>2024-01-08</Date>
 										<Provider>
-											<Author>SOK</Author>
+											<Author>SKF</Author>
 											<Company>Skyline Communications</Company>
 										</Provider>
 										<Changes>

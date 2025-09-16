@@ -20,14 +20,14 @@ public static class Parameter
 	public const int statusdecoder = 4;
 	/// <summary>PID: 5 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int curcombitrateencoder_5 = 5;
+	public const int currentcompressedbitrateencoder_5 = 5;
 	/// <summary>PID: 5 | Type: read</summary>
-	public const int curcombitrateencoder = 5;
+	public const int currentcompressedbitrateencoder = 5;
 	/// <summary>PID: 6 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int curcombitratedecoder_6 = 6;
+	public const int currentcompressedbitratedecoder_6 = 6;
 	/// <summary>PID: 6 | Type: read</summary>
-	public const int curcombitratedecoder = 6;
+	public const int currentcompressedbitratedecoder = 6;
 	/// <summary>PID: 7 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int autochromaweight_7 = 7;
@@ -60,14 +60,14 @@ public static class Parameter
 	public const int codeblockheight = 12;
 	/// <summary>PID: 55 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int savedcurcombitrateencoder_55 = 55;
+	public const int savedcurrentcompressedbitrateencoder_55 = 55;
 	/// <summary>PID: 55 | Type: read</summary>
-	public const int savedcurcombitrateencoder = 55;
+	public const int savedcurrentcompressedbitrateencoder = 55;
 	/// <summary>PID: 56 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int savedcurcombitratedecoder_56 = 56;
+	public const int savedcurrentcompressedbitratedecoder_56 = 56;
 	/// <summary>PID: 56 | Type: read</summary>
-	public const int savedcurcombitratedecoder = 56;
+	public const int savedcurrentcompressedbitratedecoder = 56;
 	/// <summary>PID: 57 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int savedautochromaweight_57 = 57;
@@ -159,10 +159,10 @@ public interface SLProtocolExt : SLProtocol
 	object Statusencoder { get; set; }
 	object Statusdecoder_4 { get; set; }
 	object Statusdecoder { get; set; }
-	object Curcombitrateencoder_5 { get; set; }
-	object Curcombitrateencoder { get; set; }
-	object Curcombitratedecoder_6 { get; set; }
-	object Curcombitratedecoder { get; set; }
+	object Currentcompressedbitrateencoder_5 { get; set; }
+	object Currentcompressedbitrateencoder { get; set; }
+	object Currentcompressedbitratedecoder_6 { get; set; }
+	object Currentcompressedbitratedecoder { get; set; }
 	object Autochromaweight_7 { get; set; }
 	object Autochromaweight { get; set; }
 	object Chromaweight_8 { get; set; }
@@ -177,10 +177,10 @@ public interface SLProtocolExt : SLProtocol
 	object Codeblockheight { get; set; }
 	object Encodertitle__fixed { get; set; }
 	object Decodertitle__fixed { get; set; }
-	object Savedcurcombitrateencoder_55 { get; set; }
-	object Savedcurcombitrateencoder { get; set; }
-	object Savedcurcombitratedecoder_56 { get; set; }
-	object Savedcurcombitratedecoder { get; set; }
+	object Savedcurrentcompressedbitrateencoder_55 { get; set; }
+	object Savedcurrentcompressedbitrateencoder { get; set; }
+	object Savedcurrentcompressedbitratedecoder_56 { get; set; }
+	object Savedcurrentcompressedbitratedecoder { get; set; }
 	object Savedautochromaweight_57 { get; set; }
 	object Savedautochromaweight { get; set; }
 	object Savedchromaweight_58 { get; set; }
@@ -201,7 +201,6 @@ public interface SLProtocolExt : SLProtocol
 	object Progressionorder_110 { get; set; }
 	object Minusonevalue__fixed { get; set; }
 	object Zerovalue__fixed { get; set; }
-	object Onevalue__fixed { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -220,14 +219,14 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Statusdecoder {get { return GetParameter(4); }set { SetParameter(4, value); }}
 	/// <summary>PID: 5  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Curcombitrateencoder_5 {get { return GetParameter(5); }set { SetParameter(5, value); }}
+	public System.Object Currentcompressedbitrateencoder_5 {get { return GetParameter(5); }set { SetParameter(5, value); }}
 	/// <summary>PID: 5  | Type: read | EXCEPTIONS: Not Available = -1</summary>
-	public System.Object Curcombitrateencoder {get { return GetParameter(5); }set { SetParameter(5, value); }}
+	public System.Object Currentcompressedbitrateencoder {get { return GetParameter(5); }set { SetParameter(5, value); }}
 	/// <summary>PID: 6  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Curcombitratedecoder_6 {get { return GetParameter(6); }set { SetParameter(6, value); }}
+	public System.Object Currentcompressedbitratedecoder_6 {get { return GetParameter(6); }set { SetParameter(6, value); }}
 	/// <summary>PID: 6  | Type: read | EXCEPTIONS: Not Available = -1</summary>
-	public System.Object Curcombitratedecoder {get { return GetParameter(6); }set { SetParameter(6, value); }}
+	public System.Object Currentcompressedbitratedecoder {get { return GetParameter(6); }set { SetParameter(6, value); }}
 	/// <summary>PID: 7  | Type: read | DISCREETS: Disabled = 0, Enabled = 1 | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Autochromaweight_7 {get { return GetParameter(7); }set { SetParameter(7, value); }}
@@ -264,14 +263,14 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Decodertitle__fixed {get { return GetParameter(14); }set { SetParameter(14, value); }}
 	/// <summary>PID: 55  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Savedcurcombitrateencoder_55 {get { return GetParameter(55); }set { SetParameter(55, value); }}
+	public System.Object Savedcurrentcompressedbitrateencoder_55 {get { return GetParameter(55); }set { SetParameter(55, value); }}
 	/// <summary>PID: 55  | Type: read</summary>
-	public System.Object Savedcurcombitrateencoder {get { return GetParameter(55); }set { SetParameter(55, value); }}
+	public System.Object Savedcurrentcompressedbitrateencoder {get { return GetParameter(55); }set { SetParameter(55, value); }}
 	/// <summary>PID: 56  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Savedcurcombitratedecoder_56 {get { return GetParameter(56); }set { SetParameter(56, value); }}
+	public System.Object Savedcurrentcompressedbitratedecoder_56 {get { return GetParameter(56); }set { SetParameter(56, value); }}
 	/// <summary>PID: 56  | Type: read</summary>
-	public System.Object Savedcurcombitratedecoder {get { return GetParameter(56); }set { SetParameter(56, value); }}
+	public System.Object Savedcurrentcompressedbitratedecoder {get { return GetParameter(56); }set { SetParameter(56, value); }}
 	/// <summary>PID: 57  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Savedautochromaweight_57 {get { return GetParameter(57); }set { SetParameter(57, value); }}
@@ -324,8 +323,6 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Minusonevalue__fixed {get { return GetParameter(999); }set { SetParameter(999, value); }}
 	/// <summary>PID: 1000  | Type: fixed</summary>
 	public System.Object Zerovalue__fixed {get { return GetParameter(1000); }set { SetParameter(1000, value); }}
-	/// <summary>PID: 1001  | Type: fixed</summary>
-	public System.Object Onevalue__fixed {get { return GetParameter(1001); }set { SetParameter(1001, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
