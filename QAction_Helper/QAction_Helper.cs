@@ -8,16 +8,6 @@ namespace Skyline.DataMiner.Scripting
 {
 public static class Parameter
 {
-	/// <summary>PID: 1 | Type: read</summary>
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int encodertitle_1 = 1;
-	/// <summary>PID: 1 | Type: read</summary>
-	public const int encodertitle = 1;
-	/// <summary>PID: 3 | Type: read</summary>
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int decodertitle_3 = 3;
-	/// <summary>PID: 3 | Type: read</summary>
-	public const int decodertitle = 3;
 	/// <summary>PID: 4 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int encoderstatus_4 = 4;
@@ -164,11 +154,9 @@ public class WriteParameters
 }
 public interface SLProtocolExt : SLProtocol
 {
-	object Encodertitle_1 { get; set; }
-	object Encodertitle { get; set; }
+	object Title_begin_encodertitle__fixed { get; set; }
 	object Afterstartup_dummy { get; set; }
-	object Decodertitle_3 { get; set; }
-	object Decodertitle { get; set; }
+	object Title_begin_decodertitle__fixed { get; set; }
 	object Encoderstatus_4 { get; set; }
 	object Encoderstatus { get; set; }
 	object Decoderstatus_5 { get; set; }
@@ -217,18 +205,12 @@ public interface SLProtocolExt : SLProtocol
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 {
-	/// <summary>PID: 1  | Type: read</summary>
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Encodertitle_1 {get { return GetParameter(1); }set { SetParameter(1, value); }}
-	/// <summary>PID: 1  | Type: read</summary>
-	public System.Object Encodertitle {get { return GetParameter(1); }set { SetParameter(1, value); }}
+	/// <summary>PID: 1  | Type: fixed</summary>
+	public System.Object Title_begin_encodertitle__fixed {get { return GetParameter(1); }set { SetParameter(1, value); }}
 	/// <summary>PID: 2  | Type: dummy</summary>
 	public System.Object Afterstartup_dummy {get { return GetParameter(2); }set { SetParameter(2, value); }}
-	/// <summary>PID: 3  | Type: read</summary>
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Decodertitle_3 {get { return GetParameter(3); }set { SetParameter(3, value); }}
-	/// <summary>PID: 3  | Type: read</summary>
-	public System.Object Decodertitle {get { return GetParameter(3); }set { SetParameter(3, value); }}
+	/// <summary>PID: 3  | Type: fixed</summary>
+	public System.Object Title_begin_decodertitle__fixed {get { return GetParameter(3); }set { SetParameter(3, value); }}
 	/// <summary>PID: 4  | Type: read | DISCREETS: Enabled = 1, Disabled = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderstatus_4 {get { return GetParameter(4); }set { SetParameter(4, value); }}
@@ -254,10 +236,10 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Encoderautochromaweight_8 {get { return GetParameter(8); }set { SetParameter(8, value); }}
 	/// <summary>PID: 8  | Type: read | DISCREETS: Enabled = 1, Disabled = 0 | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Encoderautochromaweight {get { return GetParameter(8); }set { SetParameter(8, value); }}
-	/// <summary>PID: 10  | Type: read | DISCREETS: Enabled = 1, Disabled = 0 | EXCEPTIONS: Not Avilable = -1</summary>
+	/// <summary>PID: 10  | Type: read | DISCREETS: Enabled = 1, Disabled = 0 | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderlosslessmode_10 {get { return GetParameter(10); }set { SetParameter(10, value); }}
-	/// <summary>PID: 10  | Type: read | DISCREETS: Enabled = 1, Disabled = 0 | EXCEPTIONS: Not Avilable = -1</summary>
+	/// <summary>PID: 10  | Type: read | DISCREETS: Enabled = 1, Disabled = 0 | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Encoderlosslessmode {get { return GetParameter(10); }set { SetParameter(10, value); }}
 	/// <summary>PID: 11  | Type: read | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4 | EXCEPTIONS: Not Avilable = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]

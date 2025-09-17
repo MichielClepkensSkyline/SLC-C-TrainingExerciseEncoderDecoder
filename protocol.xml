@@ -64,17 +64,10 @@ Any inquiries can be addressed to:
 	</Compliancies>
 
 	<Params>
-		<Param id="1" trending="false">
-			<Name>EncoderTitle</Name>
+		<Param id="1">
+			<Name>Title_Begin_EncoderTitle</Name>
 			<Description>Encoder</Description>
-			<Type>read</Type>
-			<Information>
-			</Information>
-			<Interprete>
-				<RawType>text</RawType>
-				<Type>string</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
+			<Type>fixed</Type>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -86,7 +79,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>title</Type>
+				<Type options="begin">title</Type>
 			</Measurement>
 		</Param>
 		<Param id="2">
@@ -94,17 +87,10 @@ Any inquiries can be addressed to:
 			<Description>After Startup</Description>
 			<Type>dummy</Type>
 		</Param>
-		<Param id="3" trending="false">
-			<Name>DecoderTitle</Name>
+		<Param id="3">
+			<Name>Title_Begin_DecoderTitle</Name>
 			<Description>Decoder</Description>
-			<Type>read</Type>
-			<Information>
-			</Information>
-			<Interprete>
-				<RawType>text</RawType>
-				<Type>string</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
+			<Type>fixed</Type>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -116,7 +102,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>title</Type>
+				<Type options="begin">title</Type>
 			</Measurement>
 		</Param>
 		<Param id="4" trending="true">
@@ -441,7 +427,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="10" trending="true">
-			<Name>EncoderLosslessMode</Name>
+			<Name>EncoderLosslessMode</Name> 
 			<Description>Lossless Mode</Description>
 			<Type>read</Type>
 			<Information>
@@ -453,7 +439,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<Exceptions>
 					<Exception id="1" value="-1">
-						<Display state="disabled">Not Avilable</Display>
+						<Display state="disabled">Not Available</Display>
 						<Value>-1</Value>
 					</Exception>
 				</Exceptions>
@@ -745,6 +731,7 @@ Any inquiries can be addressed to:
 						<Value>-1</Value>
 					</Exception>
 				</Exceptions>
+				<DefaultValue>-1</DefaultValue>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -811,7 +798,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="107">
 			<Name>CopyOfDecoderCurrentCompressedBitrate</Name>
-			<Description>Copy Of Decoder Current Compressed Bitrate </Description>
+			<Description>Copy Of Decoder Current Compressed Bitrate</Description>
 			<Type>read</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -822,7 +809,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="108">
 			<Name>CopyOfEncoderAutoChromaWeight</Name>
-			<Description>Copy Of Encoder Auto Chroma Weight </Description>
+			<Description>Copy Of Encoder Auto Chroma Weight</Description>
 			<Type>read</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
