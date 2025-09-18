@@ -134,13 +134,13 @@ public static class Parameter
 }
 public class WriteParameters
 {
-	/// <summary>PID: 54  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	/// <summary>PID: 54  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	public System.Object Encoderstatus {get { return Protocol.GetParameter(54); }set { Protocol.SetParameter(54, value); }}
-	/// <summary>PID: 55  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	/// <summary>PID: 55  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	public System.Object Decoderstatus {get { return Protocol.GetParameter(55); }set { Protocol.SetParameter(55, value); }}
-	/// <summary>PID: 58  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	/// <summary>PID: 58  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	public System.Object Encoderautochromaweight {get { return Protocol.GetParameter(58); }set { Protocol.SetParameter(58, value); }}
-	/// <summary>PID: 60  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	/// <summary>PID: 60  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	public System.Object Encoderlosslessmode {get { return Protocol.GetParameter(60); }set { Protocol.SetParameter(60, value); }}
 	/// <summary>PID: 61  | Type: write | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4</summary>
 	public System.Object Decoderprogressionorder {get { return Protocol.GetParameter(61); }set { Protocol.SetParameter(61, value); }}
@@ -211,15 +211,15 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Afterstartup_dummy {get { return GetParameter(2); }set { SetParameter(2, value); }}
 	/// <summary>PID: 3  | Type: fixed</summary>
 	public System.Object Title_begin_decodertitle__fixed {get { return GetParameter(3); }set { SetParameter(3, value); }}
-	/// <summary>PID: 4  | Type: read | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	/// <summary>PID: 4  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderstatus_4 {get { return GetParameter(4); }set { SetParameter(4, value); }}
-	/// <summary>PID: 4  | Type: read | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	/// <summary>PID: 4  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	public System.Object Encoderstatus {get { return GetParameter(4); }set { SetParameter(4, value); }}
-	/// <summary>PID: 5  | Type: read | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	/// <summary>PID: 5  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Decoderstatus_5 {get { return GetParameter(5); }set { SetParameter(5, value); }}
-	/// <summary>PID: 5  | Type: read | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	/// <summary>PID: 5  | Type: read | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	public System.Object Decoderstatus {get { return GetParameter(5); }set { SetParameter(5, value); }}
 	/// <summary>PID: 6  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
@@ -231,15 +231,15 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Decodercurrentcompressedbitrate_7 {get { return GetParameter(7); }set { SetParameter(7, value); }}
 	/// <summary>PID: 7  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Decodercurrentcompressedbitrate {get { return GetParameter(7); }set { SetParameter(7, value); }}
-	/// <summary>PID: 8  | Type: read | DISCREETS: Enabled = 1, Disabled = 0 | EXCEPTIONS: Not Available = -1</summary>
+	/// <summary>PID: 8  | Type: read | DISCREETS: Disabled = 0, Enabled = 1 | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderautochromaweight_8 {get { return GetParameter(8); }set { SetParameter(8, value); }}
-	/// <summary>PID: 8  | Type: read | DISCREETS: Enabled = 1, Disabled = 0 | EXCEPTIONS: Not Available = -1</summary>
+	/// <summary>PID: 8  | Type: read | DISCREETS: Disabled = 0, Enabled = 1 | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Encoderautochromaweight {get { return GetParameter(8); }set { SetParameter(8, value); }}
-	/// <summary>PID: 10  | Type: read | DISCREETS: Enabled = 1, Disabled = 0 | EXCEPTIONS: Not Available = -1</summary>
+	/// <summary>PID: 10  | Type: read | DISCREETS: Disabled = 0, Enabled = 1 | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderlosslessmode_10 {get { return GetParameter(10); }set { SetParameter(10, value); }}
-	/// <summary>PID: 10  | Type: read | DISCREETS: Enabled = 1, Disabled = 0 | EXCEPTIONS: Not Available = -1</summary>
+	/// <summary>PID: 10  | Type: read | DISCREETS: Disabled = 0, Enabled = 1 | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Encoderlosslessmode {get { return GetParameter(10); }set { SetParameter(10, value); }}
 	/// <summary>PID: 11  | Type: read | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4 | EXCEPTIONS: Not Avilable = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
@@ -265,16 +265,16 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Encoderchromaweight_17 {get { return GetParameter(17); }set { SetParameter(17, value); }}
 	/// <summary>PID: 17  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	public System.Object Encoderchromaweight {get { return GetParameter(17); }set { SetParameter(17, value); }}
-	/// <summary>PID: 54  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	/// <summary>PID: 54  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderstatus_54 {get { return GetParameter(54); }set { SetParameter(54, value); }}
-	/// <summary>PID: 55  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	/// <summary>PID: 55  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Decoderstatus_55 {get { return GetParameter(55); }set { SetParameter(55, value); }}
-	/// <summary>PID: 58  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	/// <summary>PID: 58  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderautochromaweight_58 {get { return GetParameter(58); }set { SetParameter(58, value); }}
-	/// <summary>PID: 60  | Type: write | DISCREETS: Enabled = 1, Disabled = 0</summary>
+	/// <summary>PID: 60  | Type: write | DISCREETS: Disabled = 0, Enabled = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Encoderlosslessmode_60 {get { return GetParameter(60); }set { SetParameter(60, value); }}
 	/// <summary>PID: 61  | Type: write | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4</summary>
